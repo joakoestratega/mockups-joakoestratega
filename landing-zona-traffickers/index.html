@@ -184,7 +184,10 @@
   .hero > * { position: relative; z-index: 1; }
 
   .hero-banner {
-    max-width: 800px;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 720px;
     margin: 0 auto 36px;
     filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
   }
@@ -751,6 +754,134 @@
     transform: translateY(-2px);
   }
 
+  /* ============= WIZARD: barra de progreso, pasos, navegación ============= */
+  .form-progreso {
+    background: var(--gris-suave);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+  }
+
+  .form-progreso-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .form-progreso-info > span:first-child {
+    font-size: 13px;
+    color: var(--azul-profundo);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+
+  .form-progreso-info > span:first-child strong { font-weight: 900; }
+
+  .form-progreso-info > span:last-child {
+    font-size: 11px;
+    color: var(--texto-suave);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: right;
+  }
+
+  .form-progreso-barra {
+    height: 6px;
+    background: var(--blanco);
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1px solid var(--gris-borde);
+  }
+
+  .form-progreso-fill {
+    height: 100%;
+    background: var(--azul-medio);
+    border-radius: 100px;
+    width: 20%;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .form-paso { display: none; }
+
+  .form-paso.activo {
+    display: block;
+    animation: fadeInPaso 0.35s ease;
+  }
+
+  @keyframes fadeInPaso {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gris-borde);
+  }
+
+  .form-nav .btn-continuar,
+  .form-nav .btn-enviar { margin-left: auto; }
+
+  .btn-form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px 36px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-continuar {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+  }
+  .btn-continuar:hover {
+    background: var(--azul-noche);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(25,77,126,0.25);
+  }
+
+  .btn-atras {
+    background: transparent;
+    color: var(--texto-suave);
+    border: 2px solid var(--gris-borde);
+  }
+  .btn-atras:hover {
+    background: var(--gris-suave);
+    color: var(--negro);
+    border-color: var(--azul-medio);
+  }
+
+  .btn-enviar {
+    background: #73708E;
+    color: var(--blanco);
+    font-size: 17px;
+    padding: 16px 40px;
+  }
+  .btn-enviar:hover {
+    background: var(--gris-violeta-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(115,112,142,0.35);
+  }
+
+  /* Campo inválido (lo aplica el JS al hacer Continuar) */
+  .form-grupo input.invalido,
+  .form-grupo select.invalido,
+  .form-grupo textarea.invalido {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+  }
+
   /* ============= PIE ============= */
   .pie {
     background: var(--negro);
@@ -772,6 +903,8 @@
     .btn { font-size: 18px; padding: 16px 40px; }
     .btn-grande { padding: 20px 60px; font-size: 20px; }
     .formulario-wrapper { padding: 40px 28px; }
+    .hero { padding: 60px 20px 80px; }
+    .hero-banner { max-width: 480px; margin-bottom: 28px; }
   }
 
   @media (max-width: 600px) {
@@ -783,6 +916,72 @@
     .badge-exclusivo { font-size: 10px; padding: 5px 12px; }
     .formulario-wrapper { padding: 32px 20px; }
     .form-submit button { font-size: 18px; padding: 14px 50px; width: 100%; }
+
+    /* Hero ajustado para móvil */
+    .hero { padding: 40px 16px 60px; }
+    .hero-banner { max-width: 280px; margin-bottom: 20px; }
+    .hero-titulo { font-size: 36px; margin-bottom: 12px; }
+    .hero-tags { gap: 8px; margin: 24px auto; }
+    .hero-tag { font-size: 12px; padding: 7px 14px; }
+    .hero-aviso { font-size: 13px; margin-top: 18px; }
+
+    /* Tipografía general más compacta */
+    .lead { font-size: 16px; line-height: 1.5; }
+    h2.titulo-seccion { font-size: 26px; }
+
+    /* Botón principal cabe en pantalla angosta */
+    .btn-grande { padding: 16px 40px; font-size: 17px; }
+
+    /* Embed de Instagram más bajo en móviles muy pequeños */
+    .ig-embed-wrapper { max-width: 100%; border-radius: 12px; }
+    .ig-embed-wrapper iframe { min-height: 700px; }
+
+    /* Wrapper general con menos padding lateral */
+    .wrapper { padding: 0 16px; }
+
+    /* Que-es-bloque más compacto */
+    .que-es-bloque h3 { font-size: 20px; }
+    .que-es-bloque p { font-size: 15px; }
+
+    /* Beneficio destacado en columna ya está, ajustar tipos */
+    .beneficio-destacado h3 { font-size: 22px; }
+    .beneficio-destacado p { font-size: 15px; }
+    .beneficio-destacado-icono { width: 80px; height: 80px; font-size: 38px; }
+
+    /* Beneficio en mobile - más compacto */
+    .beneficio { padding: 24px 22px; gap: 16px; flex-direction: row; text-align: left; }
+    .beneficio-num { width: 48px; height: 48px; font-size: 18px; }
+    .beneficio-texto h3 { font-size: 17px; }
+    .beneficio-texto p { font-size: 14px; }
+
+    /* Proceso en mobile más compacto */
+    .proceso-paso { padding: 24px 20px; }
+
+    /* Evaluamos */
+    .evaluamos-card .marca { font-size: 70px; }
+
+    /* FAQ más compacto */
+    .faq-pregunta { font-size: 15px; padding: 18px 20px; }
+    .faq-respuesta { padding: 0 20px 22px; font-size: 14px; }
+
+    /* Formulario más compacto */
+    .form-titulo { font-size: 18px !important; }
+    .form-seccion-titulo { font-size: 13px; }
+    .form-grupo label { font-size: 14px; }
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea { font-size: 14px; padding: 12px 18px; }
+
+    /* CTA bar más compacto */
+    .cta-fijo .btn-fijo { font-size: 11px; padding: 7px 14px; }
+
+    /* Wizard responsive */
+    .form-progreso { padding: 14px 16px; }
+    .form-progreso-info > span:last-child { font-size: 10px; }
+    .form-nav { flex-direction: column-reverse; gap: 10px; }
+    .form-nav .btn-form { width: 100%; padding: 14px 24px; font-size: 15px; }
+    .form-nav .btn-continuar,
+    .form-nav .btn-enviar { margin-left: 0; }
   }
 </style>
 </head>
@@ -1230,199 +1429,246 @@
 
       <h3 class="form-titulo">FORMULARIO DE CONVOCATORIA TRAFFICKERS</h3>
 
-      <form name="Formulario Traffickers Feria Effix" method="post" action="">
-
-        <!-- ============= SECCIÓN 1 ============= -->
-        <div class="form-seccion-titulo">1. Información básica</div>
-
-        <div class="form-grupo">
-          <label>• Tu nombre completo <span class="obligatorio">*</span></label>
-          <input type="text" name="nombre" required>
+      <!-- Barra de progreso del wizard -->
+      <div class="form-progreso">
+        <div class="form-progreso-info">
+          <span>Paso <strong id="paso-actual">1</strong> de <strong>5</strong></span>
+          <span id="paso-nombre">Información básica</span>
         </div>
-
-        <div class="form-grupo">
-          <label>• Número de contacto (WhatsApp) <span class="obligatorio">*</span></label>
-          <input type="tel" name="whatsapp" placeholder="Incluye código de país, ej: +57 300 000 0000" required>
+        <div class="form-progreso-barra">
+          <div class="form-progreso-fill" id="progreso-fill"></div>
         </div>
+      </div>
 
-        <div class="form-grupo">
-          <label>• Usuario de Instagram <span class="obligatorio">*</span></label>
-          <input type="text" name="instagram" placeholder="Ej: @tuusuario" required>
-        </div>
+      <form name="Formulario Traffickers Feria Effix" method="post" action="" id="form-traffickers" novalidate>
 
-        <div class="form-grupo">
-          <label>• Correo electrónico <span class="obligatorio">*</span></label>
-          <input type="email" name="correo" required>
-        </div>
+        <!-- ============= PASO 1 ============= -->
+        <div class="form-paso activo" data-paso="1" data-nombre="Información básica">
 
-        <div class="form-grupo">
-          <label>• País de residencia <span class="obligatorio">*</span></label>
-          <select name="pais" required>
-            <option value="">Selecciona una opción</option>
-            <option value="colombia">Colombia</option>
-            <option value="argentina">Argentina</option>
-            <option value="bolivia">Bolivia</option>
-            <option value="brasil">Brasil</option>
-            <option value="chile">Chile</option>
-            <option value="costa-rica">Costa Rica</option>
-            <option value="cuba">Cuba</option>
-            <option value="ecuador">Ecuador</option>
-            <option value="el-salvador">El Salvador</option>
-            <option value="espana">España</option>
-            <option value="estados-unidos">Estados Unidos</option>
-            <option value="guatemala">Guatemala</option>
-            <option value="honduras">Honduras</option>
-            <option value="mexico">México</option>
-            <option value="nicaragua">Nicaragua</option>
-            <option value="panama">Panamá</option>
-            <option value="paraguay">Paraguay</option>
-            <option value="peru">Perú</option>
-            <option value="puerto-rico">Puerto Rico</option>
-            <option value="republica-dominicana">República Dominicana</option>
-            <option value="uruguay">Uruguay</option>
-            <option value="venezuela">Venezuela</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
+          <div class="form-seccion-titulo">1. Información básica</div>
 
-        <div class="form-grupo">
-          <label>• Ciudad de residencia <span class="obligatorio">*</span></label>
-          <input type="text" name="ciudad" required>
-        </div>
-
-
-        <!-- ============= SECCIÓN 2 ============= -->
-        <div class="form-seccion-titulo">2. Perfil profesional y experiencia</div>
-
-        <div class="form-grupo">
-          <label>• ¿Cuánto tiempo de experiencia tienes en pauta digital? <span class="obligatorio">*</span></label>
-          <select name="experiencia" required>
-            <option value="">Selecciona una opción</option>
-            <option value="0-6">0 a 6 meses</option>
-            <option value="6-12">6 a 12 meses</option>
-            <option value="12-24">12 a 24 meses</option>
-            <option value="mas-24">Más de 24 meses</option>
-          </select>
-        </div>
-
-        <div class="form-grupo">
-          <label>• ¿Cuál es tu modelo actual de operación en pauta digital? <span class="obligatorio">*</span></label>
-          <select name="modelo" required>
-            <option value="">Selecciona una opción</option>
-            <option value="independiente">Independiente (manejo mis propios clientes)</option>
-            <option value="agencia">Parte de una agencia</option>
-            <option value="inhouse">In-house (trabajo directamente para una marca)</option>
-            <option value="hibrido">Modelo híbrido (combino varias de las anteriores)</option>
-          </select>
-        </div>
-
-        <div class="form-grupo">
-          <label>• Nombre de tu marca personal, agencia o empresa</label>
-          <input type="text" name="empresa">
-        </div>
-
-        <div class="form-grupo">
-          <label>• ¿En qué plataformas manejas pauta actualmente?</label>
-          <div class="checkboxes">
-            <label><input type="checkbox" name="plataformas[]" value="meta"> Meta Ads (Facebook / Instagram)</label>
-            <label><input type="checkbox" name="plataformas[]" value="google"> Google Ads</label>
-            <label><input type="checkbox" name="plataformas[]" value="tiktok"> TikTok Ads</label>
-            <label><input type="checkbox" name="plataformas[]" value="youtube"> YouTube Ads</label>
-            <label><input type="checkbox" name="plataformas[]" value="linkedin"> LinkedIn Ads</label>
-            <label><input type="checkbox" name="plataformas[]" value="programatica"> Publicidad programática (compra de anuncios en múltiples sitios web y apps)</label>
-            <label><input type="checkbox" name="plataformas[]" value="otras"> Otras</label>
+          <div class="form-grupo">
+            <label>• Tu nombre completo <span class="obligatorio">*</span></label>
+            <input type="text" name="nombre" required>
           </div>
-        </div>
 
-        <div class="form-grupo">
-          <label>• ¿En qué países has ejecutado campañas?</label>
-          <input type="text" name="paises-campanas">
-        </div>
+          <div class="form-grupo">
+            <label>• Número de contacto (WhatsApp) <span class="obligatorio">*</span></label>
+            <input type="tel" name="whatsapp" placeholder="Incluye código de país, ej: +57 300 000 0000" required>
+          </div>
 
-        <div class="form-grupo">
-          <label>• ¿En qué tipo de negocio tienes mayor experiencia gestionando pauta digital? <span class="obligatorio">*</span></label>
-          <select name="tipo-negocio" required>
-            <option value="">Selecciona una opción</option>
-            <option value="ecommerce">Ecommerce (productos físicos)</option>
-            <option value="infoproductos">Infoproductos / educación digital</option>
-            <option value="servicios">Servicios (coaches, consultores, agencias)</option>
-            <option value="marca-personal">Marca personal</option>
-            <option value="inmobiliario">Inmobiliario</option>
-            <option value="eventos">Eventos</option>
-            <option value="salud">Salud y bienestar (clínicas, estética, fitness)</option>
-            <option value="educacion">Educación (instituciones, academias)</option>
-            <option value="gastronomico">Gastronómico</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
+          <div class="form-grupo">
+            <label>• Usuario de Instagram <span class="obligatorio">*</span></label>
+            <input type="text" name="instagram" placeholder="Ej: @tuusuario" required>
+          </div>
 
+          <div class="form-grupo">
+            <label>• Correo electrónico <span class="obligatorio">*</span></label>
+            <input type="email" name="correo" required>
+          </div>
 
-        <!-- ============= SECCIÓN 3 ============= -->
-        <div class="form-seccion-titulo">3. Afinidad con el evento</div>
+          <div class="form-grupo">
+            <label>• País de residencia <span class="obligatorio">*</span></label>
+            <select name="pais" required>
+              <option value="">Selecciona una opción</option>
+              <option value="colombia">Colombia</option>
+              <option value="argentina">Argentina</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="brasil">Brasil</option>
+              <option value="chile">Chile</option>
+              <option value="costa-rica">Costa Rica</option>
+              <option value="cuba">Cuba</option>
+              <option value="ecuador">Ecuador</option>
+              <option value="el-salvador">El Salvador</option>
+              <option value="espana">España</option>
+              <option value="estados-unidos">Estados Unidos</option>
+              <option value="guatemala">Guatemala</option>
+              <option value="honduras">Honduras</option>
+              <option value="mexico">México</option>
+              <option value="nicaragua">Nicaragua</option>
+              <option value="panama">Panamá</option>
+              <option value="paraguay">Paraguay</option>
+              <option value="peru">Perú</option>
+              <option value="puerto-rico">Puerto Rico</option>
+              <option value="republica-dominicana">República Dominicana</option>
+              <option value="uruguay">Uruguay</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
 
-        <div class="form-grupo">
-          <label>• ¿Has asistido antes a la Feria EFFIX? <span class="obligatorio">*</span></label>
-          <select name="asistencia-previa" required>
-            <option value="">Selecciona una opción</option>
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
-        </div>
+          <div class="form-grupo">
+            <label>• Ciudad de residencia <span class="obligatorio">*</span></label>
+            <input type="text" name="ciudad" required>
+          </div>
 
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
 
-        <!-- ============= SECCIÓN 4 ============= -->
-        <div class="form-seccion-titulo">4. Validación / Selección</div>
-
-        <div class="form-grupo">
-          <label>• ¿Por qué consideras que deberías ser parte de este grupo seleccionado de profesionales? <span class="obligatorio">*</span></label>
-          <textarea name="motivacion" rows="4" required></textarea>
-        </div>
-
-
-        <!-- ============= SECCIÓN 5 ============= -->
-        <div class="form-seccion-titulo">5. Cierre</div>
-
-        <div class="form-grupo">
-          <label>• ¿Estarías disponible para asistir presencialmente en Medellín del 15 al 18 de octubre de 2026 durante los días del evento? <span class="obligatorio">*</span></label>
-          <select name="disponibilidad" required>
-            <option value="">Selecciona una opción</option>
-            <option value="si">Sí</option>
-            <option value="no">No</option>
-          </select>
-        </div>
-
-
-        <!-- ============= ACEPTACIONES ============= -->
-        <div class="form-aceptacion">
-          • Autorizo de manera previa, expresa e informada a los organizadores
-          de Feria EFFIX para recolectar, almacenar y tratar mis datos personales
-          con la finalidad de gestionar mi participación en la Zona Traffickers,
-          compartir información relacionada con el evento, validar mi perfil
-          profesional y contactarme por los canales suministrados.
-          Declaro que conozco que mis datos serán tratados conforme a la normativa
-          colombiana vigente de protección de datos personales y la política de
-          tratamiento de datos del evento.
-          <label class="acepto">
-            <input type="checkbox" name="acepto-datos" required>
-            Acepto la autorización de tratamiento de datos personales
-          </label>
-        </div>
-
-        <div class="form-aceptacion">
-          • Autorizo a los organizadores de Feria EFFIX a utilizar mi nombre,
-          usuario de redes sociales e imagen con fines informativos, promocionales
-          o de visibilidad dentro del directorio de profesionales, comunicaciones
-          del evento y piezas relacionadas con la Zona Traffickers.
-          <label class="acepto">
-            <input type="checkbox" name="acepto-imagen" required>
-            Autorizo el uso de mi imagen y datos con fines informativos del evento.
-          </label>
         </div>
 
 
-        <!-- ============= SUBMIT ============= -->
-        <div class="form-submit">
-          <button type="submit">ENVIAR</button>
+        <!-- ============= PASO 2 ============= -->
+        <div class="form-paso" data-paso="2" data-nombre="Perfil profesional">
+
+          <div class="form-seccion-titulo">2. Perfil profesional y experiencia</div>
+
+          <div class="form-grupo">
+            <label>• ¿Cuánto tiempo de experiencia tienes en pauta digital? <span class="obligatorio">*</span></label>
+            <select name="experiencia" required>
+              <option value="">Selecciona una opción</option>
+              <option value="0-6">0 a 6 meses</option>
+              <option value="6-12">6 a 12 meses</option>
+              <option value="12-24">12 a 24 meses</option>
+              <option value="mas-24">Más de 24 meses</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿Cuál es tu modelo actual de operación en pauta digital? <span class="obligatorio">*</span></label>
+            <select name="modelo" required>
+              <option value="">Selecciona una opción</option>
+              <option value="independiente">Independiente (manejo mis propios clientes)</option>
+              <option value="agencia">Parte de una agencia</option>
+              <option value="inhouse">In-house (trabajo directamente para una marca)</option>
+              <option value="hibrido">Modelo híbrido (combino varias de las anteriores)</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label>• Nombre de tu marca personal, agencia o empresa</label>
+            <input type="text" name="empresa">
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿En qué plataformas manejas pauta actualmente?</label>
+            <div class="checkboxes">
+              <label><input type="checkbox" name="plataformas[]" value="meta"> Meta Ads (Facebook / Instagram)</label>
+              <label><input type="checkbox" name="plataformas[]" value="google"> Google Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="tiktok"> TikTok Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="youtube"> YouTube Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="linkedin"> LinkedIn Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="programatica"> Publicidad programática (compra de anuncios en múltiples sitios web y apps)</label>
+              <label><input type="checkbox" name="plataformas[]" value="otras"> Otras</label>
+            </div>
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿En qué países has ejecutado campañas?</label>
+            <input type="text" name="paises-campanas">
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿En qué tipo de negocio tienes mayor experiencia gestionando pauta digital? <span class="obligatorio">*</span></label>
+            <select name="tipo-negocio" required>
+              <option value="">Selecciona una opción</option>
+              <option value="ecommerce">Ecommerce (productos físicos)</option>
+              <option value="infoproductos">Infoproductos / educación digital</option>
+              <option value="servicios">Servicios (coaches, consultores, agencias)</option>
+              <option value="marca-personal">Marca personal</option>
+              <option value="inmobiliario">Inmobiliario</option>
+              <option value="eventos">Eventos</option>
+              <option value="salud">Salud y bienestar (clínicas, estética, fitness)</option>
+              <option value="educacion">Educación (instituciones, academias)</option>
+              <option value="gastronomico">Gastronómico</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 3 ============= -->
+        <div class="form-paso" data-paso="3" data-nombre="Afinidad con el evento">
+
+          <div class="form-seccion-titulo">3. Afinidad con el evento</div>
+
+          <div class="form-grupo">
+            <label>• ¿Has asistido antes a la Feria EFFIX? <span class="obligatorio">*</span></label>
+            <select name="asistencia-previa" required>
+              <option value="">Selecciona una opción</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 4 ============= -->
+        <div class="form-paso" data-paso="4" data-nombre="Validación">
+
+          <div class="form-seccion-titulo">4. Validación / Selección</div>
+
+          <div class="form-grupo">
+            <label>• ¿Por qué consideras que deberías ser parte de este grupo seleccionado de profesionales? <span class="obligatorio">*</span></label>
+            <textarea name="motivacion" rows="6" required></textarea>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 5 ============= -->
+        <div class="form-paso" data-paso="5" data-nombre="Cierre">
+
+          <div class="form-seccion-titulo">5. Cierre</div>
+
+          <div class="form-grupo">
+            <label>• ¿Estarías disponible para asistir presencialmente en Medellín del 15 al 18 de octubre de 2026 durante los días del evento? <span class="obligatorio">*</span></label>
+            <select name="disponibilidad" required>
+              <option value="">Selecciona una opción</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="form-aceptacion">
+            • Autorizo de manera previa, expresa e informada a los organizadores
+            de Feria EFFIX para recolectar, almacenar y tratar mis datos personales
+            con la finalidad de gestionar mi participación en la Zona Traffickers,
+            compartir información relacionada con el evento, validar mi perfil
+            profesional y contactarme por los canales suministrados.
+            Declaro que conozco que mis datos serán tratados conforme a la normativa
+            colombiana vigente de protección de datos personales y la política de
+            tratamiento de datos del evento.
+            <label class="acepto">
+              <input type="checkbox" name="acepto-datos" required>
+              Acepto la autorización de tratamiento de datos personales
+            </label>
+          </div>
+
+          <div class="form-aceptacion">
+            • Autorizo a los organizadores de Feria EFFIX a utilizar mi nombre,
+            usuario de redes sociales e imagen con fines informativos, promocionales
+            o de visibilidad dentro del directorio de profesionales, comunicaciones
+            del evento y piezas relacionadas con la Zona Traffickers.
+            <label class="acepto">
+              <input type="checkbox" name="acepto-imagen" required>
+              Autorizo el uso de mi imagen y datos con fines informativos del evento.
+            </label>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="submit" class="btn-form btn-enviar">ENVIAR POSTULACIÓN</button>
+          </div>
+
         </div>
 
       </form>
@@ -1448,6 +1694,94 @@
     </p>
   </div>
 </footer>
+
+<script>
+(function () {
+  const form = document.getElementById('form-traffickers');
+  if (!form) return;
+
+  const pasos = form.querySelectorAll('.form-paso');
+  const totalPasos = pasos.length;
+  const pasoActualEl = document.getElementById('paso-actual');
+  const pasoNombreEl = document.getElementById('paso-nombre');
+  const progresoFill = document.getElementById('progreso-fill');
+  let pasoActual = 1;
+
+  function mostrarPaso(num) {
+    pasos.forEach(function (p) {
+      p.classList.toggle('activo', parseInt(p.dataset.paso, 10) === num);
+    });
+    if (pasoActualEl) pasoActualEl.textContent = num;
+    const pasoEl = form.querySelector('.form-paso[data-paso="' + num + '"]');
+    if (pasoEl && pasoNombreEl) pasoNombreEl.textContent = pasoEl.dataset.nombre;
+    if (progresoFill) progresoFill.style.width = (num / totalPasos * 100) + '%';
+
+    const wrapper = form.closest('.formulario-wrapper');
+    if (wrapper) {
+      const top = wrapper.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  }
+
+  function validarPaso(num) {
+    const paso = form.querySelector('.form-paso[data-paso="' + num + '"]');
+    if (!paso) return true;
+    const requeridos = paso.querySelectorAll('[required]');
+    let valido = true;
+    let primerInvalido = null;
+
+    requeridos.forEach(function (campo) {
+      campo.classList.remove('invalido');
+      if (!campo.checkValidity()) {
+        campo.classList.add('invalido');
+        valido = false;
+        if (!primerInvalido) primerInvalido = campo;
+      }
+    });
+
+    if (!valido && primerInvalido) {
+      primerInvalido.focus({ preventScroll: false });
+      if (typeof primerInvalido.reportValidity === 'function') {
+        primerInvalido.reportValidity();
+      }
+    }
+    return valido;
+  }
+
+  form.addEventListener('click', function (e) {
+    const target = e.target.closest('button');
+    if (!target) return;
+
+    if (target.classList.contains('btn-continuar')) {
+      e.preventDefault();
+      if (validarPaso(pasoActual) && pasoActual < totalPasos) {
+        pasoActual++;
+        mostrarPaso(pasoActual);
+      }
+    } else if (target.classList.contains('btn-atras')) {
+      e.preventDefault();
+      if (pasoActual > 1) {
+        pasoActual--;
+        mostrarPaso(pasoActual);
+      }
+    }
+  });
+
+  form.addEventListener('input', function (e) {
+    if (e.target.classList && e.target.classList.contains('invalido')) {
+      if (e.target.checkValidity()) e.target.classList.remove('invalido');
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    if (!validarPaso(pasoActual)) {
+      e.preventDefault();
+    }
+  });
+
+  mostrarPaso(1);
+})();
+</script>
 
 </body>
 </html>
