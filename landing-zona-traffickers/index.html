@@ -216,7 +216,25 @@
     color: rgba(255,255,255,0.75);
   }
 
-  /* ============= VIDEO (formato vertical 9:16) ============= */
+  /* ============= VIDEO · embed de Instagram ============= */
+  .ig-embed-wrapper {
+    max-width: 480px;
+    width: 100%;
+    margin: 40px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    background: #fff;
+  }
+
+  .ig-embed-wrapper iframe {
+    display: block;
+    width: 100%;
+    min-height: 730px;
+    border: none;
+  }
+
+  /* Estilos heredados del video local (por si en el futuro se vuelve a usar) */
   .video-wrapper {
     max-width: 360px;
     width: 100%;
@@ -830,24 +848,19 @@
     </p>
 
     <!--
-      ===== INSTRUCCIÓN PARA MELISA =====
-      Cuando se monte la landing en el dominio oficial:
-      1. Subir el archivo "video-juan-zona-traffickers.mp4" a la biblioteca de
-         medios de WordPress.
-      2. Reemplazar el src del <source> abajo por la URL pública del video
-         (ej: https://feriaeffix.com/wp-content/uploads/2026/05/...mp4).
-
-      Para revisar localmente esta landing, el video debe estar en la misma
-      carpeta que este HTML con el nombre "video-juan-zona-traffickers.mp4".
-      El video es formato vertical 9:16 (reel de Instagram).
+      Reel oficial de Feria EFFIX presentando la Zona Traffickers.
+      Embedido directamente desde Instagram para que siempre esté actualizado
+      sin necesidad de hospedar el archivo en el servidor.
+      URL pública del reel: https://www.instagram.com/p/DX0HDHLO8p4/
     -->
-    <div class="video-wrapper">
-      <video controls preload="metadata" playsinline
-             poster="https://feriaeffix.com/wp-content/uploads/2026/04/trafickers-feria-effix.webp">
-        <source src="./video-juan-zona-traffickers.mp4" type="video/mp4">
-        Tu navegador no soporta este video. Puedes verlo en
-        <a href="https://www.instagram.com/feriaeffix/" target="_blank">@feriaeffix</a>.
-      </video>
+    <div class="ig-embed-wrapper">
+      <iframe src="https://www.instagram.com/p/DX0HDHLO8p4/embed/"
+              width="100%"
+              height="730"
+              frameborder="0"
+              scrolling="no"
+              allowtransparency="true"
+              allowfullscreen></iframe>
     </div>
 
     <p class="video-pie">Juan Carmona · Gerente de Feria EFFIX</p>
