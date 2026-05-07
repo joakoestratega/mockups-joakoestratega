@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zona Traffickers · Feria EFFIX 2026</title>
+<meta name="description" content="Zona Traffickers es el espacio dentro de Feria EFFIX 2026 dedicado a traffickers y estrategas digitales que mueven pauta en Latinoamérica. Postulación con revisión de perfil. 16 al 18 de octubre de 2026 en Plaza Mayor, Medellín, con acceso exclusivo al evento de inauguración el 15 de octubre.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --azul-profundo: #194D7E;
+    --azul-medio: #4286C6;
+    --azul-noche: #263164;
+    --gris-violeta: #73708E;
+    --gris-violeta-hover: #595672;
+    --negro: #0d0d0d;
+    --blanco: #FFFFFF;
+    --gris-suave: #f5f6f8;
+    --gris-borde: #e6e7e9;
+    --texto: #2b2b2a;
+    --texto-suave: #5f5e5a;
+    --textura-oscura: url("https://feriaeffix.com/wp-content/uploads/2025/08/black-18-scaled.webp");
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: var(--texto);
+    line-height: 1.5;
+    background: var(--blanco);
+    padding-top: 64px;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  /* ============= UTILIDADES ============= */
+  .wrapper { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
+  .text-center { text-align: center; }
+
+  .seccion-clara, .seccion-gris, .seccion-textura {
+    padding: 90px 20px;
+  }
+
+  .seccion-clara { background: var(--blanco); color: var(--texto); }
+  .seccion-gris { background: var(--gris-suave); color: var(--texto); }
+
+  .seccion-textura {
+    background-color: var(--negro);
+    background-image: var(--textura-oscura);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--blanco);
+  }
+
+  /* ============= TIPOGRAFÍA ============= */
+  h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+
+  h1.hero-titulo {
+    font-size: clamp(40px, 7vw, 80px);
+    color: var(--blanco);
+    text-align: center;
+    margin-bottom: 16px;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  }
+
+  h2.titulo-seccion {
+    font-size: clamp(30px, 5vw, 50px);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  h2.titulo-blanco { color: var(--blanco); }
+
+  .lead {
+    font-size: clamp(17px, 1.8vw, 22px);
+    font-weight: 400;
+    line-height: 1.55;
+    margin: 0 auto 16px;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .lead-blanco { color: rgba(255,255,255,0.92); }
+
+  /* ============= STICKY CTA BAR ============= */
+  .cta-fijo {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #73708E;
+    z-index: 9999;
+    padding: 10px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+  .cta-fijo-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 20px;
+  }
+  .cta-fijo-info {
+    color: var(--blanco);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+  .cta-fijo-info strong { font-weight: 900; letter-spacing: 0.5px; }
+  .cta-fijo .btn-fijo {
+    background: var(--blanco);
+    color: #73708E !important;
+    font-weight: 900;
+    font-size: 14px;
+    padding: 10px 28px;
+    border-radius: 100px;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .cta-fijo .btn-fijo:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 600px) {
+    body { padding-top: 56px; }
+    .cta-fijo { padding: 8px 16px; }
+    .cta-fijo-info { font-size: 12px; }
+    .cta-fijo-info .ocultar-mobile { display: none; }
+    .cta-fijo .btn-fijo { font-size: 12px; padding: 8px 18px; }
+  }
+
+  /* ============= BOTONES ============= */
+  .btn {
+    display: inline-block;
+    background: #73708E;
+    color: var(--blanco) !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 22px;
+    padding: 18px 60px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+  }
+  .btn:hover { background: var(--gris-violeta-hover); transform: translateY(-2px); }
+  .btn-grande { padding: 22px 90px; font-size: 24px; }
+
+  /* ============= HERO ============= */
+  .hero {
+    background-color: var(--negro);
+    background-image: var(--textura-oscura);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--blanco);
+    padding: 70px 20px 90px;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    pointer-events: none;
+  }
+
+  .hero > * { position: relative; z-index: 1; }
+
+  .hero-banner {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 720px;
+    margin: 0 auto 36px;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+  }
+
+  .hero p.lead { color: var(--blanco); }
+
+  .hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 32px auto;
+    max-width: 800px;
+  }
+
+  .hero-tag {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--blanco);
+    padding: 10px 20px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .hero-aviso {
+    margin-top: 24px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  /* ============= VIDEO · embed de Instagram ============= */
+  .ig-embed-wrapper {
+    max-width: 480px;
+    width: 100%;
+    margin: 40px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    background: #fff;
+  }
+
+  .ig-embed-wrapper iframe {
+    display: block;
+    width: 100%;
+    min-height: 730px;
+    border: none;
+  }
+
+  /* Estilos heredados del video local (por si en el futuro se vuelve a usar) */
+  .video-wrapper {
+    max-width: 360px;
+    width: 100%;
+    margin: 40px auto 0;
+    aspect-ratio: 9/16;
+    background: #000;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.18);
+    border: 4px solid var(--blanco);
+  }
+
+  .video-wrapper video,
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+    display: block;
+  }
+
+  .video-pie {
+    text-align: center;
+    color: var(--azul-profundo);
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  /* ============= QUÉ ES ============= */
+  .que-es-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+  }
+
+  .que-es-bloque {
+    background: var(--blanco);
+    padding: 36px;
+    border-radius: 20px;
+    border-left: 6px solid var(--azul-medio);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .que-es-bloque:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  }
+
+  .que-es-bloque h3 {
+    color: var(--azul-profundo);
+    font-size: clamp(22px, 2.5vw, 26px);
+    margin-bottom: 14px;
+  }
+
+  .que-es-bloque p {
+    font-size: 16px;
+    color: var(--texto);
+    line-height: 1.65;
+  }
+
+  /* ============= QUÉ INCLUYE ============= */
+  .beneficio-destacado {
+    max-width: 1000px;
+    margin: 50px auto 30px;
+    background: var(--azul-profundo);
+    color: var(--blanco);
+    padding: 40px;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    position: relative;
+  }
+
+  .badge-exclusivo {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: var(--blanco);
+    color: var(--azul-profundo);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    z-index: 2;
+  }
+
+  .beneficio-destacado-icono {
+    flex-shrink: 0;
+    width: 100px; height: 100px;
+    background: rgba(255,255,255,0.18);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+
+  .beneficio-destacado h3 {
+    font-size: clamp(22px, 3vw, 28px);
+    color: var(--blanco);
+    margin-bottom: 8px;
+  }
+
+  .beneficio-destacado p {
+    font-size: 16px;
+    color: rgba(255,255,255,0.92);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin: 30px auto 0;
+    max-width: 1000px;
+  }
+
+  .beneficio {
+    background: var(--blanco);
+    padding: 30px 28px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--azul-medio);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .beneficio:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+  }
+
+  .beneficio-num {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    background: var(--azul-profundo);
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 22px;
+  }
+
+  .beneficio-texto h3 {
+    font-size: 19px;
+    color: var(--azul-profundo);
+    margin-bottom: 6px;
+  }
+
+  .beneficio-texto p {
+    font-size: 15px;
+    color: var(--texto-suave);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* ============= PROCESO ============= */
+  .proceso-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 50px auto 0;
+    max-width: 1100px;
+  }
+
+  .proceso-paso {
+    background: rgba(255,255,255,0.07);
+    padding: 32px 24px;
+    border-radius: 20px;
+    text-align: center;
+    border-top: 4px solid var(--azul-medio);
+  }
+
+  .proceso-paso .num {
+    display: inline-block;
+    width: 60px; height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: var(--blanco);
+    color: var(--azul-profundo);
+    font-weight: 900;
+    font-size: 26px;
+    margin-bottom: 18px;
+  }
+
+  .proceso-paso h3 {
+    font-size: 18px;
+    color: var(--blanco);
+    margin-bottom: 10px;
+  }
+
+  .proceso-paso p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+  }
+
+  /* ============= QUÉ EVALUAMOS (CARDS VISUALES) ============= */
+  .evaluamos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1000px;
+    margin: 50px auto 0;
+  }
+
+  .evaluamos-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 36px 30px;
+    position: relative;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    border: 1px solid var(--gris-borde);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+  }
+
+  .evaluamos-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  }
+
+  .evaluamos-card .marca {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    color: rgba(25, 77, 126, 0.08);
+    line-height: 1;
+    position: absolute;
+    top: 10px; right: 20px;
+  }
+
+  .evaluamos-card h3 {
+    font-size: 19px;
+    color: var(--azul-profundo);
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .evaluamos-card p {
+    font-size: 15px;
+    color: var(--texto);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+
+  .evaluamos-aviso {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+    padding: 28px 32px;
+    border-radius: 18px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .evaluamos-aviso strong { font-weight: 900; }
+
+  /* ============= FAQ ============= */
+  .faq-wrapper {
+    max-width: 800px;
+    margin: 50px auto 0;
+  }
+
+  .faq-item {
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 14px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease;
+  }
+
+  .faq-item:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+
+  .faq-item[open] {
+    border-color: var(--azul-medio);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .faq-pregunta {
+    padding: 22px 26px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--azul-profundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    list-style: none;
+  }
+
+  .faq-pregunta::-webkit-details-marker { display: none; }
+
+  .faq-pregunta:after {
+    content: "+";
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--azul-medio);
+    transition: transform 0.3s ease;
+    margin-left: 16px;
+    flex-shrink: 0;
+  }
+
+  .faq-item[open] .faq-pregunta:after { transform: rotate(45deg); }
+
+  .faq-respuesta {
+    padding: 0 26px 26px;
+    font-size: 15px;
+    color: var(--texto-suave);
+    line-height: 1.65;
+  }
+
+  /* ============= CTA FINAL + FORMULARIO ============= */
+  .cta-final {
+    background-color: var(--negro);
+    background-image: var(--textura-oscura);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--blanco);
+    padding: 90px 20px;
+    position: relative;
+  }
+
+  .cta-final::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    pointer-events: none;
+  }
+
+  .cta-final > * { position: relative; z-index: 1; }
+
+  .cta-final h2 { color: var(--blanco); margin-bottom: 24px; text-align: center; }
+  .cta-final .lead { color: rgba(255,255,255,0.9); }
+
+  /* ============= FORMULARIO ============= */
+  .formulario-wrapper {
+    background: var(--blanco);
+    max-width: 820px;
+    margin: 50px auto 0;
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    color: var(--texto);
+  }
+
+  .formulario-wrapper h3.form-titulo {
+    text-align: center;
+    color: var(--negro);
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+
+  .form-seccion-titulo {
+    color: var(--azul-profundo);
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 30px 0 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--azul-medio);
+  }
+  .form-seccion-titulo:first-child { margin-top: 0; }
+
+  .form-grupo {
+    margin-bottom: 22px;
+  }
+
+  .form-grupo label {
+    display: block;
+    color: var(--negro);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .form-grupo .obligatorio { color: #c00; font-weight: 700; }
+
+  .form-grupo input[type="text"],
+  .form-grupo input[type="tel"],
+  .form-grupo input[type="email"],
+  .form-grupo select,
+  .form-grupo textarea {
+    width: 100%;
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 25px;
+    padding: 14px 22px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: var(--texto);
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .form-grupo input:focus,
+  .form-grupo select:focus,
+  .form-grupo textarea:focus {
+    border-color: var(--azul-medio);
+    box-shadow: 0 0 0 3px rgba(66,134,198,0.15);
+  }
+
+  .form-grupo textarea {
+    resize: vertical;
+    min-height: 90px;
+    border-radius: 18px;
+  }
+
+  .form-grupo select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23194D7E'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 18px;
+    padding-right: 50px;
+  }
+
+  .form-grupo .checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .form-grupo .checkboxes label {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--texto);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+    line-height: 1.4;
+  }
+
+  .form-grupo .checkboxes input[type="checkbox"] {
+    margin-top: 3px;
+    width: 16px; height: 16px;
+    accent-color: var(--azul-profundo);
+    flex-shrink: 0;
+  }
+
+  .form-aceptacion {
+    background: var(--gris-suave);
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    font-size: 12.5px;
+    color: var(--texto-suave);
+    line-height: 1.55;
+  }
+
+  .form-aceptacion label.acepto {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 12px;
+    font-weight: 700;
+    color: var(--negro);
+    font-size: 13.5px;
+    cursor: pointer;
+  }
+
+  .form-aceptacion input[type="checkbox"] {
+    margin-top: 2px;
+    width: 16px; height: 16px;
+    accent-color: var(--azul-profundo);
+    flex-shrink: 0;
+  }
+
+  .form-submit {
+    margin-top: 24px;
+    text-align: center;
+  }
+
+  .form-submit button {
+    background: #73708E;
+    color: var(--blanco);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    border: none;
+    border-radius: 25px;
+    padding: 16px 80px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .form-submit button:hover {
+    background: var(--gris-violeta-hover);
+    transform: translateY(-2px);
+  }
+
+  /* ============= WIZARD: barra de progreso, pasos, navegación ============= */
+  .form-progreso {
+    background: var(--gris-suave);
+    padding: 18px 22px;
+    border-radius: 14px;
+    margin-bottom: 30px;
+  }
+
+  .form-progreso-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .form-progreso-info > span:first-child {
+    font-size: 13px;
+    color: var(--azul-profundo);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+  }
+
+  .form-progreso-info > span:first-child strong { font-weight: 900; }
+
+  .form-progreso-info > span:last-child {
+    font-size: 11px;
+    color: var(--texto-suave);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: right;
+  }
+
+  .form-progreso-barra {
+    height: 6px;
+    background: var(--blanco);
+    border-radius: 100px;
+    overflow: hidden;
+    border: 1px solid var(--gris-borde);
+  }
+
+  .form-progreso-fill {
+    height: 100%;
+    background: var(--azul-medio);
+    border-radius: 100px;
+    width: 20%;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .form-paso { display: none; }
+
+  .form-paso.activo {
+    display: block;
+    animation: fadeInPaso 0.35s ease;
+  }
+
+  @keyframes fadeInPaso {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .form-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gris-borde);
+  }
+
+  .form-nav .btn-continuar,
+  .form-nav .btn-enviar { margin-left: auto; }
+
+  .btn-form {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 14px 36px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-continuar {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+  }
+  .btn-continuar:hover {
+    background: var(--azul-noche);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(25,77,126,0.25);
+  }
+
+  .btn-atras {
+    background: transparent;
+    color: var(--texto-suave);
+    border: 2px solid var(--gris-borde);
+  }
+  .btn-atras:hover {
+    background: var(--gris-suave);
+    color: var(--negro);
+    border-color: var(--azul-medio);
+  }
+
+  .btn-enviar {
+    background: #73708E;
+    color: var(--blanco);
+    font-size: 17px;
+    padding: 16px 40px;
+  }
+  .btn-enviar:hover {
+    background: var(--gris-violeta-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(115,112,142,0.35);
+  }
+
+  /* Campo inválido (lo aplica el JS al hacer Continuar) */
+  .form-grupo input.invalido,
+  .form-grupo select.invalido,
+  .form-grupo textarea.invalido {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.15);
+  }
+
+  /* ============= PIE ============= */
+  .pie {
+    background: var(--negro);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 50px 20px;
+    font-size: 14px;
+  }
+
+  .pie strong { color: var(--blanco); }
+
+  /* ============= RESPONSIVE ============= */
+  @media (max-width: 900px) {
+    .beneficios-grid { grid-template-columns: 1fr; }
+    .proceso-grid { grid-template-columns: repeat(2, 1fr); }
+    .evaluamos-grid { grid-template-columns: 1fr; }
+    .seccion-clara, .seccion-gris, .seccion-textura { padding: 70px 20px; }
+    .beneficio-destacado { flex-direction: column; text-align: center; gap: 18px; }
+    .btn { font-size: 18px; padding: 16px 40px; }
+    .btn-grande { padding: 20px 60px; font-size: 20px; }
+    .formulario-wrapper { padding: 40px 28px; }
+    .hero { padding: 60px 20px 80px; }
+    .hero-banner { max-width: 480px; margin-bottom: 28px; }
+  }
+
+  @media (max-width: 600px) {
+    .proceso-grid { grid-template-columns: 1fr; }
+    .seccion-clara, .seccion-gris, .seccion-textura { padding: 60px 16px; }
+    .que-es-bloque { padding: 28px; }
+    .evaluamos-card { padding: 28px 22px; }
+    .beneficio-destacado { padding: 30px 22px; }
+    .badge-exclusivo { font-size: 10px; padding: 5px 12px; }
+    .formulario-wrapper { padding: 32px 20px; }
+    .form-submit button { font-size: 18px; padding: 14px 50px; width: 100%; }
+
+    /* Hero ajustado para móvil */
+    .hero { padding: 40px 16px 60px; }
+    .hero-banner { max-width: 280px; margin-bottom: 20px; }
+    .hero-titulo { font-size: 36px; margin-bottom: 12px; }
+    .hero-tags { gap: 8px; margin: 24px auto; }
+    .hero-tag { font-size: 12px; padding: 7px 14px; }
+    .hero-aviso { font-size: 13px; margin-top: 18px; }
+
+    /* Tipografía general más compacta */
+    .lead { font-size: 16px; line-height: 1.5; }
+    h2.titulo-seccion { font-size: 26px; }
+
+    /* Botón principal cabe en pantalla angosta */
+    .btn-grande { padding: 16px 40px; font-size: 17px; }
+
+    /* Embed de Instagram más bajo en móviles muy pequeños */
+    .ig-embed-wrapper { max-width: 100%; border-radius: 12px; }
+    .ig-embed-wrapper iframe { min-height: 700px; }
+
+    /* Wrapper general con menos padding lateral */
+    .wrapper { padding: 0 16px; }
+
+    /* Que-es-bloque más compacto */
+    .que-es-bloque h3 { font-size: 20px; }
+    .que-es-bloque p { font-size: 15px; }
+
+    /* Beneficio destacado en columna ya está, ajustar tipos */
+    .beneficio-destacado h3 { font-size: 22px; }
+    .beneficio-destacado p { font-size: 15px; }
+    .beneficio-destacado-icono { width: 80px; height: 80px; font-size: 38px; }
+
+    /* Beneficio en mobile - más compacto */
+    .beneficio { padding: 24px 22px; gap: 16px; flex-direction: row; text-align: left; }
+    .beneficio-num { width: 48px; height: 48px; font-size: 18px; }
+    .beneficio-texto h3 { font-size: 17px; }
+    .beneficio-texto p { font-size: 14px; }
+
+    /* Proceso en mobile más compacto */
+    .proceso-paso { padding: 24px 20px; }
+
+    /* Evaluamos */
+    .evaluamos-card .marca { font-size: 70px; }
+
+    /* FAQ más compacto */
+    .faq-pregunta { font-size: 15px; padding: 18px 20px; }
+    .faq-respuesta { padding: 0 20px 22px; font-size: 14px; }
+
+    /* Formulario más compacto */
+    .form-titulo { font-size: 18px !important; }
+    .form-seccion-titulo { font-size: 13px; }
+    .form-grupo label { font-size: 14px; }
+    .form-grupo input,
+    .form-grupo select,
+    .form-grupo textarea { font-size: 14px; padding: 12px 18px; }
+
+    /* CTA bar más compacto */
+    .cta-fijo .btn-fijo { font-size: 11px; padding: 7px 14px; }
+
+    /* Wizard responsive */
+    .form-progreso { padding: 14px 16px; }
+    .form-progreso-info > span:last-child { font-size: 10px; }
+    .form-nav { flex-direction: column-reverse; gap: 10px; }
+    .form-nav .btn-form { width: 100%; padding: 14px 24px; font-size: 15px; }
+    .form-nav .btn-continuar,
+    .form-nav .btn-enviar { margin-left: 0; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- =========================================
+     STICKY CTA BAR
+     ========================================= -->
+<header class="cta-fijo">
+  <div class="cta-fijo-inner">
+    <div class="cta-fijo-info">
+      <strong>ZONA TRAFFICKERS</strong>
+      <span class="ocultar-mobile"> · 16 al 18 de octubre · Plaza Mayor, Medellín</span>
+    </div>
+    <a href="#postular" class="btn-fijo">POSTULARME</a>
+  </div>
+</header>
+
+<!-- =========================================
+     HERO
+     ========================================= -->
+<section class="hero">
+  <div class="wrapper">
+
+    <img class="hero-banner"
+         src="https://feriaeffix.com/wp-content/uploads/2026/04/trafickers-feria-effix.webp"
+         alt="Zona Traffickers · Feria EFFIX 2026">
+
+    <h1 class="hero-titulo">ZONA TRAFFICKERS</h1>
+
+    <p class="lead">
+      El espacio dentro de Feria EFFIX 2026 dedicado a quienes mueven pauta digital
+      en Latinoamérica.
+    </p>
+
+    <div class="hero-tags">
+      <span class="hero-tag">📍 Plaza Mayor · Medellín</span>
+      <span class="hero-tag">🗓️ 16 al 18 de octubre 2026</span>
+      <span class="hero-tag">⭐ Inauguración exclusiva el 15 de octubre</span>
+    </div>
+
+    <a href="#postular" class="btn btn-grande">POSTULARME</a>
+
+    <p class="hero-aviso">
+      Cupos limitados. Cada postulación pasa por proceso de revisión.
+    </p>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     VIDEO DEL CEO (formato vertical 9:16)
+     ========================================= -->
+<section class="seccion-clara">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion">ESCUCHA AL CEO DE FERIA EFFIX</h2>
+    <p class="lead">
+      Juan Carmona presenta la Zona Traffickers, qué es y por qué la abrimos
+      en la edición 2026.
+    </p>
+
+    <!--
+      Reel oficial de Feria EFFIX presentando la Zona Traffickers.
+      Embedido directamente desde Instagram para que siempre esté actualizado
+      sin necesidad de hospedar el archivo en el servidor.
+      URL pública del reel: https://www.instagram.com/p/DX0HDHLO8p4/
+    -->
+    <div class="ig-embed-wrapper">
+      <iframe src="https://www.instagram.com/p/DX0HDHLO8p4/embed/"
+              width="100%"
+              height="730"
+              frameborder="0"
+              scrolling="no"
+              allowtransparency="true"
+              allowfullscreen></iframe>
+    </div>
+
+    <p class="video-pie">Juan Carmona · Gerente de Feria EFFIX</p>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     QUÉ ES
+     ========================================= -->
+<section class="seccion-gris">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion">QUÉ ES LA ZONA TRAFFICKERS</h2>
+
+    <p class="lead">
+      La zona nueva de Feria EFFIX 2026 para reunir, identificar y visibilizar a
+      traffickers y estrategas que mueven pauta digital en Latinoamérica.
+    </p>
+
+    <div class="que-es-grid">
+
+      <div class="que-es-bloque">
+        <h3>A quién va dirigida</h3>
+        <p>
+          Trabajas en agencia, eres freelance o tienes tus propios clientes. Manejas
+          Meta Ads, Google Ads, TikTok Ads, performance media, paid social, email
+          marketing o influencer marketing. Sin importar cuántos años llevas: lo
+          importante es que tu profesión sea esa y que tu cuenta de Instagram,
+          LinkedIn o cualquier red profesional muestre publicaciones, casos,
+          resultados o conversaciones donde se vea con claridad que sí trabajas
+          con pauta digital.
+        </p>
+      </div>
+
+      <div class="que-es-bloque">
+        <h3>Por qué nace</h3>
+        <p>
+          Hoy se dice que la inteligencia artificial reemplaza al trafficker. La
+          realidad es que la IA sin estrategia detrás no convierte. La Zona
+          Traffickers existe para visibilizar y agrupar a quienes hacen bien este
+          trabajo dentro de la feria de comercio electrónico más grande del mundo.
+        </p>
+      </div>
+
+      <div class="que-es-bloque">
+        <h3>Qué la hace distinta</h3>
+        <p>
+          Por primera vez en seis ediciones, Feria EFFIX abre una zona pensada
+          específicamente para los profesionales de la pauta. Tu identificación
+          dentro del evento te ubica frente a las marcas y negocios que asisten
+          buscando con quién pautar.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     QUÉ INCLUYE
+     ========================================= -->
+<section class="seccion-clara">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion">QUÉ INCLUYE PARA QUIENES PASAN EL PROCESO</h2>
+
+    <div class="beneficio-destacado">
+      <span class="badge-exclusivo">EXCLUSIVO</span>
+      <div class="beneficio-destacado-icono">⭐</div>
+      <div>
+        <h3>Evento de inauguración de la feria</h3>
+        <p>
+          Acceso al evento privado de inauguración el 15 de octubre, un día antes
+          de la apertura general. Este acceso no está incluido en las entradas
+          regulares y solo se otorga a perfiles seleccionados de la Zona Traffickers.
+        </p>
+      </div>
+    </div>
+
+    <div class="beneficios-grid">
+
+      <div class="beneficio">
+        <div class="beneficio-num">1</div>
+        <div class="beneficio-texto">
+          <h3>Acceso a los tres días de feria</h3>
+          <p>16, 17 y 18 de octubre de 2026 en Plaza Mayor, Medellín.</p>
+        </div>
+      </div>
+
+      <div class="beneficio">
+        <div class="beneficio-num">2</div>
+        <div class="beneficio-texto">
+          <h3>Identificación profesional</h3>
+          <p>Distintivo dentro del evento que te ubica como trafficker frente a
+            las marcas que asisten.</p>
+        </div>
+      </div>
+
+      <div class="beneficio">
+        <div class="beneficio-num">3</div>
+        <div class="beneficio-texto">
+          <h3>Dinámicas pensadas para traffickers</h3>
+          <p>Espacios y actividades diseñadas específicamente para profesionales
+            de la pauta digital.</p>
+        </div>
+      </div>
+
+      <div class="beneficio">
+        <div class="beneficio-num">4</div>
+        <div class="beneficio-texto">
+          <h3>Directorio del evento</h3>
+          <p>Tu perfil queda dentro del directorio profesional al que tienen
+            acceso asistentes y marcas.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     PROCESO
+     ========================================= -->
+<section class="seccion-textura">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion titulo-blanco">CÓMO ES EL PROCESO</h2>
+    <p class="lead lead-blanco">
+      Cuatro pasos. Tiempo estimado de respuesta: dos semanas desde tu postulación.
+    </p>
+
+    <div class="proceso-grid">
+
+      <div class="proceso-paso">
+        <div class="num">1</div>
+        <h3>POSTULAS</h3>
+        <p>Llenas el formulario al final de esta página. Toma menos de cinco minutos.</p>
+      </div>
+
+      <div class="proceso-paso">
+        <div class="num">2</div>
+        <h3>REVISAMOS</h3>
+        <p>Validamos que tu perfil profesional muestre evidencia de trabajo en
+          pauta digital.</p>
+      </div>
+
+      <div class="proceso-paso">
+        <div class="num">3</div>
+        <h3>CONFIRMAMOS</h3>
+        <p>Recibes la respuesta por mensaje directo en Instagram desde @feriaeffix.</p>
+      </div>
+
+      <div class="proceso-paso">
+        <div class="num">4</div>
+        <h3>COMUNIDAD</h3>
+        <p>Entras a la comunidad privada de la Zona Traffickers para coordinar
+          tu participación.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================================
+     QUÉ EVALUAMOS
+     ========================================= -->
+<section class="seccion-gris">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion">QUÉ EVALUAMOS</h2>
+    <p class="lead">
+      No buscamos años de experiencia ni un tipo de cliente específico. Buscamos
+      que tu trabajo en pauta digital sea verificable.
+    </p>
+
+    <div class="evaluamos-grid">
+
+      <div class="evaluamos-card">
+        <div class="marca">01</div>
+        <h3>Evidencia en redes profesionales</h3>
+        <p>
+          Tu perfil de Instagram, LinkedIn o redes equivalentes muestra
+          publicaciones, casos, resultados o conversaciones que dejan ver que sí
+          trabajas con pauta digital.
+        </p>
+      </div>
+
+      <div class="evaluamos-card">
+        <div class="marca">02</div>
+        <h3>Plataformas de pauta</h3>
+        <p>
+          Trabajas con Meta Ads, Google Ads, TikTok Ads o equivalentes. No importa
+          cuántas, no importa nivel: importa que sí formen parte de tu trabajo
+          real.
+        </p>
+      </div>
+
+      <div class="evaluamos-card">
+        <div class="marca">03</div>
+        <h3>Autoidentificación coherente</h3>
+        <p>
+          Te describes como trafficker, estratega digital o profesional de la
+          pauta, y el contenido público que tienes hoy respalda esa descripción.
+        </p>
+      </div>
+
+      <div class="evaluamos-card">
+        <div class="marca">04</div>
+        <h3>Aceptación de las reglas</h3>
+        <p>
+          Aceptas el proceso de revisión, los tiempos de respuesta y las reglas
+          de comunicación de la zona, todas a través del canal oficial de
+          Instagram de Feria EFFIX.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="evaluamos-aviso">
+      <strong>Sobre experiencia:</strong> aceptamos perfiles desde quienes apenas
+      están empezando con su primer cliente hasta profesionales con varios años
+      en el sector. Lo único que pedimos es evidencia pública de tu trabajo.
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     FAQ
+     ========================================= -->
+<section class="seccion-clara">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion">PREGUNTAS FRECUENTES</h2>
+
+    <div class="faq-wrapper">
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Quién puede postularse a la Zona Traffickers?</summary>
+        <div class="faq-respuesta">
+          Cualquier persona en Colombia o Latinoamérica que se dedique a la pauta
+          digital o a la estrategia de campañas, sin importar los años de
+          experiencia ni el tipo de cliente que maneje. Lo que evaluamos es la
+          evidencia pública de tu trabajo en redes profesionales.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Hasta cuándo puedo postularme?</summary>
+        <div class="faq-respuesta">
+          La convocatoria está abierta hasta agotar cupos. Los cupos son limitados
+          y el cierre se anuncia con anticipación en el Instagram oficial de
+          @feriaeffix.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿La Zona Traffickers tiene costo de inscripción?</summary>
+        <div class="faq-respuesta">
+          La postulación no tiene costo de inscripción. La selección depende del
+          proceso de revisión que aplicamos a cada perfil postulado.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Qué incluye exactamente el evento de inauguración del 15 de octubre?</summary>
+        <div class="faq-respuesta">
+          Es el evento privado de apertura de la feria, un día antes de la apertura
+          al público general. No está incluido en las entradas regulares y solo se
+          otorga a perfiles seleccionados de la Zona Traffickers. Los detalles de
+          agenda, hora y lugar se comparten dentro de la comunidad privada de
+          WhatsApp una vez tu postulación esté aprobada.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Qué pasa si mi perfil no es seleccionado?</summary>
+        <div class="faq-respuesta">
+          Recibirás un mensaje directo desde @feriaeffix informándote del resultado.
+          La inscripción a Feria EFFIX como público general sigue disponible a
+          través de los canales oficiales en feriaeffix.com.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Cómo me confirman si quedo dentro?</summary>
+        <div class="faq-respuesta">
+          Toda la comunicación se hace por mensaje directo en Instagram desde
+          @feriaeffix. Si tu perfil queda aprobado, recibirás el enlace a la
+          comunidad privada en WhatsApp donde compartimos logística, dinámicas y
+          actualizaciones previas al evento.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Es lo mismo postularme a la Zona Traffickers que ser ponente de Feria EFFIX?</summary>
+        <div class="faq-respuesta">
+          No. La Zona Traffickers es un espacio para asistir a la feria,
+          identificarte como trafficker dentro del evento y participar de las
+          dinámicas pensadas para profesionales de la pauta. Las convocatorias de
+          ponentes son canales independientes que se gestionan por separado.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Puedo postularme si vivo fuera de Colombia?</summary>
+        <div class="faq-respuesta">
+          Sí. La convocatoria está abierta a traffickers de toda Latinoamérica.
+          Ten presente que el evento se realiza en Plaza Mayor, Medellín, y los
+          costos de viaje y hospedaje son responsabilidad de cada asistente.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-pregunta">¿Qué pasa después de que envío el formulario?</summary>
+        <div class="faq-respuesta">
+          Recibirás una confirmación automática por mensaje directo de @feriaeffix
+          indicando que tu postulación fue recibida. El proceso de revisión toma
+          entre una y dos semanas. Cuando tu perfil esté evaluado, te respondemos
+          por el mismo medio con los siguientes pasos.
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     CTA FINAL + FORMULARIO COMPLETO
+     ========================================= -->
+<section class="cta-final" id="postular">
+  <div class="wrapper">
+
+    <h2 class="titulo-seccion titulo-blanco">POSTÚLATE A LA ZONA TRAFFICKERS</h2>
+
+    <p class="lead lead-blanco">
+      Llena el formulario con tu información profesional. Toma menos de cinco
+      minutos. Te respondemos por mensaje directo desde @feriaeffix una vez tu
+      perfil esté revisado.
+    </p>
+
+    <!--
+      ===== INSTRUCCIÓN PARA MELISA =====
+      Este formulario es una réplica visual del que ya está montado en
+      feriaeffix.com/traffickers/ (form ID acb757b en Elementor).
+
+      OPCIÓN A · Reemplazar este bloque <form> por el widget de Elementor que ya
+      tienes configurado, conservando toda su lógica, integraciones y validaciones.
+
+      OPCIÓN B · Mantener este HTML y configurar el atributo `action` del <form>
+      hacia el endpoint que prefieras. En ese caso, las validaciones de Elementor
+      no aplicarán y habría que reconectar las integraciones.
+
+      La OPCIÓN A es la recomendada. Este HTML solo está aquí para que la página
+      se vea completa en preview.
+    -->
+
+    <div class="formulario-wrapper">
+
+      <h3 class="form-titulo">FORMULARIO DE CONVOCATORIA TRAFFICKERS</h3>
+
+      <!-- Barra de progreso del wizard -->
+      <div class="form-progreso">
+        <div class="form-progreso-info">
+          <span>Paso <strong id="paso-actual">1</strong> de <strong>5</strong></span>
+          <span id="paso-nombre">Información básica</span>
+        </div>
+        <div class="form-progreso-barra">
+          <div class="form-progreso-fill" id="progreso-fill"></div>
+        </div>
+      </div>
+
+      <form name="Formulario Traffickers Feria Effix" method="post" action="" id="form-traffickers" novalidate>
+
+        <!-- ============= PASO 1 ============= -->
+        <div class="form-paso activo" data-paso="1" data-nombre="Información básica">
+
+          <div class="form-seccion-titulo">1. Información básica</div>
+
+          <div class="form-grupo">
+            <label>• Tu nombre completo <span class="obligatorio">*</span></label>
+            <input type="text" name="nombre" required>
+          </div>
+
+          <div class="form-grupo">
+            <label>• Número de contacto (WhatsApp) <span class="obligatorio">*</span></label>
+            <input type="tel" name="whatsapp" placeholder="Incluye código de país, ej: +57 300 000 0000" required>
+          </div>
+
+          <div class="form-grupo">
+            <label>• Usuario de Instagram <span class="obligatorio">*</span></label>
+            <input type="text" name="instagram" placeholder="Ej: @tuusuario" required>
+          </div>
+
+          <div class="form-grupo">
+            <label>• Correo electrónico <span class="obligatorio">*</span></label>
+            <input type="email" name="correo" required>
+          </div>
+
+          <div class="form-grupo">
+            <label>• País de residencia <span class="obligatorio">*</span></label>
+            <select name="pais" required>
+              <option value="">Selecciona una opción</option>
+              <option value="colombia">Colombia</option>
+              <option value="argentina">Argentina</option>
+              <option value="bolivia">Bolivia</option>
+              <option value="brasil">Brasil</option>
+              <option value="chile">Chile</option>
+              <option value="costa-rica">Costa Rica</option>
+              <option value="cuba">Cuba</option>
+              <option value="ecuador">Ecuador</option>
+              <option value="el-salvador">El Salvador</option>
+              <option value="espana">España</option>
+              <option value="estados-unidos">Estados Unidos</option>
+              <option value="guatemala">Guatemala</option>
+              <option value="honduras">Honduras</option>
+              <option value="mexico">México</option>
+              <option value="nicaragua">Nicaragua</option>
+              <option value="panama">Panamá</option>
+              <option value="paraguay">Paraguay</option>
+              <option value="peru">Perú</option>
+              <option value="puerto-rico">Puerto Rico</option>
+              <option value="republica-dominicana">República Dominicana</option>
+              <option value="uruguay">Uruguay</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label>• Ciudad de residencia <span class="obligatorio">*</span></label>
+            <input type="text" name="ciudad" required>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 2 ============= -->
+        <div class="form-paso" data-paso="2" data-nombre="Perfil profesional">
+
+          <div class="form-seccion-titulo">2. Perfil profesional y experiencia</div>
+
+          <div class="form-grupo">
+            <label>• ¿Cuánto tiempo de experiencia tienes en pauta digital? <span class="obligatorio">*</span></label>
+            <select name="experiencia" required>
+              <option value="">Selecciona una opción</option>
+              <option value="0-6">0 a 6 meses</option>
+              <option value="6-12">6 a 12 meses</option>
+              <option value="12-24">12 a 24 meses</option>
+              <option value="mas-24">Más de 24 meses</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿Cuál es tu modelo actual de operación en pauta digital? <span class="obligatorio">*</span></label>
+            <select name="modelo" required>
+              <option value="">Selecciona una opción</option>
+              <option value="independiente">Independiente (manejo mis propios clientes)</option>
+              <option value="agencia">Parte de una agencia</option>
+              <option value="inhouse">In-house (trabajo directamente para una marca)</option>
+              <option value="hibrido">Modelo híbrido (combino varias de las anteriores)</option>
+            </select>
+          </div>
+
+          <div class="form-grupo">
+            <label>• Nombre de tu marca personal, agencia o empresa</label>
+            <input type="text" name="empresa">
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿En qué plataformas manejas pauta actualmente?</label>
+            <div class="checkboxes">
+              <label><input type="checkbox" name="plataformas[]" value="meta"> Meta Ads (Facebook / Instagram)</label>
+              <label><input type="checkbox" name="plataformas[]" value="google"> Google Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="tiktok"> TikTok Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="youtube"> YouTube Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="linkedin"> LinkedIn Ads</label>
+              <label><input type="checkbox" name="plataformas[]" value="programatica"> Publicidad programática (compra de anuncios en múltiples sitios web y apps)</label>
+              <label><input type="checkbox" name="plataformas[]" value="otras"> Otras</label>
+            </div>
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿En qué países has ejecutado campañas?</label>
+            <input type="text" name="paises-campanas">
+          </div>
+
+          <div class="form-grupo">
+            <label>• ¿En qué tipo de negocio tienes mayor experiencia gestionando pauta digital? <span class="obligatorio">*</span></label>
+            <select name="tipo-negocio" required>
+              <option value="">Selecciona una opción</option>
+              <option value="ecommerce">Ecommerce (productos físicos)</option>
+              <option value="infoproductos">Infoproductos / educación digital</option>
+              <option value="servicios">Servicios (coaches, consultores, agencias)</option>
+              <option value="marca-personal">Marca personal</option>
+              <option value="inmobiliario">Inmobiliario</option>
+              <option value="eventos">Eventos</option>
+              <option value="salud">Salud y bienestar (clínicas, estética, fitness)</option>
+              <option value="educacion">Educación (instituciones, academias)</option>
+              <option value="gastronomico">Gastronómico</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 3 ============= -->
+        <div class="form-paso" data-paso="3" data-nombre="Afinidad con el evento">
+
+          <div class="form-seccion-titulo">3. Afinidad con el evento</div>
+
+          <div class="form-grupo">
+            <label>• ¿Has asistido antes a la Feria EFFIX? <span class="obligatorio">*</span></label>
+            <select name="asistencia-previa" required>
+              <option value="">Selecciona una opción</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 4 ============= -->
+        <div class="form-paso" data-paso="4" data-nombre="Validación">
+
+          <div class="form-seccion-titulo">4. Validación / Selección</div>
+
+          <div class="form-grupo">
+            <label>• ¿Por qué consideras que deberías ser parte de este grupo seleccionado de profesionales? <span class="obligatorio">*</span></label>
+            <textarea name="motivacion" rows="6" required></textarea>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="button" class="btn-form btn-continuar">Continuar →</button>
+          </div>
+
+        </div>
+
+
+        <!-- ============= PASO 5 ============= -->
+        <div class="form-paso" data-paso="5" data-nombre="Cierre">
+
+          <div class="form-seccion-titulo">5. Cierre</div>
+
+          <div class="form-grupo">
+            <label>• ¿Estarías disponible para asistir presencialmente en Medellín del 15 al 18 de octubre de 2026 durante los días del evento? <span class="obligatorio">*</span></label>
+            <select name="disponibilidad" required>
+              <option value="">Selecciona una opción</option>
+              <option value="si">Sí</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+
+          <div class="form-aceptacion">
+            • Autorizo de manera previa, expresa e informada a los organizadores
+            de Feria EFFIX para recolectar, almacenar y tratar mis datos personales
+            con la finalidad de gestionar mi participación en la Zona Traffickers,
+            compartir información relacionada con el evento, validar mi perfil
+            profesional y contactarme por los canales suministrados.
+            Declaro que conozco que mis datos serán tratados conforme a la normativa
+            colombiana vigente de protección de datos personales y la política de
+            tratamiento de datos del evento.
+            <label class="acepto">
+              <input type="checkbox" name="acepto-datos" required>
+              Acepto la autorización de tratamiento de datos personales
+            </label>
+          </div>
+
+          <div class="form-aceptacion">
+            • Autorizo a los organizadores de Feria EFFIX a utilizar mi nombre,
+            usuario de redes sociales e imagen con fines informativos, promocionales
+            o de visibilidad dentro del directorio de profesionales, comunicaciones
+            del evento y piezas relacionadas con la Zona Traffickers.
+            <label class="acepto">
+              <input type="checkbox" name="acepto-imagen" required>
+              Autorizo el uso de mi imagen y datos con fines informativos del evento.
+            </label>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn-form btn-atras">← Atrás</button>
+            <button type="submit" class="btn-form btn-enviar">ENVIAR POSTULACIÓN</button>
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =========================================
+     PIE
+     ========================================= -->
+<footer class="pie">
+  <div class="wrapper">
+    <p>
+      <strong>Zona Traffickers</strong> · Feria EFFIX 2026<br>
+      Plaza Mayor, Medellín · Inauguración el 15 de octubre · Feria abierta del
+      16 al 18 de octubre de 2026
+    </p>
+    <p style="margin-top:16px;font-size:13px;opacity:0.6">
+      Toda la comunicación oficial de la Zona Traffickers se hace por mensaje
+      directo en Instagram desde @feriaeffix.
+    </p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  const form = document.getElementById('form-traffickers');
+  if (!form) return;
+
+  const pasos = form.querySelectorAll('.form-paso');
+  const totalPasos = pasos.length;
+  const pasoActualEl = document.getElementById('paso-actual');
+  const pasoNombreEl = document.getElementById('paso-nombre');
+  const progresoFill = document.getElementById('progreso-fill');
+  let pasoActual = 1;
+
+  function mostrarPaso(num) {
+    pasos.forEach(function (p) {
+      p.classList.toggle('activo', parseInt(p.dataset.paso, 10) === num);
+    });
+    if (pasoActualEl) pasoActualEl.textContent = num;
+    const pasoEl = form.querySelector('.form-paso[data-paso="' + num + '"]');
+    if (pasoEl && pasoNombreEl) pasoNombreEl.textContent = pasoEl.dataset.nombre;
+    if (progresoFill) progresoFill.style.width = (num / totalPasos * 100) + '%';
+
+    const wrapper = form.closest('.formulario-wrapper');
+    if (wrapper) {
+      const top = wrapper.getBoundingClientRect().top + window.pageYOffset - 90;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    }
+  }
+
+  function validarPaso(num) {
+    const paso = form.querySelector('.form-paso[data-paso="' + num + '"]');
+    if (!paso) return true;
+    const requeridos = paso.querySelectorAll('[required]');
+    let valido = true;
+    let primerInvalido = null;
+
+    requeridos.forEach(function (campo) {
+      campo.classList.remove('invalido');
+      if (!campo.checkValidity()) {
+        campo.classList.add('invalido');
+        valido = false;
+        if (!primerInvalido) primerInvalido = campo;
+      }
+    });
+
+    if (!valido && primerInvalido) {
+      primerInvalido.focus({ preventScroll: false });
+      if (typeof primerInvalido.reportValidity === 'function') {
+        primerInvalido.reportValidity();
+      }
+    }
+    return valido;
+  }
+
+  form.addEventListener('click', function (e) {
+    const target = e.target.closest('button');
+    if (!target) return;
+
+    if (target.classList.contains('btn-continuar')) {
+      e.preventDefault();
+      if (validarPaso(pasoActual) && pasoActual < totalPasos) {
+        pasoActual++;
+        mostrarPaso(pasoActual);
+      }
+    } else if (target.classList.contains('btn-atras')) {
+      e.preventDefault();
+      if (pasoActual > 1) {
+        pasoActual--;
+        mostrarPaso(pasoActual);
+      }
+    }
+  });
+
+  form.addEventListener('input', function (e) {
+    if (e.target.classList && e.target.classList.contains('invalido')) {
+      if (e.target.checkValidity()) e.target.classList.remove('invalido');
+    }
+  });
+
+  form.addEventListener('submit', function (e) {
+    if (!validarPaso(pasoActual)) {
+      e.preventDefault();
+    }
+  });
+
+  mostrarPaso(1);
+})();
+</script>
+
+</body>
+</html>
