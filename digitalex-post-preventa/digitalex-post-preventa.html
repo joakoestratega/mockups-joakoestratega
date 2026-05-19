@@ -10,7 +10,7 @@
 	<meta property="og:locale" content="es_ES">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="DIGITALEX - Feria Effix 2026">
-	<meta property="og:description" content="2×1 FINALIZA EN 00 Días : 00 Horas : 00 Min : 00 Seg COMPRA ANTES DE QUE SE AGOTE 2×1 FINALIZA EN 00 Días : 00 Horas : 00 Min : 00 Seg COMPRA ANTES DE QUE SE AGOTE SI NADIE SABE NO IMPORTA QUÉ TAN BUENO SEAS Una jornada intensiva para construir la marca personal que te hace la […]">
+	<meta property="og:description" content="Ampliamos el aforo de Digitalex. Una jornada intensiva con Vilma Núñez y ponentes top para construir la marca personal que te hace la opción obvia en tu industria. 28 de mayo · Plaza Mayor, Medellín. Estas son las últimas entradas.">
 	<meta property="og:url" content="https://feriaeffix.com/digitalex/">
 	<meta property="og:site_name" content="Feria Effix 2026">
 	<meta property="article:publisher" content="https://www.facebook.com/feriaeffix">
@@ -358,58 +358,84 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: none;
   }
   @media (max-width: 768px) { .dgx-mobile-cta { display: block; } }
+
+  /* SECCIÓN AMPLIAMOS EL AFORO · compacta, no invasiva */
   .dgx-progress-section {
     background: #0F0F14; color: #FFFFFF;
-    padding: 60px 20px; text-align: center;
+    padding: 36px 24px; text-align: center;
     font-family: Arial, sans-serif;
+    max-width: 920px; margin: 24px auto;
+    border-radius: 18px;
   }
   .dgx-progress-section h2 {
-    font-size: 36px; font-weight: 900; color: #1FCFD3;
-    margin: 0 0 24px 0; letter-spacing: 2px;
+    font-size: 30px; font-weight: 900; color: #1FCFD3;
+    margin: 0 0 14px 0; letter-spacing: 1.5px; line-height: 1.1;
   }
   .dgx-progress-section p {
-    font-size: 18px; line-height: 1.5; max-width: 720px;
-    margin: 0 auto 30px auto; color: #FFFFFF;
-  }
-  .dgx-progress-bar {
-    width: 80%; max-width: 600px; height: 28px;
-    background: #2a2a36; border-radius: 14px; margin: 0 auto;
-    overflow: hidden; position: relative;
-  }
-  .dgx-progress-bar .fill {
-    width: 83%; height: 100%;
-    background: linear-gradient(90deg, #1FCFD3 0%, #F8B400 100%);
-    border-radius: 14px;
-  }
-  .dgx-progress-section .subtitle {
-    font-size: 20px; font-weight: 800; color: #FFFFFF;
-    letter-spacing: 4px; margin: -8px 0 32px 0;
-    text-transform: uppercase;
-  }
-  .dgx-progress-bar .label {
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-    color: #0F0F14; font-weight: 900; font-size: 16px;
-  }
-  .dgx-progress-section .available {
-    margin-top: 24px; font-size: 22px; font-weight: 800; color: #F8B400;
+    font-size: 16px; line-height: 1.55; max-width: 680px;
+    margin: 0 auto 22px auto; color: #FFFFFF;
   }
   .dgx-progress-section a.cta {
-    display: inline-block; margin-top: 32px;
+    display: inline-block;
     background: #1FCFD3; color: #0F0F14;
-    padding: 16px 40px; border-radius: 30px;
-    font-size: 18px; font-weight: 900; text-decoration: none;
+    padding: 14px 36px; border-radius: 30px;
+    font-size: 16px; font-weight: 900; text-decoration: none;
     text-transform: uppercase; letter-spacing: 1px;
+    animation: dgx-pulse 1.8s ease-in-out infinite;
+    transition: transform 0.2s ease;
+  }
+  .dgx-progress-section a.cta:hover {
+    transform: scale(1.06);
+    animation-play-state: paused;
+  }
+  @media (max-width: 768px) {
+    .dgx-progress-section { padding: 28px 18px; margin: 18px 12px; }
+    .dgx-progress-section h2 { font-size: 24px; letter-spacing: 1px; }
+    .dgx-progress-section p { font-size: 15px; }
+  }
+
+  /* Botón del banner sticky superior · pill con animación */
+  .dgx-sticky-banner a {
+    display: inline-block;
+    background: #F8B400; color: #0F0F14;
+    padding: 7px 18px; border-radius: 20px;
+    text-decoration: none; font-weight: 900;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    font-size: 12px; margin-left: 10px;
+    animation: dgx-pulse 1.8s ease-in-out infinite;
+    transition: transform 0.2s ease;
+  }
+  .dgx-sticky-banner a:hover {
+    transform: scale(1.06);
+    animation-play-state: paused;
+  }
+
+  /* Sticky bottom mobile · botón pill animado */
+  .dgx-mobile-cta a {
+    display: inline-block;
+    background: #0F0F14; color: #1FCFD3 !important;
+    padding: 8px 20px; border-radius: 22px;
+    text-decoration: none !important; font-weight: 900;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    font-size: 13px; margin-left: 8px;
+    animation: dgx-pulse 1.8s ease-in-out infinite;
+  }
+
+  /* Animación de pulso suave · llama la atención sin distraer */
+  @keyframes dgx-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(31, 207, 211, 0.5); }
+    50%      { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(31, 207, 211, 0); }
   }
 </style>
 
 <div class="dgx-sticky-banner">
   <span class="dot"></span>
-  83% VENDIDO EN PREVENTA · Quedan los últimos cupos.
-  <a href="#entradas">Compra antes de que se agote →</a>
+  AMPLIAMOS EL AFORO · DIGITALEX ES EN 9 DÍAS
+  <a href="#entradas">Compra tu entrada</a>
 </div>
 
 <div class="dgx-mobile-cta">
-  Solo queda el 17%. <a href="#entradas" style="color:#0F0F14;text-decoration:underline;">Compra antes de que se agote →</a>
+  Digitalex es en 9 días. <a href="#entradas">Compra tu entrada</a>
 </div>
 <!-- ════════════════════════════════════════════════════════════ -->
 <!-- FIN BANNER STICKY NUEVO                                       -->
@@ -698,20 +724,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 
 <!-- ════════════════════════════════════════════════════════════ -->
-<!-- SECCIÓN NUEVA · EL ÉXITO DE LA PREVENTA · AGREGADA 2026-04-29 -->
+<!-- SECCIÓN · AMPLIAMOS EL AFORO · ACTUALIZADA 2026-05-19         -->
 <!-- ════════════════════════════════════════════════════════════ -->
-<div class="dgx-progress-section" id="exito-preventa">
-  <h2>EL EVENTO DE MARCA PERSONAL MÁS IMPORTANTE DE COLOMBIA</h2>
-  <p class="subtitle">Éxito en preventa</p>
-  <div class="dgx-progress-bar">
-    <div class="fill"></div>
-    <div class="label">83% VENDIDO</div>
-  </div>
-  <p class="available">Solo el 17% de los cupos sigue disponible.</p>
-  <a href="#entradas" class="cta">Compra antes de que se agote</a>
+<div class="dgx-progress-section" id="ampliamos-aforo">
+  <h2>AMPLIAMOS EL AFORO</h2>
+  <p>Se vendieron todas las entradas a Digitalex y la gente nos seguía pidiendo más. Logramos gestionar el aumento del aforo. Estas son las últimas entradas disponibles.</p>
+  <a href="#entradas" class="cta">Compra tu entrada</a>
 </div>
 <!-- ════════════════════════════════════════════════════════════ -->
-<!-- FIN SECCIÓN NUEVA                                             -->
+<!-- FIN SECCIÓN                                                   -->
 <!-- ════════════════════════════════════════════════════════════ -->
 				<div class="elementor-element elementor-element-d5287f7 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="d5287f7" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
@@ -934,11 +955,11 @@ EMPIEZA EN:</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-d88e081 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="d88e081" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">La preventa cerró con el 83% vendido. Quedan los últimos cupos.</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Se vendieron todas las entradas a Digitalex. Logramos ampliar el aforo.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-d46eafa elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="d46eafa" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Solo el 17% de los cupos sigue disponible. Compra antes de que se agote.</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Estas son las últimas entradas. Compra la tuya.</h2>				</div>
 				</div>
 					</div>
 				</div>
@@ -1364,21 +1385,21 @@ publicidad digital y ventas.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-125be93 elementor-widget-tablet__width-initial elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="125be93" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">El 83% ya tiene su cupo. <span style="font-weight: 800">Estos son los dos tipos de entrada que aún están disponibles.</span> </h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Se vendieron todas las entradas y logramos ampliar el aforo. <span style="font-weight: 800">Estas son las dos entradas que aún puedes comprar.</span> </h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-ad9b345 e-con-full elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile e-flex e-con e-child" data-id="ad9b345" data-element_type="container" data-e-type="container">
 		<div class="elementor-element elementor-element-9abcd13 e-con-full e-flex e-con e-child" data-id="9abcd13" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				<div class="elementor-element elementor-element-407d103 elementor-widget elementor-widget-heading" data-id="407d103" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">FASE ACTUAL</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">FASE 1</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-8340135 elementor-widget elementor-widget-heading" data-id="8340135" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">PREVENTA · 83% VENDIDO</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">PREVENTA</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-470b9f7 elementor-widget elementor-widget-heading" data-id="470b9f7" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Cerrada · agotada</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Cerrada · entradas vendidas</h2>				</div>
 				</div>
 				</div>
 		<div class="elementor-element elementor-element-587aac7 e-con-full e-flex e-con e-child" data-id="587aac7" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1392,7 +1413,7 @@ publicidad digital y ventas.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-6052bd0 elementor-widget elementor-widget-heading" data-id="6052bd0" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Activa · solo el 17% disponible</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Activa · entradas finales</h2>				</div>
 				</div>
 				</div>
 				</div>
@@ -1408,7 +1429,7 @@ publicidad digital y ventas.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-bc6994a elementor-widget elementor-widget-heading" data-id="bc6994a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Activa · solo el 17% disponible</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Activa · entradas finales</h2>				</div>
 				</div>
 				</div>
 				</div>
@@ -1436,12 +1457,12 @@ publicidad digital y ventas.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-a3d714a elementor-widget elementor-widget-text-editor" data-id="a3d714a" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									Por <span style="font-weight: 800;">DOS ENTRADAS · </span> 2×1 de lanzamiento								</div>
+									Por persona · <span style="font-weight: 800;">aforo ampliado</span></div>
 				</div>
 		<div class="elementor-element elementor-element-9a0ce9d e-con-full e-flex e-con e-child" data-id="9a0ce9d" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				<div class="elementor-element elementor-element-b910ff4 elementor-widget elementor-widget-heading" data-id="b910ff4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">EL 83% YA TIENE SU CUPO</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">AFORO AMPLIADO</h2>				</div>
 				</div>
 				</div>
 				<div class="elementor-element elementor-element-99435b4 elementor-widget elementor-widget-text-editor" data-id="99435b4" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
@@ -1482,7 +1503,7 @@ publicidad digital y ventas.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-ef65679 elementor-widget elementor-widget-text-editor" data-id="ef65679" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
 				<div class="elementor-widget-container">
-									Por <span style="font-weight: 800;">DOS ENTRADAS · </span> 2×1 de lanzamiento								</div>
+									Por persona · <span style="font-weight: 800;">aforo ampliado</span></div>
 				</div>
 		<div class="elementor-element elementor-element-fdf9eb1 e-con-full e-flex e-con e-child" data-id="fdf9eb1" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 				<div class="elementor-element elementor-element-60759d6 elementor-widget elementor-widget-heading" data-id="60759d6" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
@@ -1586,7 +1607,7 @@ publicidad digital y ventas.</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-6d49939 elementor-widget-tablet__width-initial elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="6d49939" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">Solo el 17% de los cupos sigue disponible. Compra antes de que se agote.</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Logramos ampliar el aforo. Estas son las últimas entradas que entran al salón.</h2>				</div>
 				</div>
 					</div>
 				</div>
@@ -1963,10 +1984,10 @@ Effix anual</h2>				</div>
 															<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-plus" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"></path></svg></span>
 								<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up" viewBox="0 0 320 512" xmlns="http://www.w3.org/2000/svg"><path d="M288.662 352H31.338c-17.818 0-26.741-21.543-14.142-34.142l128.662-128.662c7.81-7.81 20.474-7.81 28.284 0l128.662 128.662c12.6 12.599 3.676 34.142-14.142 34.142z"></path></svg></span>
 													</span>
-												<a class="elementor-toggle-title" tabindex="0">¿Hay cupos limitados?</a>
+												<a class="elementor-toggle-title" tabindex="0">¿Por qué hay más entradas si todo estaba vendido?</a>
 					</div>
 
-					<div id="elementor-tab-content-17610" class="elementor-tab-content elementor-clearfix" data-tab="10" role="region" aria-labelledby="elementor-tab-title-17610"><p>Sí. El evento cuenta con cupos limitados según la capacidad del salón y la categoría de entradas disponibles.</p></div>
+					<div id="elementor-tab-content-17610" class="elementor-tab-content elementor-clearfix" data-tab="10" role="region" aria-labelledby="elementor-tab-title-17610"><p>Se vendieron todas las entradas a Digitalex y la gente nos seguía pidiendo más. Logramos gestionar el aumento del aforo. Estas son las últimas disponibles. Cuando se vayan, no hay más.</p></div>
 				</div>
 							<div class="elementor-toggle-item">
 					<div id="elementor-tab-title-17611" class="elementor-tab-title" data-tab="11" role="button" aria-controls="elementor-tab-content-17611" aria-expanded="false">
@@ -2011,8 +2032,8 @@ Effix anual</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-6481677 elementor-widget__width-initial elementor-widget elementor-widget-heading" data-id="6481677" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">EL 28 DE MAYO HAY 1.200 SILLAS.
-¿LA TUYA YA ESTÁ SEPARADA?</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">DIGITALEX ES EN 9 DÍAS.
+¿YA TIENES TU ENTRADA?</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-9f383eb elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="9f383eb" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
 				<div class="elementor-widget-container">
@@ -2024,7 +2045,7 @@ Effix anual</h2>				</div>
 				</div>
 				<div class="elementor-element elementor-element-ab6f285 elementor-widget-tablet__width-initial elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-widget elementor-widget-heading" data-id="ab6f285" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
 				<div class="elementor-widget-container">
-					<h2 class="elementor-heading-title elementor-size-default">El 83% ya tiene su cupo. Quedan los últimos de las 1.200 sillas.</h2>				</div>
+					<h2 class="elementor-heading-title elementor-size-default">Logramos ampliar el aforo. Estas son las últimas entradas.</h2>				</div>
 				</div>
 		<div class="elementor-element elementor-element-4cc014a e-con-full e-flex e-con e-child" data-id="4cc014a" data-element_type="container" data-e-type="container">
 		<a class="elementor-element elementor-element-ba2234a e-con-full boton-vibracion-digitalex-2 e-flex e-con e-child" data-id="ba2234a" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" href="https://latiquetera.com/event/digitalex-con-vilma-nunez" target="_blank">

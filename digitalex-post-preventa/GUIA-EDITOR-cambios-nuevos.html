@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía editor · Cambios nuevos landing Digitalex</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #F4F5F7;
+    color: #0F0F14;
+    line-height: 1.5;
+    padding: 40px 20px;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+
+  header.top {
+    background: linear-gradient(135deg, #21209C 0%, #1FCFD3 100%);
+    color: #fff;
+    padding: 36px 32px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+  header.top h1 { font-size: 32px; margin-bottom: 12px; letter-spacing: 0.5px; }
+  header.top p { font-size: 16px; opacity: 0.95; }
+  header.top .meta {
+    margin-top: 18px; font-size: 13px; opacity: 0.85;
+    background: rgba(0,0,0,0.18); padding: 10px 14px; border-radius: 8px;
+    display: inline-block;
+  }
+
+  .legend {
+    background: #FFFBEB; border-left: 5px solid #F8B400;
+    padding: 16px 22px; margin-bottom: 32px; border-radius: 6px;
+    font-size: 14px;
+  }
+  .legend strong { color: #0F0F14; }
+
+  .card {
+    background: #fff; border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    margin-bottom: 28px; overflow: hidden;
+    border: 1px solid #E5E7EB;
+  }
+  .card .head {
+    background: #0F0F14; color: #fff;
+    padding: 18px 26px;
+    display: flex; align-items: center; gap: 14px;
+    flex-wrap: wrap;
+  }
+  .card .head .num {
+    background: #F8B400; color: #0F0F14;
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 900; font-size: 16px;
+  }
+  .card .head h2 {
+    font-size: 18px; flex: 1; letter-spacing: 0.3px;
+  }
+  .card .head .where {
+    background: #1FCFD3; color: #0F0F14;
+    padding: 5px 12px; border-radius: 20px;
+    font-size: 11px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .card .body { padding: 24px 28px; }
+
+  .label {
+    display: inline-block;
+    background: #DCFCE7; color: #166534;
+    padding: 4px 10px; border-radius: 4px;
+    font-size: 11px; font-weight: 800;
+    letter-spacing: 0.5px; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .label.code { background: #EEF2FF; color: #3730A3; }
+  .label.style { background: #FCE7F3; color: #9D174D; }
+
+  .text-new {
+    background: #ECFEFF;
+    border-left: 4px solid #1FCFD3;
+    padding: 14px 18px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+  .text-new strong { color: #0F0F14; }
+
+  .visual-preview {
+    margin-top: 16px; padding: 22px;
+    background: #F9FAFB; border: 1px dashed #9CA3AF;
+    border-radius: 8px;
+  }
+  .visual-preview .caption {
+    font-size: 11px; color: #6B7280; text-transform: uppercase;
+    letter-spacing: 1px; margin-bottom: 12px; font-weight: 800;
+  }
+
+  /* MOCK del banner sticky */
+  .mock-sticky {
+    background: #1FCFD3; color: #0F0F14;
+    padding: 10px 18px; border-radius: 6px;
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 14px;
+    flex-wrap: wrap;
+  }
+  .mock-sticky .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #F8B400;
+  }
+  .mock-sticky .btn-yellow {
+    background: #F8B400; color: #0F0F14;
+    padding: 7px 18px; border-radius: 20px;
+    font-weight: 900; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-left: auto;
+    animation: dgx-pulse 1.8s ease-in-out infinite;
+  }
+
+  /* MOCK de la sección negra */
+  .mock-black {
+    background: #0F0F14; color: #fff;
+    padding: 32px 24px; border-radius: 14px;
+    text-align: center; max-width: 720px; margin: 0 auto;
+  }
+  .mock-black h3 {
+    color: #1FCFD3; font-size: 26px; margin-bottom: 12px;
+    letter-spacing: 1.5px;
+  }
+  .mock-black p {
+    font-size: 15px; line-height: 1.55; max-width: 540px;
+    margin: 0 auto 20px auto;
+  }
+  .mock-black .btn-turq {
+    background: #1FCFD3; color: #0F0F14;
+    padding: 13px 32px; border-radius: 30px;
+    display: inline-block; font-weight: 900; font-size: 14px;
+    text-transform: uppercase; letter-spacing: 1px;
+    animation: dgx-pulse 1.8s ease-in-out infinite;
+  }
+
+  /* MOCK última llamada */
+  .mock-final {
+    background: #fff; border: 2px solid #0F0F14;
+    padding: 22px; border-radius: 10px; text-align: center;
+  }
+  .mock-final h3 {
+    font-size: 22px; font-weight: 900; margin-bottom: 6px;
+    letter-spacing: 0.5px;
+  }
+  .mock-final .sub { font-size: 14px; color: #4B5563; }
+
+  /* MOCK FAQ */
+  .mock-faq {
+    background: #fff; border: 1px solid #E5E7EB;
+    border-radius: 8px; overflow: hidden;
+  }
+  .mock-faq .q {
+    background: #F3F4F6; padding: 14px 18px;
+    font-weight: 800; display: flex; justify-content: space-between;
+  }
+  .mock-faq .a {
+    padding: 16px 18px; font-size: 14px; color: #1F2937;
+    line-height: 1.55;
+  }
+
+  /* MOCK fases */
+  .mock-fases { display: flex; gap: 16px; flex-wrap: wrap; }
+  .mock-fases .fase {
+    flex: 1; min-width: 230px;
+    border: 1px solid #E5E7EB; padding: 16px; border-radius: 8px;
+  }
+  .mock-fases .fase .top { font-size: 11px; color: #6B7280; font-weight: 800; letter-spacing: 1px; }
+  .mock-fases .fase .mid { font-size: 17px; font-weight: 900; margin: 6px 0; }
+  .mock-fases .fase .bot { font-size: 13px; color: #4B5563; }
+  .mock-fases .fase.activa { border-color: #1FCFD3; background: #ECFEFF; }
+  .mock-fases .fase.activa .top { color: #0E7490; }
+
+  /* MOCK sticky bottom mobile */
+  .mock-mobile {
+    background: #1FCFD3; color: #0F0F14;
+    padding: 12px 18px; border-radius: 6px;
+    display: flex; align-items: center; justify-content: space-between;
+    font-weight: 700; font-size: 14px; max-width: 380px;
+    flex-wrap: wrap; gap: 8px;
+  }
+  .mock-mobile .btn-dark {
+    background: #0F0F14; color: #1FCFD3;
+    padding: 7px 16px; border-radius: 20px;
+    font-weight: 900; font-size: 12px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    animation: dgx-pulse 1.8s ease-in-out infinite;
+  }
+
+  pre.code {
+    background: #1F2937; color: #E5E7EB;
+    padding: 16px; border-radius: 6px;
+    font-size: 12.5px; overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    line-height: 1.55;
+    margin-top: 14px;
+  }
+
+  .style-spec {
+    background: #FAF5FF; border: 1px solid #E9D5FF;
+    padding: 14px 18px; border-radius: 6px;
+    font-size: 13.5px; color: #581C87;
+    margin-top: 14px;
+  }
+  .style-spec strong { color: #4C1D95; }
+  .style-spec ul { margin-left: 20px; margin-top: 6px; }
+  .style-spec li { margin-bottom: 4px; }
+
+  @keyframes dgx-pulse {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(31, 207, 211, 0.55); }
+    50%      { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(31, 207, 211, 0); }
+  }
+
+  footer.bottom {
+    text-align: center; margin-top: 40px;
+    padding: 24px; color: #6B7280; font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <h1>Cambios nuevos · Landing Digitalex</h1>
+  <p>Esta guía muestra solo los <strong>elementos nuevos</strong> que debes implementar en la landing. Cada bloque indica dónde va, cómo se ve y el texto exacto. Lo que no aparece acá no se toca.</p>
+  <div class="meta">Fecha: 2026-05-19 · Cliente: Feria EFFIX · Producto: Digitalex</div>
+</header>
+
+<div class="legend">
+  <strong>Cómo leer esta guía:</strong> cada tarjeta tiene un número (orden de aparición en la página), un título, la ubicación, el texto literal a usar y un mock visual de cómo debe verse. Los botones marcados con animación de pulso deben tener movimiento suave (pulso turquesa) para captar atención.
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 1. BANNER STICKY SUPERIOR                                     -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">1</span>
+    <h2>Banner sticky superior</h2>
+    <span class="where">Top fijo · todo el sitio</span>
+  </div>
+  <div class="body">
+    <span class="label">Texto nuevo</span>
+    <div class="text-new">
+      <strong>AMPLIAMOS EL AFORO · DIGITALEX ES EN 9 DÍAS</strong>
+    </div>
+    <span class="label">Botón nuevo con animación</span>
+    <div class="text-new">
+      <strong>COMPRA TU ENTRADA</strong> (botón amarillo · pulso suave · enlaza a #entradas)
+    </div>
+
+    <div class="visual-preview">
+      <div class="caption">Así debe verse</div>
+      <div class="mock-sticky">
+        <span class="dot"></span>
+        <span>AMPLIAMOS EL AFORO · DIGITALEX ES EN 9 DÍAS</span>
+        <span class="btn-yellow">Compra tu entrada</span>
+      </div>
+    </div>
+
+    <div class="style-spec">
+      <strong>Estilo del botón:</strong>
+      <ul>
+        <li>Fondo: <code>#F8B400</code> (amarillo Feria EFFIX)</li>
+        <li>Texto: <code>#0F0F14</code> negro</li>
+        <li>Forma: pill (border-radius 20px)</li>
+        <li>Padding: 7px 18px</li>
+        <li>Animación: pulso suave cada 1.8 segundos</li>
+        <li>Hover: aumenta 6% el tamaño</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 2. SUBTÍTULO BAJO EL HOOK PRINCIPAL                           -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">2</span>
+    <h2>Subtítulos bajo el hook "SI NADIE SABE / NO IMPORTA QUÉ TAN BUENO SEAS"</h2>
+    <span class="where">Hero principal</span>
+  </div>
+  <div class="body">
+    <span class="label">Texto nuevo · línea 1</span>
+    <div class="text-new">
+      <strong>Se vendieron todas las entradas a Digitalex. Logramos ampliar el aforo.</strong>
+    </div>
+    <span class="label">Texto nuevo · línea 2</span>
+    <div class="text-new">
+      <strong>Estas son las últimas entradas. Compra la tuya.</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 3. SECCIÓN NUEVA "AMPLIAMOS EL AFORO"                         -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">3</span>
+    <h2>Sección nueva "AMPLIAMOS EL AFORO"</h2>
+    <span class="where">Entre el hook principal y el bloque FECHA / HORA / LUGAR</span>
+  </div>
+  <div class="body">
+    <span class="label">Título de la sección</span>
+    <div class="text-new">
+      <strong>AMPLIAMOS EL AFORO</strong>
+    </div>
+    <span class="label">Texto del bloque</span>
+    <div class="text-new">
+      <strong>Se vendieron todas las entradas a Digitalex y la gente nos seguía pidiendo más. Logramos gestionar el aumento del aforo. Estas son las últimas entradas disponibles.</strong>
+    </div>
+    <span class="label">Botón con animación</span>
+    <div class="text-new">
+      <strong>COMPRA TU ENTRADA</strong> (botón turquesa · pulso suave · enlaza a #entradas)
+    </div>
+
+    <div class="visual-preview">
+      <div class="caption">Así debe verse</div>
+      <div class="mock-black">
+        <h3>AMPLIAMOS EL AFORO</h3>
+        <p>Se vendieron todas las entradas a Digitalex y la gente nos seguía pidiendo más. Logramos gestionar el aumento del aforo. Estas son las últimas entradas disponibles.</p>
+        <span class="btn-turq">Compra tu entrada</span>
+      </div>
+    </div>
+
+    <div class="style-spec">
+      <strong>Estilo del contenedor:</strong>
+      <ul>
+        <li>Fondo: <code>#0F0F14</code> negro (para destacar visualmente sin invadir)</li>
+        <li>Padding: 36px arriba/abajo · 24px laterales (compacto, no invasivo)</li>
+        <li>Margen lateral: max-width 920px, centrado en la página</li>
+        <li>Border-radius: 18px (esquinas redondeadas, no rectángulo cortado)</li>
+        <li>Mobile: padding 28px, márgenes laterales 12px</li>
+      </ul>
+      <strong>Estilo del texto:</strong>
+      <ul>
+        <li>Título: turquesa <code>#1FCFD3</code>, 30px, peso 900</li>
+        <li>Párrafo: blanco, 16px, line-height 1.55</li>
+      </ul>
+      <strong>Estilo del botón:</strong>
+      <ul>
+        <li>Fondo: turquesa <code>#1FCFD3</code></li>
+        <li>Texto: negro, 16px, mayúsculas</li>
+        <li>Pill (border-radius 30px), padding 14px 36px</li>
+        <li>Animación: pulso suave cada 1.8 segundos</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 4. BLOQUE DE FASES                                            -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">4</span>
+    <h2>Bloque de fases · sección "DOS FORMAS DE VIVIR"</h2>
+    <span class="where">Antes de la comparativa General/VIP</span>
+  </div>
+  <div class="body">
+    <span class="label">FASE 1</span>
+    <div class="text-new">
+      <strong>FASE 1 · PREVENTA · Cerrada · entradas vendidas</strong>
+    </div>
+    <span class="label">FASE 2 / FASE ACTUAL</span>
+    <div class="text-new">
+      <strong>FASE 2 · PRECIO REGULAR · Activa · entradas finales</strong>
+    </div>
+
+    <div class="visual-preview">
+      <div class="caption">Así debe verse</div>
+      <div class="mock-fases">
+        <div class="fase">
+          <div class="top">FASE 1</div>
+          <div class="mid">PREVENTA</div>
+          <div class="bot">Cerrada · entradas vendidas</div>
+        </div>
+        <div class="fase activa">
+          <div class="top">FASE ACTUAL</div>
+          <div class="mid">PRECIO REGULAR</div>
+          <div class="bot">Activa · entradas finales</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 5. SUBTÍTULO DE LA COMPARATIVA                                -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">5</span>
+    <h2>Subtítulo de la comparativa "DOS FORMAS DE VIVIR"</h2>
+    <span class="where">Encabezado de la sección General vs VIP</span>
+  </div>
+  <div class="body">
+    <span class="label">Texto nuevo</span>
+    <div class="text-new">
+      <strong>Se vendieron todas las entradas y logramos ampliar el aforo. Estas son las dos entradas que aún puedes comprar.</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 6. ENCABEZADOS DE LOS BLOQUES DE ENTRADA                      -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">6</span>
+    <h2>Etiquetas de cada bloque de entrada (General y VIP)</h2>
+    <span class="where">Junto al precio de cada entrada</span>
+  </div>
+  <div class="body">
+    <span class="label">Subtítulo precio</span>
+    <div class="text-new">
+      <strong>Por persona · aforo ampliado</strong>
+    </div>
+    <span class="label">Etiqueta destacada</span>
+    <div class="text-new">
+      <strong>AFORO AMPLIADO</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 7. SUBTÍTULO "CUPOS LIMITADOS"                                -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">7</span>
+    <h2>Subtítulo de la sección "CUPOS LIMITADOS"</h2>
+    <span class="where">Detalles prácticos del evento</span>
+  </div>
+  <div class="body">
+    <span class="label">Texto nuevo</span>
+    <div class="text-new">
+      <strong>Logramos ampliar el aforo. Estas son las últimas entradas que entran al salón.</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 8. FAQ · PREGUNTA NUEVA                                       -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">8</span>
+    <h2>FAQ · pregunta nueva</h2>
+    <span class="where">Sección de preguntas frecuentes · reemplaza "¿Hay cupos limitados?"</span>
+  </div>
+  <div class="body">
+    <span class="label">Pregunta nueva</span>
+    <div class="text-new">
+      <strong>¿Por qué hay más entradas si todo estaba vendido?</strong>
+    </div>
+    <span class="label">Respuesta nueva</span>
+    <div class="text-new">
+      <strong>Se vendieron todas las entradas a Digitalex y la gente nos seguía pidiendo más. Logramos gestionar el aumento del aforo. Estas son las últimas disponibles. Cuando se vayan, no hay más.</strong>
+    </div>
+
+    <div class="visual-preview">
+      <div class="caption">Así debe verse</div>
+      <div class="mock-faq">
+        <div class="q"><span>¿Por qué hay más entradas si todo estaba vendido?</span><span>+</span></div>
+        <div class="a">Se vendieron todas las entradas a Digitalex y la gente nos seguía pidiendo más. Logramos gestionar el aumento del aforo. Estas son las últimas disponibles. Cuando se vayan, no hay más.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 9. ÚLTIMA LLAMADA                                             -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">9</span>
+    <h2>Bloque "ÚLTIMA LLAMADA"</h2>
+    <span class="where">Antes del bloque de patrocinadores</span>
+  </div>
+  <div class="body">
+    <span class="label">Título principal</span>
+    <div class="text-new">
+      <strong>DIGITALEX ES EN 9 DÍAS. ¿YA TIENES TU ENTRADA?</strong>
+    </div>
+    <span class="label">Subtítulo</span>
+    <div class="text-new">
+      <strong>Logramos ampliar el aforo. Estas son las últimas entradas.</strong>
+    </div>
+
+    <div class="visual-preview">
+      <div class="caption">Así debe verse</div>
+      <div class="mock-final">
+        <h3>DIGITALEX ES EN 9 DÍAS.<br>¿YA TIENES TU ENTRADA?</h3>
+        <div class="sub">Logramos ampliar el aforo. Estas son las últimas entradas.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 10. STICKY BOTTOM MOBILE                                      -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">10</span>
+    <h2>Botón flotante inferior (solo mobile)</h2>
+    <span class="where">Fijo abajo en pantallas mobile · todo el sitio</span>
+  </div>
+  <div class="body">
+    <span class="label">Texto nuevo</span>
+    <div class="text-new">
+      <strong>Digitalex es en 9 días.</strong>
+    </div>
+    <span class="label">Botón con animación</span>
+    <div class="text-new">
+      <strong>COMPRA TU ENTRADA</strong> (botón negro sobre fondo turquesa · pulso suave · enlaza a #entradas)
+    </div>
+
+    <div class="visual-preview">
+      <div class="caption">Así debe verse (solo en pantallas mobile)</div>
+      <div class="mock-mobile">
+        <span>Digitalex es en 9 días.</span>
+        <span class="btn-dark">Compra tu entrada</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- 11. META OG:DESCRIPTION                                       -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">11</span>
+    <h2>Meta og:description · preview en redes sociales</h2>
+    <span class="where">Etiqueta meta del HTML · sale cuando se comparte el link en WhatsApp, Facebook o Twitter</span>
+  </div>
+  <div class="body">
+    <span class="label code">Texto nuevo</span>
+    <div class="text-new">
+      <strong>Ampliamos el aforo de Digitalex. Una jornada intensiva con Vilma Núñez y ponentes top para construir la marca personal que te hace la opción obvia en tu industria. 28 de mayo · Plaza Mayor, Medellín. Estas son las últimas entradas.</strong>
+    </div>
+
+    <pre class="code">&lt;meta property="og:description" content="Ampliamos el aforo de Digitalex. Una jornada intensiva con Vilma Núñez y ponentes top para construir la marca personal que te hace la opción obvia en tu industria. 28 de mayo · Plaza Mayor, Medellín. Estas son las últimas entradas."&gt;</pre>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════ -->
+<!-- ANIMACIÓN · ESPECIFICACIÓN GLOBAL                             -->
+<!-- ════════════════════════════════════════════════════════════ -->
+<div class="card">
+  <div class="head">
+    <span class="num">★</span>
+    <h2>Animación de los botones nuevos · regla global</h2>
+    <span class="where">Aplica a los botones 1, 3 y 10</span>
+  </div>
+  <div class="body">
+    <p style="margin-bottom: 14px; font-size: 14.5px;">Los tres botones nuevos (banner sticky superior, sección AMPLIAMOS EL AFORO y sticky bottom mobile) deben tener una animación de <strong>pulso suave continuo</strong>. El movimiento llama la atención del usuario sin distraer y aumenta la tasa de click sobre botones estáticos.</p>
+
+    <pre class="code">@keyframes dgx-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(31, 207, 211, 0.55);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(31, 207, 211, 0);
+  }
+}
+
+/* Aplicar a cada botón nuevo: */
+.boton-nuevo {
+  animation: dgx-pulse 1.8s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+.boton-nuevo:hover {
+  transform: scale(1.06);
+  animation-play-state: paused;
+}</pre>
+
+    <div class="style-spec">
+      <strong>Comportamiento:</strong>
+      <ul>
+        <li>El botón crece y decrece sutilmente (escala 1 → 1.05 → 1) cada 1.8 segundos</li>
+        <li>Una sombra turquesa se expande y desvanece alrededor del botón en cada pulso</li>
+        <li>Al pasar el mouse encima (hover), la animación se pausa y el botón crece a 1.06 (estado activo)</li>
+        <li>El efecto es discreto: llama la atención, no marea</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="bottom">
+  Guía generada el 2026-05-19 · Para implementación inmediata en feriaeffix.com/digitalex<br>
+  HTML aplicado disponible en: <code>OUTPUT/feria-effix/MOCKUP-CRO/digitalex post preventa/digitalex-post-preventa.html</code>
+</footer>
+
+</div>
+</body>
+</html>
