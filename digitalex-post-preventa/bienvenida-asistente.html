@@ -31,127 +31,114 @@
 
   img { max-width: 100%; height: auto; display: block; }
 
-  /* HERO */
+  /* HERO TURQUESA · estilo Digitalex oficial */
   .hero {
-    background: linear-gradient(135deg, #0F0F14 0%, #1f1f2e 100%);
-    padding: 56px 20px 40px 20px;
-    text-align: center;
-    border-bottom: 4px solid var(--turquesa);
-  }
-  .hero .label {
-    display: inline-block;
     background: var(--turquesa);
+    padding: 50px 20px 36px 20px;
+    text-align: center;
+  }
+  .hero .logo-digitalex {
+    max-width: 480px;
+    margin: 0 auto 22px auto;
+    width: 100%;
+  }
+  .hero .tagline {
     color: #0F0F14;
-    padding: 7px 18px;
-    border-radius: 24px;
-    font-size: 11px;
+    font-size: 18px;
     font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-  }
-  .hero h1 {
-    font-size: 38px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  .hero h1 span { color: var(--turquesa); }
-  .hero .subtitle {
-    font-size: 16px;
-    color: #B5B5C0;
     margin-bottom: 24px;
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
   .hero .meta {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 14px;
+    gap: 8px 12px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 800;
   }
   .hero .meta span {
-    background: rgba(0, 167, 183, 0.12);
-    border: 1px solid rgba(0, 167, 183, 0.5);
-    padding: 7px 14px;
-    border-radius: 20px;
-  }
-
-  /* HUB · grid de botones */
-  .hub-intro {
-    text-align: center;
-    padding: 40px 20px 8px 20px;
-    max-width: 720px;
-    margin: 0 auto;
-  }
-  .hub-intro h2 {
-    font-size: 22px;
-    font-weight: 900;
-    color: var(--amarillo);
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 8px 16px;
+    border-radius: 24px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
-  }
-  .hub-intro p {
-    font-size: 14px;
-    color: var(--gris);
+    letter-spacing: 0.6px;
   }
 
+  /* BANNER NEGRO · TODO LO QUE NECESITAS SABER */
+  .info-banner {
+    background: var(--negro);
+    padding: 48px 20px 12px 20px;
+    text-align: center;
+  }
+  .info-banner img {
+    max-width: 520px;
+    margin: 0 auto 8px auto;
+    width: 100%;
+    filter: invert(1);
+  }
+  .info-banner p {
+    color: var(--gris);
+    font-size: 14px;
+    max-width: 580px;
+    margin: 0 auto;
+    letter-spacing: 0.3px;
+  }
+
+  /* HUB · botones grandes */
   .hub {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 16px;
-    padding: 28px 20px 50px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    padding: 28px 20px 56px 20px;
     max-width: 1100px;
     margin: 0 auto;
   }
   .hub-btn {
     background: linear-gradient(145deg, #2a2a2a 0%, #1d1d1d 100%);
-    border: 1.5px solid rgba(0, 167, 183, 0.3);
+    border: 2px solid rgba(0, 167, 183, 0.35);
     border-radius: 16px;
-    padding: 26px 22px;
+    padding: 28px 22px;
     cursor: pointer;
     text-align: left;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 18px;
     color: var(--blanco);
     font-family: inherit;
     width: 100%;
   }
   .hub-btn:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     border-color: var(--turquesa);
-    box-shadow: 0 14px 32px rgba(0, 167, 183, 0.22);
+    box-shadow: 0 16px 36px rgba(0, 167, 183, 0.28);
   }
   .hub-btn .icon {
     flex-shrink: 0;
-    width: 54px;
-    height: 54px;
+    width: 60px;
+    height: 60px;
     background: var(--turquesa);
     color: #0F0F14;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 900;
   }
   .hub-btn .text h3 {
-    font-size: 16px;
-    font-weight: 800;
+    font-size: 17px;
+    font-weight: 900;
     color: var(--blanco);
     margin-bottom: 3px;
     text-transform: uppercase;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.5px;
   }
   .hub-btn .text p {
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--gris);
     line-height: 1.45;
   }
@@ -165,20 +152,20 @@
   }
   .detail.active { display: block; animation: fadeIn 0.35s ease; }
   @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
+    from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
   .back-btn {
     background: transparent;
     color: var(--turquesa);
-    border: 1.5px solid var(--turquesa);
+    border: 2px solid var(--turquesa);
     padding: 10px 22px;
-    border-radius: 22px;
+    border-radius: 24px;
     font-size: 12px;
     font-weight: 800;
     cursor: pointer;
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     font-family: inherit;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -187,12 +174,13 @@
   .back-btn:hover { background: var(--turquesa); color: #0F0F14; }
 
   .detail h2 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 900;
     color: var(--turquesa);
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    line-height: 1;
   }
 
   .card {
@@ -246,29 +234,42 @@
     padding: 12px;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid rgba(0, 167, 183, 0.3);
+    border: 2px solid rgba(0, 167, 183, 0.35);
   }
   .img-frame img {
     border-radius: 10px;
     margin: 0 auto;
   }
 
-  /* PONENTES */
+  /* PONENTES · con foto y estilo Digitalex */
   .speakers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 14px;
+    gap: 16px;
   }
   .speaker-card {
     background: var(--negro-card);
     border-radius: 14px;
-    padding: 22px;
+    padding: 24px 22px;
     text-align: center;
-    border: 1px solid rgba(0, 167, 183, 0.2);
+    border: 1px solid rgba(0, 167, 183, 0.25);
+    transition: border-color 0.25s ease, transform 0.25s ease;
   }
-  .speaker-card .avatar {
-    width: 72px;
-    height: 72px;
+  .speaker-card:hover {
+    border-color: var(--turquesa);
+    transform: translateY(-3px);
+  }
+  .speaker-card .photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 14px auto;
+    border: 3px solid var(--turquesa);
+  }
+  .speaker-card .avatar-text {
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: linear-gradient(135deg, var(--turquesa) 0%, #21209C 100%);
     margin: 0 auto 14px auto;
@@ -276,19 +277,21 @@
     align-items: center;
     justify-content: center;
     color: var(--blanco);
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 900;
   }
   .speaker-card h3 {
-    font-size: 17px;
-    font-weight: 800;
+    font-size: 18px;
+    font-weight: 900;
     margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
   .speaker-card .role {
     color: var(--amarillo);
     font-size: 11px;
     font-weight: 800;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -303,7 +306,7 @@
     display: inline-block;
     background: var(--turquesa);
     color: #0F0F14;
-    padding: 14px 32px;
+    padding: 15px 36px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 900;
@@ -316,31 +319,39 @@
   }
   .primary-action:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 24px rgba(0, 167, 183, 0.3);
+    box-shadow: 0 10px 26px rgba(0, 167, 183, 0.4);
     animation-play-state: paused;
   }
   @keyframes dgx-pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 167, 183, 0.5); }
-    50%      { box-shadow: 0 0 0 12px rgba(0, 167, 183, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 167, 183, 0.55); }
+    50%      { box-shadow: 0 0 0 14px rgba(0, 167, 183, 0); }
   }
 
   footer {
-    background: #14141a;
+    background: #0F0F14;
     text-align: center;
-    padding: 30px 20px;
+    padding: 32px 20px;
     color: #6B7280;
     font-size: 13px;
-    border-top: 1px solid rgba(0, 167, 183, 0.18);
+    border-top: 3px solid var(--turquesa);
   }
   footer strong { color: var(--turquesa); }
+  footer .by {
+    margin-top: 8px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
 
   @media (max-width: 600px) {
-    .hero h1 { font-size: 28px; }
-    .hero .subtitle { font-size: 14px; }
-    .hub { padding: 20px 14px 36px 14px; }
+    .hero { padding: 36px 16px 28px 16px; }
+    .hero .logo-digitalex { max-width: 320px; }
+    .hero .tagline { font-size: 14px; }
+    .info-banner img { max-width: 320px; }
+    .hub { padding: 22px 14px 40px 14px; }
     .hub-btn { padding: 22px 18px; }
-    .detail { padding: 30px 16px 50px 16px; }
-    .detail h2 { font-size: 24px; }
+    .detail { padding: 32px 16px 50px 16px; }
+    .detail h2 { font-size: 26px; }
   }
 </style>
 </head>
@@ -348,9 +359,8 @@
 
 <!-- HERO -->
 <header class="hero">
-  <span class="label">Información del asistente</span>
-  <h1>Bienvenido a <span>Digitalex</span></h1>
-  <p class="subtitle">El evento de marca personal más importante de Colombia</p>
+  <img src="assets/img-titulo-digitalex-con-vilma-nunes-3.webp" alt="Digitalex con Vilma Núñez" class="logo-digitalex">
+  <p class="tagline">El evento de marca personal más importante de Colombia</p>
   <div class="meta">
     <span>📅 Jueves 28 de mayo</span>
     <span>🕒 8 a.m. a 7 p.m.</span>
@@ -358,12 +368,13 @@
   </div>
 </header>
 
-<!-- HUB -->
-<div class="hub-intro" id="hub-top">
-  <h2>Toda la información del evento</h2>
-  <p>Toca cualquier botón para ver el detalle.</p>
+<!-- BANNER TODO LO QUE NECESITAS SABER -->
+<div class="info-banner">
+  <img src="assets/img-titulo-digitalex-todo-lo-que-necesitas-saber-2.webp" alt="Todo lo que necesitas saber">
+  <p>Toca cualquier botón para ver el detalle del evento.</p>
 </div>
 
+<!-- HUB -->
 <section class="hub" id="hub">
   <button class="hub-btn" onclick="openDetail('programacion')">
     <span class="icon">📋</span>
@@ -456,7 +467,7 @@
   <div class="img-frame">
     <img src="mapa.png" alt="Mapa general de Digitalex">
   </div>
-  <div style="text-align: center; margin-top: 18px;">
+  <div style="text-align: center; margin-top: 20px;">
     <a href="mapa-digitalex.pdf" target="_blank" class="primary-action">📥 Descargar mapa en PDF</a>
   </div>
 </section>
@@ -541,28 +552,28 @@
 
   <div class="speakers-grid">
     <div class="speaker-card">
-      <div class="avatar">VN</div>
+      <img src="assets/img-vilma-digitalex-1.webp" alt="Vilma Núñez" class="photo">
       <h3>Vilma Núñez</h3>
       <div class="role">Taller práctico</div>
       <p>15 años haciendo marcas personales en el mundo hispano.</p>
     </div>
 
     <div class="speaker-card">
-      <div class="avatar">FV</div>
+      <div class="avatar-text">FV</div>
       <h3>Felipe Vergara</h3>
       <div class="role">Cofundador Deeplook</div>
       <p>250 empresas asesoradas en construcción de autoridad.</p>
     </div>
 
     <div class="speaker-card">
-      <div class="avatar">SS</div>
+      <div class="avatar-text">SS</div>
       <h3>Santiago Sánchez</h3>
       <div class="role">Fundador Converzzo</div>
       <p>30.000 alumnos formados en marca personal.</p>
     </div>
 
     <div class="speaker-card">
-      <div class="avatar">DE</div>
+      <div class="avatar-text">DE</div>
       <h3>Danii Emprende</h3>
       <div class="role">Mentora marca personal</div>
       <p>Mentora especializada en marca personal para emprendedores.</p>
@@ -573,12 +584,13 @@
 <footer>
   <p><strong>Digitalex</strong> · Plaza Mayor + Feria EFFIX</p>
   <p>Jueves 28 de mayo · 8 a.m. a 7 p.m. · Medellín, Colombia</p>
+  <p class="by">By Feria EFFIX</p>
 </footer>
 
 <script>
   function openDetail(id) {
     document.getElementById('hub').style.display = 'none';
-    document.getElementById('hub-top').style.display = 'none';
+    document.querySelectorAll('.info-banner').forEach(function (el) { el.style.display = 'none'; });
     document.querySelectorAll('.detail').forEach(function (el) { el.classList.remove('active'); });
     var target = document.getElementById('detail-' + id);
     if (target) {
@@ -589,7 +601,7 @@
   function goBack() {
     document.querySelectorAll('.detail').forEach(function (el) { el.classList.remove('active'); });
     document.getElementById('hub').style.display = 'grid';
-    document.getElementById('hub-top').style.display = 'block';
+    document.querySelectorAll('.info-banner').forEach(function (el) { el.style.display = 'block'; });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 </script>
