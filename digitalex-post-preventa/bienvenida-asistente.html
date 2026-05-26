@@ -16,48 +16,44 @@
     --turquesa-claro: #1FCFD3;
     --amarillo: #F8B400;
     --negro: #1A1A1A;
-    --negro-card: #232323;
-    --gris: #B5B5B5;
+    --gris-card: #F4F6F8;
+    --gris-borde: #E5E7EB;
+    --gris-texto: #4B5563;
+    --gris-titulo: #1A1A1A;
     --blanco: #FFFFFF;
   }
 
   html, body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: var(--negro);
-    color: var(--blanco);
+    background: var(--blanco);
+    color: var(--negro);
     line-height: 1.55;
     min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
   }
 
   img { max-width: 100%; height: auto; display: block; }
 
-  /* HERO · fondo negro estilo landing oficial */
+  /* HERO · fondo negro con logo blanco estilo landing */
   .hero {
     background: var(--negro);
-    padding: 50px 20px 36px 20px;
+    padding: 56px 20px 44px 20px;
     text-align: center;
-    border-bottom: 1px solid rgba(0, 167, 183, 0.2);
   }
   .hero .logo-digitalex {
     max-width: 460px;
-    margin: 0 auto 18px auto;
+    margin: 0 auto 20px auto;
     width: 100%;
     filter: invert(1);
-  }
-  .hero .by-feria {
-    max-width: 200px;
-    margin: 0 auto 28px auto;
-    opacity: 0.95;
   }
   .hero .tagline {
     color: var(--blanco);
     font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 26px;
+    font-weight: 600;
+    margin-bottom: 28px;
     letter-spacing: 0.3px;
   }
-  .hero .tagline strong { color: var(--turquesa); }
-
+  .hero .tagline strong { color: var(--turquesa); font-weight: 900; }
   .hero .meta {
     display: inline-flex;
     flex-wrap: wrap;
@@ -75,54 +71,53 @@
     letter-spacing: 0.6px;
   }
 
-  /* BANNER NECESITAS SABER */
+  /* BANNER NECESITAS SABER · fondo blanco */
   .info-banner {
-    background: var(--negro);
-    padding: 52px 20px 14px 20px;
+    background: var(--blanco);
+    padding: 60px 20px 12px 20px;
     text-align: center;
   }
   .info-banner img {
     max-width: 540px;
     margin: 0 auto 14px auto;
     width: 100%;
-    filter: invert(1);
   }
   .info-banner p {
-    color: var(--gris);
-    font-size: 14px;
+    color: var(--gris-texto);
+    font-size: 15px;
     max-width: 580px;
     margin: 0 auto;
-    letter-spacing: 0.3px;
+    font-weight: 500;
   }
 
-  /* HUB · botones */
+  /* HUB · botones blancos */
   .hub {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 18px;
-    padding: 30px 20px 60px 20px;
+    padding: 36px 20px 70px 20px;
     max-width: 1100px;
     margin: 0 auto;
   }
   .hub-btn {
-    background: linear-gradient(145deg, #2a2a2a 0%, #1d1d1d 100%);
-    border: 2px solid rgba(0, 167, 183, 0.35);
-    border-radius: 16px;
-    padding: 28px 22px;
+    background: var(--blanco);
+    border: 2px solid var(--gris-borde);
+    border-radius: 18px;
+    padding: 28px 24px;
     cursor: pointer;
     text-align: left;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     align-items: center;
     gap: 18px;
-    color: var(--blanco);
+    color: var(--negro);
     font-family: inherit;
     width: 100%;
   }
   .hub-btn:hover {
     transform: translateY(-5px);
     border-color: var(--turquesa);
-    box-shadow: 0 16px 36px rgba(0, 167, 183, 0.3);
+    box-shadow: 0 18px 38px rgba(0, 167, 183, 0.18);
   }
   .hub-btn .icon {
     flex-shrink: 0;
@@ -130,7 +125,7 @@
     height: 60px;
     background: var(--turquesa);
     color: var(--blanco);
-    border-radius: 14px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,23 +134,25 @@
   .hub-btn .text h3 {
     font-size: 17px;
     font-weight: 900;
-    color: var(--blanco);
-    margin-bottom: 3px;
+    color: var(--negro);
+    margin-bottom: 4px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
   .hub-btn .text p {
     font-size: 13px;
-    color: var(--gris);
+    color: var(--gris-texto);
     line-height: 1.45;
+    font-weight: 500;
   }
 
-  /* DETALLE */
+  /* DETALLE · fondo blanco */
   .detail {
     display: none;
-    max-width: 980px;
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 44px 20px 60px 20px;
+    padding: 50px 20px 70px 20px;
+    background: var(--blanco);
   }
   .detail.active { display: block; animation: fadeIn 0.35s ease; }
   @keyframes fadeIn {
@@ -164,7 +161,7 @@
   }
 
   .back-btn {
-    background: transparent;
+    background: var(--blanco);
     color: var(--turquesa);
     border: 2px solid var(--turquesa);
     padding: 10px 22px;
@@ -181,10 +178,10 @@
   .back-btn:hover { background: var(--turquesa); color: var(--blanco); }
 
   .detail h2 {
-    font-size: 38px;
+    font-size: 44px;
     font-weight: 900;
-    color: var(--blanco);
-    margin-bottom: 24px;
+    color: var(--negro);
+    margin-bottom: 28px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1;
@@ -192,27 +189,29 @@
   .detail h2 .accent { color: var(--turquesa); }
 
   .card {
-    background: var(--negro-card);
-    border-radius: 14px;
-    padding: 22px 24px;
+    background: var(--gris-card);
+    border-radius: 16px;
+    padding: 24px 26px;
     margin-bottom: 14px;
-    border-left: 4px solid var(--turquesa);
+    border-left: 5px solid var(--turquesa);
   }
   .card h3 {
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--blanco);
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--negro);
     margin-bottom: 10px;
   }
   .card p {
     font-size: 15px;
-    color: #D5D5DE;
+    color: var(--gris-texto);
     margin-bottom: 8px;
+    font-weight: 500;
   }
   .card p:last-child { margin-bottom: 0; }
+  .card p strong { color: var(--negro); font-weight: 800; }
   .card.highlight {
     border-left-color: var(--amarillo);
-    background: linear-gradient(135deg, #232323 0%, #2a1f0a 100%);
+    background: #FFF9E6;
   }
 
   ul.bullets {
@@ -220,12 +219,14 @@
     margin-top: 8px;
   }
   ul.bullets li {
-    padding: 10px 0 10px 28px;
+    padding: 10px 0 10px 30px;
     position: relative;
-    color: #D5D5DE;
+    color: var(--gris-texto);
     font-size: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid var(--gris-borde);
+    font-weight: 500;
   }
+  ul.bullets li strong { color: var(--negro); font-weight: 800; }
   ul.bullets li:last-child { border-bottom: none; }
   ul.bullets li::before {
     content: "✓";
@@ -233,58 +234,60 @@
     left: 0;
     color: var(--turquesa);
     font-weight: 900;
+    font-size: 18px;
   }
 
   /* IMAGEN FULL */
   .img-frame {
-    background: var(--negro-card);
-    border-radius: 14px;
-    padding: 12px;
+    background: var(--gris-card);
+    border-radius: 16px;
+    padding: 14px;
     margin: 0 auto;
     text-align: center;
-    border: 2px solid rgba(0, 167, 183, 0.35);
+    border: 2px solid var(--gris-borde);
   }
   .img-frame img {
     border-radius: 10px;
     margin: 0 auto;
   }
 
-  /* PONENTES · estructura oficial Digitalex */
+  /* PONENTES · réplica de landing oficial */
   .ponentes-titulo {
     text-align: center;
-    margin-bottom: 12px;
-  }
-  .ponentes-titulo h2 {
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--blanco);
-    text-transform: uppercase;
-    line-height: 1.05;
-    letter-spacing: 0.5px;
     margin-bottom: 14px;
   }
+  .ponentes-titulo h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--negro);
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+  }
   .ponentes-titulo .lidera {
-    color: var(--gris);
-    font-size: 14px;
-    letter-spacing: 0.3px;
+    color: var(--gris-texto);
+    font-size: 16px;
+    font-weight: 600;
   }
   .vilma-destacada {
     max-width: 320px;
-    margin: 36px auto 14px auto;
+    margin: 36px auto 20px auto;
     text-align: center;
   }
   .vilma-destacada img { width: 100%; }
   .vilma-destacada .bio {
-    color: #D5D5DE;
+    color: var(--gris-texto);
     font-size: 14px;
     text-align: center;
     padding: 16px 8px 0 8px;
     line-height: 1.6;
+    font-weight: 500;
   }
   .speakers-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 22px;
     padding: 0;
     margin-top: 36px;
   }
@@ -299,35 +302,38 @@
     display: block;
   }
   .speaker-tile .bio {
-    color: #D5D5DE;
+    color: var(--gris-texto);
     font-size: 13px;
     text-align: center;
     padding: 14px 4px 0 4px;
     line-height: 1.55;
+    font-weight: 500;
   }
   @media (max-width: 768px) {
     .speakers-grid { grid-template-columns: 1fr; }
-    .ponentes-titulo h2 { font-size: 28px; }
+    .ponentes-titulo h2 { font-size: 30px; }
+    .detail h2 { font-size: 30px; }
   }
 
   /* PATROCINADORES + ZONA COMIDAS */
   .sponsor-section {
-    margin-top: 32px;
+    margin-top: 40px;
   }
   .sponsor-section h3 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
-    color: var(--turquesa);
+    color: var(--negro);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 6px;
     text-align: center;
   }
   .sponsor-section .sub {
-    color: var(--gris);
-    font-size: 13.5px;
+    color: var(--gris-texto);
+    font-size: 14px;
     text-align: center;
     margin-bottom: 22px;
+    font-weight: 500;
   }
   .sponsor-grid {
     display: grid;
@@ -335,7 +341,8 @@
     gap: 14px;
     background: var(--blanco);
     padding: 26px 22px;
-    border-radius: 14px;
+    border-radius: 16px;
+    border: 2px solid var(--gris-borde);
   }
   .sponsor-grid .sponsor-card {
     background: var(--blanco);
@@ -344,7 +351,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 88px;
+    min-height: 90px;
   }
   .sponsor-grid .sponsor-card img {
     max-width: 100%;
@@ -352,18 +359,19 @@
     object-fit: contain;
   }
   .placeholder-card {
-    background: rgba(0, 167, 183, 0.08);
-    border: 2px dashed rgba(0, 167, 183, 0.4);
+    background: var(--gris-card);
+    border: 2px dashed var(--gris-borde);
     border-radius: 10px;
     padding: 18px;
     text-align: center;
-    color: var(--gris);
+    color: var(--gris-texto);
     font-size: 12px;
-    min-height: 88px;
+    min-height: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
     line-height: 1.4;
+    font-weight: 600;
   }
 
   /* BOTÓN PRIMARIO */
@@ -393,12 +401,12 @@
   }
 
   footer {
-    background: #0F0F14;
+    background: var(--negro);
     text-align: center;
-    padding: 32px 20px;
-    color: #6B7280;
+    padding: 36px 20px;
+    color: #B5B5B5;
     font-size: 13px;
-    border-top: 3px solid var(--turquesa);
+    border-top: 4px solid var(--turquesa);
   }
   footer strong { color: var(--turquesa); }
   footer .by {
@@ -409,14 +417,13 @@
   }
 
   @media (max-width: 600px) {
-    .hero { padding: 36px 16px 28px 16px; }
+    .hero { padding: 38px 16px 32px 16px; }
     .hero .logo-digitalex { max-width: 300px; }
     .hero .tagline { font-size: 15px; }
     .info-banner img { max-width: 320px; }
-    .hub { padding: 24px 14px 40px 14px; }
-    .hub-btn { padding: 22px 18px; }
-    .detail { padding: 32px 16px 50px 16px; }
-    .detail h2 { font-size: 28px; }
+    .hub { padding: 28px 14px 44px 14px; }
+    .hub-btn { padding: 24px 20px; }
+    .detail { padding: 36px 16px 56px 16px; }
   }
 </style>
 </head>
