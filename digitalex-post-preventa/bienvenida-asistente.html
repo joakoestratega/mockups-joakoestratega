@@ -4,144 +4,164 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bienvenido a Digitalex · Información del asistente</title>
-<meta name="description" content="Toda la información de Digitalex con Vilma Núñez. 28 de mayo · Plaza Mayor, Medellín. Programación, beneficios VIP, ubicación y más.">
+<meta name="description" content="Toda la información de Digitalex con Vilma Núñez. 28 de mayo · Plaza Mayor, Medellín.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --turquesa: #00a7b7;
+    --turquesa-claro: #1FCFD3;
+    --amarillo: #F8B400;
+    --negro: #1A1A1A;
+    --negro-card: #232323;
+    --gris: #B5B5B5;
+    --blanco: #FFFFFF;
+  }
+
   html, body {
-    font-family: 'Segoe UI', 'Montserrat', Arial, sans-serif;
-    background: #0F0F14;
-    color: #FFFFFF;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--negro);
+    color: var(--blanco);
     line-height: 1.55;
     min-height: 100vh;
   }
 
+  img { max-width: 100%; height: auto; display: block; }
+
   /* HERO */
   .hero {
-    background: linear-gradient(135deg, #0F0F14 0%, #1a1a2e 100%);
-    padding: 50px 20px 36px 20px;
+    background: linear-gradient(135deg, #0F0F14 0%, #1f1f2e 100%);
+    padding: 56px 20px 40px 20px;
     text-align: center;
-    border-bottom: 3px solid #1FCFD3;
+    border-bottom: 4px solid var(--turquesa);
   }
   .hero .label {
     display: inline-block;
-    background: #1FCFD3;
+    background: var(--turquesa);
     color: #0F0F14;
-    padding: 6px 16px;
-    border-radius: 20px;
+    padding: 7px 18px;
+    border-radius: 24px;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
   .hero h1 {
-    font-size: 34px;
+    font-size: 38px;
     font-weight: 900;
     letter-spacing: 1px;
     margin-bottom: 10px;
-    color: #FFFFFF;
+    text-transform: uppercase;
   }
-  .hero h1 span { color: #1FCFD3; }
+  .hero h1 span { color: var(--turquesa); }
   .hero .subtitle {
     font-size: 16px;
     color: #B5B5C0;
     margin-bottom: 24px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .hero .meta {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 18px;
-    font-size: 14px;
-    color: #FFFFFF;
+    gap: 8px 14px;
+    font-size: 13px;
     font-weight: 700;
   }
   .hero .meta span {
-    background: rgba(31, 207, 211, 0.12);
-    border: 1px solid rgba(31, 207, 211, 0.4);
-    padding: 6px 14px;
-    border-radius: 18px;
+    background: rgba(0, 167, 183, 0.12);
+    border: 1px solid rgba(0, 167, 183, 0.5);
+    padding: 7px 14px;
+    border-radius: 20px;
   }
 
   /* HUB · grid de botones */
   .hub-intro {
     text-align: center;
-    padding: 36px 20px 14px 20px;
+    padding: 40px 20px 8px 20px;
     max-width: 720px;
     margin: 0 auto;
   }
   .hub-intro h2 {
     font-size: 22px;
     font-weight: 900;
-    color: #F8B400;
+    color: var(--amarillo);
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin-bottom: 6px;
-    letter-spacing: 0.5px;
   }
   .hub-intro p {
-    font-size: 15px;
-    color: #B5B5C0;
+    font-size: 14px;
+    color: var(--gris);
   }
 
   .hub {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-    padding: 24px 20px 40px 20px;
+    gap: 16px;
+    padding: 28px 20px 50px 20px;
     max-width: 1100px;
     margin: 0 auto;
   }
   .hub-btn {
-    background: linear-gradient(145deg, #1a1a2e 0%, #14141f 100%);
-    border: 1.5px solid rgba(31, 207, 211, 0.25);
-    border-radius: 18px;
-    padding: 28px 22px;
+    background: linear-gradient(145deg, #2a2a2a 0%, #1d1d1d 100%);
+    border: 1.5px solid rgba(0, 167, 183, 0.3);
+    border-radius: 16px;
+    padding: 26px 22px;
     cursor: pointer;
     text-align: left;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     align-items: center;
-    gap: 18px;
-    color: #FFFFFF;
+    gap: 16px;
+    color: var(--blanco);
     font-family: inherit;
     width: 100%;
   }
   .hub-btn:hover {
     transform: translateY(-4px);
-    border-color: #1FCFD3;
-    box-shadow: 0 12px 30px rgba(31, 207, 211, 0.18);
+    border-color: var(--turquesa);
+    box-shadow: 0 14px 32px rgba(0, 167, 183, 0.22);
   }
   .hub-btn .icon {
     flex-shrink: 0;
-    width: 56px;
-    height: 56px;
-    background: #1FCFD3;
+    width: 54px;
+    height: 54px;
+    background: var(--turquesa);
     color: #0F0F14;
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 900;
   }
   .hub-btn .text h3 {
-    font-size: 17px;
-    font-weight: 900;
-    color: #FFFFFF;
-    margin-bottom: 4px;
-    letter-spacing: 0.3px;
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--blanco);
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
   }
   .hub-btn .text p {
-    font-size: 13px;
-    color: #B5B5C0;
-    line-height: 1.4;
+    font-size: 12.5px;
+    color: var(--gris);
+    line-height: 1.45;
   }
 
-  /* SECCIONES DE DETALLE · ocultas por defecto */
+  /* DETALLE */
   .detail {
     display: none;
-    max-width: 860px;
+    max-width: 920px;
     margin: 0 auto;
-    padding: 40px 20px 60px 20px;
+    padding: 42px 20px 60px 20px;
   }
   .detail.active { display: block; animation: fadeIn 0.35s ease; }
   @keyframes fadeIn {
@@ -151,11 +171,11 @@
 
   .back-btn {
     background: transparent;
-    color: #1FCFD3;
-    border: 1.5px solid #1FCFD3;
+    color: var(--turquesa);
+    border: 1.5px solid var(--turquesa);
     padding: 10px 22px;
     border-radius: 22px;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 800;
     cursor: pointer;
     margin-bottom: 28px;
@@ -164,35 +184,29 @@
     letter-spacing: 1px;
     transition: background 0.25s ease, color 0.25s ease;
   }
-  .back-btn:hover { background: #1FCFD3; color: #0F0F14; }
+  .back-btn:hover { background: var(--turquesa); color: #0F0F14; }
 
   .detail h2 {
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 900;
-    color: #1FCFD3;
-    margin-bottom: 16px;
-    letter-spacing: 0.5px;
-  }
-  .detail .intro {
-    font-size: 16px;
-    color: #B5B5C0;
-    margin-bottom: 28px;
-    line-height: 1.6;
+    color: var(--turquesa);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .card {
-    background: #1a1a2e;
+    background: var(--negro-card);
     border-radius: 14px;
     padding: 22px 24px;
-    margin-bottom: 16px;
-    border-left: 4px solid #1FCFD3;
+    margin-bottom: 14px;
+    border-left: 4px solid var(--turquesa);
   }
   .card h3 {
     font-size: 17px;
-    font-weight: 900;
-    color: #FFFFFF;
+    font-weight: 800;
+    color: var(--blanco);
     margin-bottom: 10px;
-    letter-spacing: 0.3px;
   }
   .card p {
     font-size: 15px;
@@ -201,8 +215,8 @@
   }
   .card p:last-child { margin-bottom: 0; }
   .card.highlight {
-    border-left-color: #F8B400;
-    background: linear-gradient(135deg, #1a1a2e 0%, #2a1f0a 100%);
+    border-left-color: var(--amarillo);
+    background: linear-gradient(135deg, #232323 0%, #2a1f0a 100%);
   }
 
   ul.bullets {
@@ -221,196 +235,112 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #1FCFD3;
+    color: var(--turquesa);
     font-weight: 900;
   }
 
-  .schedule-item {
-    display: flex;
-    gap: 18px;
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(31, 207, 211, 0.12);
-  }
-  .schedule-item:last-child { border-bottom: none; }
-  .schedule-item .time {
-    flex-shrink: 0;
-    width: 90px;
-    color: #F8B400;
-    font-weight: 900;
-    font-size: 15px;
-  }
-  .schedule-item .activity {
-    flex: 1;
-  }
-  .schedule-item .activity h4 {
-    color: #FFFFFF;
-    font-size: 16px;
-    font-weight: 800;
-    margin-bottom: 4px;
-  }
-  .schedule-item .activity p {
-    color: #B5B5C0;
-    font-size: 14px;
-  }
-
-  /* MAPA DEL EVENTO · esquemático */
-  .venue-map {
-    background: #14141f;
-    border: 2px solid #1FCFD3;
-    border-radius: 16px;
-    padding: 24px;
-    margin-top: 16px;
-  }
-  .venue-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    gap: 12px;
-  }
-  .venue-zone {
-    background: #1a1a2e;
-    border: 2px dashed rgba(31, 207, 211, 0.4);
-    border-radius: 10px;
-    padding: 18px 14px;
+  /* IMAGEN FULL */
+  .img-frame {
+    background: var(--negro-card);
+    border-radius: 14px;
+    padding: 12px;
+    margin: 0 auto;
     text-align: center;
-    color: #FFFFFF;
+    border: 1px solid rgba(0, 167, 183, 0.3);
   }
-  .venue-zone .num {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: #1FCFD3;
-    color: #0F0F14;
-    border-radius: 50%;
-    font-weight: 900;
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-  .venue-zone h4 {
-    font-size: 14px;
-    font-weight: 900;
-    margin-bottom: 4px;
-    color: #FFFFFF;
-    letter-spacing: 0.3px;
-  }
-  .venue-zone p {
-    font-size: 12px;
-    color: #B5B5C0;
-    line-height: 1.4;
-  }
-  .venue-zone.main {
-    background: linear-gradient(135deg, #1FCFD3 0%, #0E7490 100%);
-    border-style: solid;
-    border-color: #1FCFD3;
-    grid-column: span 2;
-    padding: 26px 14px;
-  }
-  .venue-zone.main h4 { color: #0F0F14; font-size: 17px; }
-  .venue-zone.main p  { color: #0F0F14; font-weight: 600; }
-  .venue-zone.main .num { background: #0F0F14; color: #1FCFD3; }
-
-  .map-legend {
-    margin-top: 18px;
-    padding: 14px 18px;
-    background: rgba(31, 207, 211, 0.08);
+  .img-frame img {
     border-radius: 10px;
-    font-size: 14px;
-    color: #D5D5DE;
-    line-height: 1.6;
+    margin: 0 auto;
   }
-  .map-legend strong { color: #1FCFD3; }
 
   /* PONENTES */
   .speakers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
   }
   .speaker-card {
-    background: #1a1a2e;
+    background: var(--negro-card);
     border-radius: 14px;
     padding: 22px;
     text-align: center;
-    border: 1px solid rgba(31, 207, 211, 0.18);
+    border: 1px solid rgba(0, 167, 183, 0.2);
   }
   .speaker-card .avatar {
     width: 72px;
     height: 72px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #1FCFD3 0%, #21209C 100%);
+    background: linear-gradient(135deg, var(--turquesa) 0%, #21209C 100%);
     margin: 0 auto 14px auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
-    font-size: 28px;
+    color: var(--blanco);
+    font-size: 26px;
     font-weight: 900;
   }
   .speaker-card h3 {
-    color: #FFFFFF;
     font-size: 17px;
-    font-weight: 900;
+    font-weight: 800;
     margin-bottom: 4px;
   }
   .speaker-card .role {
-    color: #F8B400;
-    font-size: 12px;
+    color: var(--amarillo);
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 10px;
   }
   .speaker-card p {
-    color: #B5B5C0;
-    font-size: 14px;
+    color: var(--gris);
+    font-size: 13.5px;
     line-height: 1.5;
   }
 
   /* BOTÓN PRIMARIO */
   .primary-action {
     display: inline-block;
-    background: #1FCFD3;
+    background: var(--turquesa);
     color: #0F0F14;
-    padding: 14px 30px;
-    border-radius: 28px;
+    padding: 14px 32px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 900;
-    font-size: 15px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 18px;
+    margin-top: 14px;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: dgx-pulse 2s ease-in-out infinite;
   }
   .primary-action:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 24px rgba(31, 207, 211, 0.25);
+    box-shadow: 0 10px 24px rgba(0, 167, 183, 0.3);
+    animation-play-state: paused;
+  }
+  @keyframes dgx-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 167, 183, 0.5); }
+    50%      { box-shadow: 0 0 0 12px rgba(0, 167, 183, 0); }
   }
 
-  /* FOOTER */
   footer {
-    background: #14141f;
+    background: #14141a;
     text-align: center;
-    padding: 28px 20px;
+    padding: 30px 20px;
     color: #6B7280;
     font-size: 13px;
-    border-top: 1px solid rgba(31, 207, 211, 0.15);
+    border-top: 1px solid rgba(0, 167, 183, 0.18);
   }
-  footer strong { color: #1FCFD3; }
+  footer strong { color: var(--turquesa); }
 
-  /* MOBILE */
   @media (max-width: 600px) {
-    .hero h1 { font-size: 26px; }
+    .hero h1 { font-size: 28px; }
     .hero .subtitle { font-size: 14px; }
-    .hub { padding: 18px 14px 30px 14px; }
+    .hub { padding: 20px 14px 36px 14px; }
     .hub-btn { padding: 22px 18px; }
     .detail { padding: 30px 16px 50px 16px; }
-    .detail h2 { font-size: 22px; }
-    .schedule-item { flex-direction: column; gap: 4px; }
-    .schedule-item .time { width: auto; }
-    .venue-grid { grid-template-columns: 1fr; }
-    .venue-zone.main { grid-column: span 1; }
+    .detail h2 { font-size: 24px; }
   }
 </style>
 </head>
@@ -428,9 +358,9 @@
   </div>
 </header>
 
-<!-- HUB · BOTONES -->
+<!-- HUB -->
 <div class="hub-intro" id="hub-top">
-  <h2>Encuentra aquí toda la información</h2>
+  <h2>Toda la información del evento</h2>
   <p>Toca cualquier botón para ver el detalle.</p>
 </div>
 
@@ -455,7 +385,7 @@
     <span class="icon">🗺️</span>
     <span class="text">
       <h3>Mapa General del Evento</h3>
-      <p>Zonas, restaurantes y patrocinadores</p>
+      <p>Plano oficial del recinto</p>
     </span>
   </button>
 
@@ -463,7 +393,7 @@
     <span class="icon">📍</span>
     <span class="text">
       <h3>Ubicación y cómo llegar</h3>
-      <p>Dirección y ruta en Google Maps</p>
+      <p>Dirección y rutas en Medellín</p>
     </span>
   </button>
 
@@ -479,7 +409,7 @@
     <span class="icon">🎤</span>
     <span class="text">
       <h3>Ponentes</h3>
-      <p>Conoce a los 4 que vienen a hablar</p>
+      <p>Los 4 referentes de la jornada</p>
     </span>
   </button>
 </section>
@@ -488,104 +418,21 @@
 <section class="detail" id="detail-programacion">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
   <h2>Programación</h2>
-  <p class="intro">Digitalex es una jornada completa de un solo día. Llegas con tu experiencia y sales con tu marca personal armada. Estos son los bloques de la jornada.</p>
-
-  <div class="card">
-    <div class="schedule-item">
-      <div class="time">8:00 a.m.</div>
-      <div class="activity">
-        <h4>Apertura de puertas</h4>
-        <p>Acceso al Gran Salón, registro de asistentes y bienvenida oficial. Si tienes entrada VIP, accedes sin hacer fila.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">9:30 a.m.</div>
-      <div class="activity">
-        <h4>Networking</h4>
-        <p>Espacio abierto para conectar con otros asistentes antes de arrancar la jornada.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">10:00 a.m.</div>
-      <div class="activity">
-        <h4>Felipe Vergara</h4>
-        <p>Cofundador de Deeplook, con 250 empresas asesoradas. Cómo construir autoridad real desde la experiencia.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">10:40 a.m.</div>
-      <div class="activity">
-        <h4>Rueda de negocios</h4>
-        <p>Espacio de conexiones reales entre asistentes y patrocinadores en la muestra comercial.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">11:40 a.m.</div>
-      <div class="activity">
-        <h4>Santiago Sánchez</h4>
-        <p>Fundador de Converzzo, con 30.000 alumnos. Cómo escalar una marca personal sin perder esencia.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">12:20 p.m.</div>
-      <div class="activity">
-        <h4>Rueda de negocios</h4>
-        <p>Segundo bloque de conexiones. Los asistentes VIP reciben su almuerzo servido directamente en su mesa. Los asistentes General tienen acceso a la zona de restaurantes de Plaza Mayor.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">1:20 p.m.</div>
-      <div class="activity">
-        <h4>Danii Emprende</h4>
-        <p>Mentora en marca personal. Cómo mostrarte como experto sin parecer vendedor.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">2:00 p.m.</div>
-      <div class="activity">
-        <h4>Rueda de negocios</h4>
-        <p>Tercer bloque de conexiones y networking antes del taller principal.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">2:40 p.m.</div>
-      <div class="activity">
-        <h4>Taller Vilma Núñez</h4>
-        <p>El plato fuerte de la jornada. Más de 4 horas de taller práctico con Vilma para que salgas con tu marca personal armada, no con apuntes para hacerla después.</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">7:00 p.m.</div>
-      <div class="activity">
-        <h4>Cierre y agradecimientos</h4>
-        <p>Fin oficial de la jornada. Despedida del equipo organizador.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card highlight">
-    <h3>🔥 Los 5 temas que se trabajan en la jornada</h3>
-    <ul class="bullets">
-      <li>Cómo hacerte conocido en internet</li>
-      <li>Cómo armar tu marca personal desde cero</li>
-      <li>Cómo ganar plata por varios lados con tu marca</li>
-      <li>Qué publicar y cómo, con criterio de negocio</li>
-      <li>Cómo mostrarte como experto sin parecer vendedor de humo</li>
-    </ul>
+  <div class="img-frame">
+    <img src="programacion.jpg" alt="Programación oficial de Digitalex">
   </div>
 </section>
 
 <!-- DETALLE · VIP -->
 <section class="detail" id="detail-vip">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Beneficios de tu entrada VIP</h2>
-  <p class="intro">Si compraste entrada VIP, estos son los beneficios que tienes durante toda la jornada.</p>
+  <h2>Beneficios VIP</h2>
 
   <div class="card highlight">
     <h3>⭐ Lo que incluye tu VIP</h3>
     <ul class="bullets">
       <li>Entrada preferencial sin filas. Accedes directamente al recinto.</li>
-      <li>Ubicación en primera fila garantizada durante toda la jornada.</li>
+      <li>Ubicación en las primeras filas durante toda la jornada.</li>
       <li>Almuerzo incluido, servido directamente a tu mesa.</li>
       <li>Zona de hidratación exclusiva con bebidas durante todo el día.</li>
     </ul>
@@ -593,17 +440,12 @@
 
   <div class="card">
     <h3>🍽️ Sobre el almuerzo VIP</h3>
-    <p>El almuerzo no requiere fila ni desplazamiento. El equipo de Plaza Mayor lo sirve directamente en tu mesa durante el bloque del almuerzo. Así puedes seguir hablando con quienes están en tu mesa sin perder tiempo en colas.</p>
+    <p>El almuerzo no requiere fila ni desplazamiento. El equipo de Digitalex lo sirve directamente en tu mesa durante el bloque del almuerzo.</p>
   </div>
 
   <div class="card">
     <h3>💧 Zona de hidratación</h3>
-    <p>Tienes acceso a un espacio exclusivo con bebidas disponibles durante toda la jornada. Pasa cuando quieras a hidratarte sin esperar el descanso oficial.</p>
-  </div>
-
-  <div class="card">
-    <h3>🪑 Tu lugar en primera fila</h3>
-    <p>Las sillas de primera fila están reservadas para los asistentes VIP. No necesitas llegar temprano para asegurar buen lugar. Tu ubicación ya está garantizada.</p>
+    <p>Tienes acceso a un espacio exclusivo con bebidas disponibles durante toda la jornada.</p>
   </div>
 </section>
 
@@ -611,18 +453,11 @@
 <section class="detail" id="detail-mapa">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
   <h2>Mapa General del Evento</h2>
-  <p class="intro">Este es el plano oficial del recinto. Aquí encuentras la sala principal, la zona de la muestra comercial, los restaurantes y las áreas exclusivas para VIP.</p>
-
-  <div class="pdf-viewer">
-    <embed src="mapa-digitalex.pdf#toolbar=0&navpanes=0" type="application/pdf" width="100%" height="600px" />
+  <div class="img-frame">
+    <img src="mapa.png" alt="Mapa general de Digitalex">
   </div>
-
   <div style="text-align: center; margin-top: 18px;">
     <a href="mapa-digitalex.pdf" target="_blank" class="primary-action">📥 Descargar mapa en PDF</a>
-  </div>
-
-  <div class="map-legend" style="margin-top: 24px;">
-    <strong>Qué encuentras en el recinto:</strong> dentro del Gran Salón está el escenario principal donde ocurren todas las charlas y el taller con Vilma. Alrededor del salón hay una <strong>muestra comercial</strong> con los stands de los patrocinadores oficiales (aprovéchala en las ruedas de negocios). Plaza Mayor tiene su propia <strong>zona de restaurantes</strong> para los asistentes General durante el almuerzo. Los asistentes VIP tienen su zona exclusiva en primera fila con almuerzo servido a la mesa.
   </div>
 </section>
 
@@ -630,29 +465,32 @@
 <section class="detail" id="detail-ubicacion">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
   <h2>Ubicación y cómo llegar</h2>
-  <p class="intro">Digitalex se realiza en el Gran Salón de Plaza Mayor, en pleno centro de Medellín. Estos son los datos para llegar.</p>
 
   <div class="card highlight">
     <h3>📍 Plaza Mayor, Medellín</h3>
     <p><strong>Dirección:</strong> Calle 41 #55-80 · Centro de Convenciones y Exposiciones</p>
     <p><strong>Ciudad:</strong> Medellín, Antioquia, Colombia</p>
-    <p style="margin-top: 14px;">Plaza Mayor es uno de los recintos feriales más importantes del país, con 55 años de historia y más de 1.5 millones de visitantes al año.</p>
     <a href="https://www.google.com/maps/search/?api=1&query=Plaza+Mayor+Medell%C3%ADn+Centro+de+Convenciones" target="_blank" class="primary-action">Abrir en Google Maps</a>
   </div>
 
   <div class="card">
     <h3>🚗 Cómo llegar en carro</h3>
-    <p>Plaza Mayor cuenta con parqueadero interno con tarifa por hora. Te recomendamos llegar entre las 8:00 y 8:30 a.m. para evitar congestión en el ingreso.</p>
+    <p>Plaza Mayor cuenta con parqueadero interno con tarifa por hora. Llega entre las 7:30 y 8:00 a.m. para evitar congestión.</p>
   </div>
 
   <div class="card">
     <h3>🚇 Cómo llegar en Metro</h3>
-    <p>Estación Cisneros (Línea A) está a 8 minutos caminando. Desde el aeropuerto José María Córdova en Rionegro, tomar transporte directo hasta el centro de Medellín.</p>
+    <p>Estación <strong>Industriales</strong> (Línea A). Desde ahí caminas unos 10 minutos hasta Plaza Mayor.</p>
+  </div>
+
+  <div class="card">
+    <h3>🚌 Cómo llegar en Metroplús</h3>
+    <p>Toma la <strong>Línea 1 de Metroplús</strong> (Universidad de Medellín - Aranjuez) y bájate en la estación <strong>Plaza Mayor</strong>. Quedas justo al frente.</p>
   </div>
 
   <div class="card">
     <h3>🚕 Cómo llegar en taxi o app</h3>
-    <p>Pídelo directo a "Plaza Mayor Medellín" o a la dirección Calle 41 #55-80. Todos los conductores conocen el lugar.</p>
+    <p>Pídelo directo a "Plaza Mayor Medellín" o a la dirección Calle 41 #55-80.</p>
   </div>
 </section>
 
@@ -660,27 +498,39 @@
 <section class="detail" id="detail-boletas">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
   <h2>Entrega de Boletas</h2>
-  <p class="intro">Tu boleta para Digitalex ya está en tu correo electrónico. Esto es lo que necesitas saber para acceder al evento sin problemas.</p>
 
   <div class="card highlight">
     <h3>📩 Tu boleta llegó por correo</h3>
-    <p>La boleta electrónica te llegó al correo desde <strong>La Tiquetera</strong>, la plataforma oficial de venta. Si compraste tu entrada, busca un correo de remitente <em>noreply@latiquetera.com</em> o similar con el asunto que menciona Digitalex.</p>
-    <p style="margin-top: 12px;">Si no la encuentras en bandeja de entrada, revisa también la carpeta de Spam o Promociones.</p>
+    <p>La boleta electrónica te llegó al correo desde <strong>La Tiquetera</strong>, la plataforma oficial de venta. Si no la encuentras en bandeja de entrada, revisa la carpeta de Spam o Promociones.</p>
   </div>
 
   <div class="card">
-    <h3>📱 Cómo presentar tu boleta el día del evento</h3>
-    <p>El día del evento, presenta la boleta directamente desde tu celular en la entrada de Plaza Mayor. No es necesario imprimirla. El equipo de acceso escanea el código QR de tu boleta digital.</p>
+    <h3>🚪 Filas de ingreso</h3>
+    <p>Hay <strong>dos filas de ingreso</strong> en la entrada del evento:</p>
+    <ul class="bullets">
+      <li>Fila <strong>General</strong> para asistentes con boleta General.</li>
+      <li>Fila <strong>VIP</strong>, donde además reclamas tu escarapela VIP.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>⚡ Preregistro VIP (opcional)</h3>
+    <p>Si quieres agilizar tu ingreso VIP, puedes hacer preregistro. Te va a llegar un link a tu correo para registrar los datos de la persona que va a ingresar. El día del evento solo presentas la cédula.</p>
+  </div>
+
+  <div class="card">
+    <h3>📱 Cómo presentar tu boleta</h3>
+    <p>Presenta la boleta directamente desde tu celular en la entrada. No es necesario imprimirla. El equipo de acceso escanea el código QR.</p>
   </div>
 
   <div class="card">
     <h3>🪪 Documento de identidad</h3>
-    <p>Trae también tu documento de identidad físico o digital. Algunas boletas piden verificación de identidad al ingresar.</p>
+    <p>Trae tu cédula física o digital. Algunas boletas requieren verificación de identidad al ingresar.</p>
   </div>
 
   <div class="card">
     <h3>❓ ¿No te llegó la boleta?</h3>
-    <p>Si compraste tu entrada y no encuentras el correo, escríbenos directamente y te ayudamos a recuperarla. La compra queda registrada en el sistema de La Tiquetera con el correo y los datos que ingresaste al pagar.</p>
+    <p>Escríbenos directamente y te ayudamos a recuperarla. La compra queda registrada en La Tiquetera con el correo y los datos del pago.</p>
   </div>
 </section>
 
@@ -688,35 +538,34 @@
 <section class="detail" id="detail-ponentes">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
   <h2>Ponentes</h2>
-  <p class="intro">Cuatro referentes vienen a Digitalex para guiarte en la construcción de tu marca personal. Cada uno desde su especialidad.</p>
 
   <div class="speakers-grid">
     <div class="speaker-card">
       <div class="avatar">VN</div>
       <h3>Vilma Núñez</h3>
-      <div class="role">Estrella · Taller práctico</div>
-      <p>15 años haciendo marcas personales en el mundo hispano. Guía el taller práctico de 4 horas durante toda la jornada.</p>
+      <div class="role">Taller práctico</div>
+      <p>15 años haciendo marcas personales en el mundo hispano.</p>
     </div>
 
     <div class="speaker-card">
       <div class="avatar">FV</div>
       <h3>Felipe Vergara</h3>
       <div class="role">Cofundador Deeplook</div>
-      <p>Cofundador de Deeplook con 250 empresas asesoradas. Charla sobre cómo construir autoridad real desde la experiencia.</p>
+      <p>250 empresas asesoradas en construcción de autoridad.</p>
     </div>
 
     <div class="speaker-card">
       <div class="avatar">SS</div>
       <h3>Santiago Sánchez</h3>
       <div class="role">Fundador Converzzo</div>
-      <p>Fundador de Converzzo con 30.000 alumnos. Comparte cómo escalar una marca personal sin perder esencia.</p>
+      <p>30.000 alumnos formados en marca personal.</p>
     </div>
 
     <div class="speaker-card">
       <div class="avatar">DE</div>
       <h3>Danii Emprende</h3>
       <div class="role">Mentora marca personal</div>
-      <p>Mentora en marca personal para emprendedores. Cómo mostrarte como experto sin parecer vendedor.</p>
+      <p>Mentora especializada en marca personal para emprendedores.</p>
     </div>
   </div>
 </section>
@@ -730,22 +579,15 @@
   function openDetail(id) {
     document.getElementById('hub').style.display = 'none';
     document.getElementById('hub-top').style.display = 'none';
-
-    document.querySelectorAll('.detail').forEach(function (el) {
-      el.classList.remove('active');
-    });
-
+    document.querySelectorAll('.detail').forEach(function (el) { el.classList.remove('active'); });
     var target = document.getElementById('detail-' + id);
     if (target) {
       target.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
-
   function goBack() {
-    document.querySelectorAll('.detail').forEach(function (el) {
-      el.classList.remove('active');
-    });
+    document.querySelectorAll('.detail').forEach(function (el) { el.classList.remove('active'); });
     document.getElementById('hub').style.display = 'grid';
     document.getElementById('hub-top').style.display = 'block';
     window.scrollTo({ top: 0, behavior: 'smooth' });
