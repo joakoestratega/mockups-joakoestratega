@@ -250,36 +250,64 @@
   }
 
   /* PONENTES · estructura oficial Digitalex */
+  .ponentes-titulo {
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .ponentes-titulo h2 {
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--blanco);
+    text-transform: uppercase;
+    line-height: 1.05;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+  .ponentes-titulo .lidera {
+    color: var(--gris);
+    font-size: 14px;
+    letter-spacing: 0.3px;
+  }
+  .vilma-destacada {
+    max-width: 320px;
+    margin: 36px auto 14px auto;
+    text-align: center;
+  }
+  .vilma-destacada img { width: 100%; }
+  .vilma-destacada .bio {
+    color: #D5D5DE;
+    font-size: 14px;
+    text-align: center;
+    padding: 16px 8px 0 8px;
+    line-height: 1.6;
+  }
   .speakers-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 26px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 0;
+    margin-top: 36px;
   }
   .speaker-tile {
     background: transparent;
+    text-align: center;
     transition: transform 0.3s ease;
   }
   .speaker-tile:hover { transform: translateY(-6px); }
-  .speaker-tile .photo-wrap {
+  .speaker-tile img {
     width: 100%;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 18px;
-    background: var(--negro-card);
-  }
-  .speaker-tile .photo-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
   }
   .speaker-tile .bio {
     color: #D5D5DE;
-    font-size: 14px;
-    text-align: left;
-    padding: 18px 4px 0 4px;
-    line-height: 1.6;
+    font-size: 13px;
+    text-align: center;
+    padding: 14px 4px 0 4px;
+    line-height: 1.55;
+  }
+  @media (max-width: 768px) {
+    .speakers-grid { grid-template-columns: 1fr; }
+    .ponentes-titulo h2 { font-size: 28px; }
   }
 
   /* PATROCINADORES + ZONA COMIDAS */
@@ -610,27 +638,31 @@
 <!-- DETALLE · PONENTES -->
 <section class="detail" id="detail-ponentes">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2><span class="accent">Ponentes</span></h2>
+
+  <div class="ponentes-titulo">
+    <h2>APRENDE DE QUIENES<br>YA LO CONSTRUYERON</h2>
+    <p class="lidera">Vilma Núñez lidera el evento.</p>
+  </div>
+
+  <div class="vilma-destacada">
+    <img src="assets/ponente-vilma.webp" alt="Vilma Núñez">
+    <p class="bio">Estratega de marketing. CEO Convierte Más. Una de las referentes más reconocidas del marketing digital en el mundo hispanohablante. Más de una década construyendo marcas personales y negocios digitales desde la estrategia real, sin humo.</p>
+  </div>
 
   <div class="speakers-grid">
     <div class="speaker-tile">
-      <div class="photo-wrap"><img src="assets/ponente-vilma.webp" alt="Vilma Núñez"></div>
-      <p class="bio">Estratega de marketing. CEO Convierte Más. Una de las referentes más reconocidas del marketing digital en el mundo hispanohablante. Más de una década construyendo marcas personales y negocios digitales desde la estrategia real, sin humo.</p>
+      <img src="assets/ponente-felipe.webp" alt="Felipe Vergara">
+      <p class="bio">Cofundador de Deeplook, agencia que ha ayudado a +250 empresas en 20 países a aumentar sus ventas online. También es creador de contenido sobre publicidad digital y ventas.</p>
     </div>
 
     <div class="speaker-tile">
-      <div class="photo-wrap"><img src="assets/ponente-santiago.webp" alt="Santiago Sánchez"></div>
+      <img src="assets/ponente-santiago.webp" alt="Santiago Sánchez">
       <p class="bio">Especialista en creación de comunidades digitales, con más de cinco años de experiencia. Ha trabajado con más de 500 emprendimientos en el desarrollo de estrategias digitales, enfocadas en transacciones. Actualmente, es gerente de Converzzo, academia de Social Media Marketing con más de 4.500 alumnos en Estados Unidos, México, Colombia y Panamá.</p>
     </div>
 
     <div class="speaker-tile">
-      <div class="photo-wrap"><img src="assets/ponente-danii.webp" alt="Danii Emprende"></div>
+      <img src="assets/ponente-danii.webp" alt="Danii Emprende">
       <p class="bio">Especialista en crecimiento orgánico y estrategia digital, con más de 5 años ayudando a emprendedores y marcas personales a crecer, vender y posicionarse en Instagram. Mentora reconocida por su enfoque práctico en la construcción de comunidad y marca personal.</p>
-    </div>
-
-    <div class="speaker-tile">
-      <div class="photo-wrap"><img src="assets/ponente-felipe.webp" alt="Felipe Vergara"></div>
-      <p class="bio">Cofundador de Deeplook, agencia que ha ayudado a +250 empresas en 20 países a aumentar sus ventas online. También es creador de contenido sobre publicidad digital y ventas.</p>
     </div>
   </div>
 </section>
