@@ -7,7 +7,7 @@
 <meta name="description" content="Toda la información de Digitalex con Vilma Núñez. 28 de mayo · Plaza Mayor, Medellín.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,25 +31,33 @@
 
   img { max-width: 100%; height: auto; display: block; }
 
-  /* HERO TURQUESA · estilo Digitalex oficial */
+  /* HERO · fondo negro estilo landing oficial */
   .hero {
-    background: var(--turquesa);
+    background: var(--negro);
     padding: 50px 20px 36px 20px;
     text-align: center;
+    border-bottom: 1px solid rgba(0, 167, 183, 0.2);
   }
   .hero .logo-digitalex {
-    max-width: 480px;
-    margin: 0 auto 22px auto;
+    max-width: 460px;
+    margin: 0 auto 18px auto;
     width: 100%;
+    filter: invert(1);
+  }
+  .hero .by-feria {
+    max-width: 200px;
+    margin: 0 auto 28px auto;
+    opacity: 0.95;
   }
   .hero .tagline {
-    color: #0F0F14;
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 24px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--blanco);
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 26px;
+    letter-spacing: 0.3px;
   }
+  .hero .tagline strong { color: var(--turquesa); }
+
   .hero .meta {
     display: inline-flex;
     flex-wrap: wrap;
@@ -59,23 +67,23 @@
     font-weight: 800;
   }
   .hero .meta span {
-    background: var(--negro);
+    background: var(--turquesa);
     color: var(--blanco);
     padding: 8px 16px;
-    border-radius: 24px;
+    border-radius: 22px;
     text-transform: uppercase;
     letter-spacing: 0.6px;
   }
 
-  /* BANNER NEGRO · TODO LO QUE NECESITAS SABER */
+  /* BANNER NECESITAS SABER */
   .info-banner {
     background: var(--negro);
-    padding: 48px 20px 12px 20px;
+    padding: 52px 20px 14px 20px;
     text-align: center;
   }
   .info-banner img {
-    max-width: 520px;
-    margin: 0 auto 8px auto;
+    max-width: 540px;
+    margin: 0 auto 14px auto;
     width: 100%;
     filter: invert(1);
   }
@@ -87,12 +95,12 @@
     letter-spacing: 0.3px;
   }
 
-  /* HUB · botones grandes */
+  /* HUB · botones */
   .hub {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 18px;
-    padding: 28px 20px 56px 20px;
+    padding: 30px 20px 60px 20px;
     max-width: 1100px;
     margin: 0 auto;
   }
@@ -114,20 +122,19 @@
   .hub-btn:hover {
     transform: translateY(-5px);
     border-color: var(--turquesa);
-    box-shadow: 0 16px 36px rgba(0, 167, 183, 0.28);
+    box-shadow: 0 16px 36px rgba(0, 167, 183, 0.3);
   }
   .hub-btn .icon {
     flex-shrink: 0;
     width: 60px;
     height: 60px;
     background: var(--turquesa);
-    color: #0F0F14;
+    color: var(--blanco);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 26px;
-    font-weight: 900;
   }
   .hub-btn .text h3 {
     font-size: 17px;
@@ -146,9 +153,9 @@
   /* DETALLE */
   .detail {
     display: none;
-    max-width: 920px;
+    max-width: 980px;
     margin: 0 auto;
-    padding: 42px 20px 60px 20px;
+    padding: 44px 20px 60px 20px;
   }
   .detail.active { display: block; animation: fadeIn 0.35s ease; }
   @keyframes fadeIn {
@@ -171,17 +178,18 @@
     letter-spacing: 1px;
     transition: background 0.25s ease, color 0.25s ease;
   }
-  .back-btn:hover { background: var(--turquesa); color: #0F0F14; }
+  .back-btn:hover { background: var(--turquesa); color: var(--blanco); }
 
   .detail h2 {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 900;
-    color: var(--turquesa);
+    color: var(--blanco);
     margin-bottom: 24px;
     text-transform: uppercase;
     letter-spacing: 1px;
     line-height: 1;
   }
+  .detail h2 .accent { color: var(--turquesa); }
 
   .card {
     background: var(--negro-card);
@@ -241,63 +249,39 @@
     margin: 0 auto;
   }
 
-  /* PONENTES · con foto y estilo Digitalex */
+  /* PONENTES · estilo oficial Digitalex */
   .speakers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
+    gap: 18px;
+    padding: 0;
   }
-  .speaker-card {
-    background: var(--negro-card);
-    border-radius: 14px;
-    padding: 24px 22px;
+  .speaker-tile {
+    background: transparent;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  .speaker-tile:hover { transform: translateY(-6px); }
+  .speaker-tile img {
+    width: 100%;
+    border-radius: 16px;
+  }
+  .speaker-tile .role {
     text-align: center;
-    border: 1px solid rgba(0, 167, 183, 0.25);
-    transition: border-color 0.25s ease, transform 0.25s ease;
-  }
-  .speaker-card:hover {
-    border-color: var(--turquesa);
-    transform: translateY(-3px);
-  }
-  .speaker-card .photo {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0 auto 14px auto;
-    border: 3px solid var(--turquesa);
-  }
-  .speaker-card .avatar-text {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--turquesa) 0%, #21209C 100%);
-    margin: 0 auto 14px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blanco);
-    font-size: 30px;
-    font-weight: 900;
-  }
-  .speaker-card h3 {
-    font-size: 18px;
-    font-weight: 900;
-    margin-bottom: 4px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  .speaker-card .role {
     color: var(--amarillo);
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 1.2px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-top: 12px;
+    margin-bottom: 6px;
   }
-  .speaker-card p {
+  .speaker-tile .bio {
     color: var(--gris);
-    font-size: 13.5px;
+    font-size: 13px;
+    text-align: center;
+    padding: 0 8px;
     line-height: 1.5;
   }
 
@@ -305,7 +289,7 @@
   .primary-action {
     display: inline-block;
     background: var(--turquesa);
-    color: #0F0F14;
+    color: var(--blanco);
     padding: 15px 36px;
     border-radius: 30px;
     text-decoration: none;
@@ -345,13 +329,13 @@
 
   @media (max-width: 600px) {
     .hero { padding: 36px 16px 28px 16px; }
-    .hero .logo-digitalex { max-width: 320px; }
-    .hero .tagline { font-size: 14px; }
+    .hero .logo-digitalex { max-width: 300px; }
+    .hero .tagline { font-size: 15px; }
     .info-banner img { max-width: 320px; }
-    .hub { padding: 22px 14px 40px 14px; }
+    .hub { padding: 24px 14px 40px 14px; }
     .hub-btn { padding: 22px 18px; }
     .detail { padding: 32px 16px 50px 16px; }
-    .detail h2 { font-size: 26px; }
+    .detail h2 { font-size: 28px; }
   }
 </style>
 </head>
@@ -359,8 +343,8 @@
 
 <!-- HERO -->
 <header class="hero">
-  <img src="assets/img-titulo-digitalex-con-vilma-nunes-3.webp" alt="Digitalex con Vilma Núñez" class="logo-digitalex">
-  <p class="tagline">El evento de marca personal más importante de Colombia</p>
+  <img src="assets/logo-digitalex.webp" alt="Digitalex con Vilma Núñez" class="logo-digitalex">
+  <p class="tagline">El evento de marca personal más importante de <strong>Colombia</strong></p>
   <div class="meta">
     <span>📅 Jueves 28 de mayo</span>
     <span>🕒 8 a.m. a 7 p.m.</span>
@@ -370,7 +354,7 @@
 
 <!-- BANNER TODO LO QUE NECESITAS SABER -->
 <div class="info-banner">
-  <img src="assets/img-titulo-digitalex-todo-lo-que-necesitas-saber-2.webp" alt="Todo lo que necesitas saber">
+  <img src="assets/titulo-necesitas-saber.webp" alt="Todo lo que necesitas saber">
   <p>Toca cualquier botón para ver el detalle del evento.</p>
 </div>
 
@@ -395,7 +379,7 @@
   <button class="hub-btn" onclick="openDetail('mapa')">
     <span class="icon">🗺️</span>
     <span class="text">
-      <h3>Mapa General del Evento</h3>
+      <h3>Mapa General</h3>
       <p>Plano oficial del recinto</p>
     </span>
   </button>
@@ -428,7 +412,7 @@
 <!-- DETALLE · PROGRAMACIÓN -->
 <section class="detail" id="detail-programacion">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Programación</h2>
+  <h2><span class="accent">Programación</span></h2>
   <div class="img-frame">
     <img src="programacion.jpg" alt="Programación oficial de Digitalex">
   </div>
@@ -437,7 +421,7 @@
 <!-- DETALLE · VIP -->
 <section class="detail" id="detail-vip">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Beneficios VIP</h2>
+  <h2>Beneficios <span class="accent">VIP</span></h2>
 
   <div class="card highlight">
     <h3>⭐ Lo que incluye tu VIP</h3>
@@ -463,7 +447,7 @@
 <!-- DETALLE · MAPA -->
 <section class="detail" id="detail-mapa">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Mapa General del Evento</h2>
+  <h2>Mapa <span class="accent">General</span></h2>
   <div class="img-frame">
     <img src="mapa.png" alt="Mapa general de Digitalex">
   </div>
@@ -475,7 +459,7 @@
 <!-- DETALLE · UBICACIÓN -->
 <section class="detail" id="detail-ubicacion">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Ubicación y cómo llegar</h2>
+  <h2>Ubicación y <span class="accent">cómo llegar</span></h2>
 
   <div class="card highlight">
     <h3>📍 Plaza Mayor, Medellín</h3>
@@ -508,7 +492,7 @@
 <!-- DETALLE · BOLETAS -->
 <section class="detail" id="detail-boletas">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Entrega de Boletas</h2>
+  <h2>Entrega de <span class="accent">Boletas</span></h2>
 
   <div class="card highlight">
     <h3>📩 Tu boleta llegó por correo</h3>
@@ -548,35 +532,31 @@
 <!-- DETALLE · PONENTES -->
 <section class="detail" id="detail-ponentes">
   <button class="back-btn" onclick="goBack()">← Volver al menú</button>
-  <h2>Ponentes</h2>
+  <h2><span class="accent">Ponentes</span></h2>
 
   <div class="speakers-grid">
-    <div class="speaker-card">
-      <img src="assets/img-vilma-digitalex-1.webp" alt="Vilma Núñez" class="photo">
-      <h3>Vilma Núñez</h3>
+    <div class="speaker-tile">
+      <img src="assets/ponente-vilma.webp" alt="Vilma Núñez">
       <div class="role">Taller práctico</div>
-      <p>15 años haciendo marcas personales en el mundo hispano.</p>
+      <p class="bio">15 años haciendo marcas personales en el mundo hispano.</p>
     </div>
 
-    <div class="speaker-card">
-      <div class="avatar-text">FV</div>
-      <h3>Felipe Vergara</h3>
+    <div class="speaker-tile">
+      <img src="assets/ponente-felipe.webp" alt="Felipe Vergara">
       <div class="role">Cofundador Deeplook</div>
-      <p>250 empresas asesoradas en construcción de autoridad.</p>
+      <p class="bio">250 empresas asesoradas en construcción de autoridad.</p>
     </div>
 
-    <div class="speaker-card">
-      <div class="avatar-text">SS</div>
-      <h3>Santiago Sánchez</h3>
+    <div class="speaker-tile">
+      <img src="assets/ponente-santiago.webp" alt="Santiago Sánchez">
       <div class="role">Fundador Converzzo</div>
-      <p>30.000 alumnos formados en marca personal.</p>
+      <p class="bio">30.000 alumnos formados en marca personal.</p>
     </div>
 
-    <div class="speaker-card">
-      <div class="avatar-text">DE</div>
-      <h3>Danii Emprende</h3>
+    <div class="speaker-tile">
+      <img src="assets/ponente-danii.webp" alt="Danii Emprende">
       <div class="role">Mentora marca personal</div>
-      <p>Mentora especializada en marca personal para emprendedores.</p>
+      <p class="bio">Mentora especializada en marca personal para emprendedores.</p>
     </div>
   </div>
 </section>
