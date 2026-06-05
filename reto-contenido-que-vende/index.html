@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<!-- MOCKUP — Página de registro al reto de Alejandra Rincón. Colores y datos marcados [así] son placeholder, se ajustan a su marca y a datos reales. La captura del formulario se conecta después (Apps Script + Sheets, sin secretos en el frontend). -->
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regístrate · Reto Contenido que Vende · Alejandra Rincón</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E0E13; --bg2:#16161f; --card:#1b1b26;
+    --acento:#FF3D77; --acento2:#FF8A3D; --blanco:#fff; --gris:#a8a6b5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:'Poppins',sans-serif;background:var(--bg);color:var(--blanco);line-height:1.55;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  h1,h2,h3{line-height:1.12;font-weight:800;}
+  .acc{color:var(--acento);}
+  .grad{background:linear-gradient(90deg,var(--acento),var(--acento2));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  section{padding:70px 0;}
+  .eyebrow{display:inline-block;background:rgba(255,61,119,.15);color:var(--acento);font-weight:700;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:7px 16px;border-radius:30px;margin-bottom:18px;}
+  .btn{display:inline-block;background:linear-gradient(90deg,var(--acento),var(--acento2));color:#fff;font-weight:800;font-size:17px;text-transform:uppercase;letter-spacing:.5px;padding:18px 34px;border-radius:14px;border:none;cursor:pointer;text-decoration:none;box-shadow:0 12px 30px rgba(255,61,119,.35);transition:transform .2s;}
+  .btn:hover{transform:translateY(-3px);}
+  .center{text-align:center;}
+  /* HERO */
+  .hero{background:radial-gradient(120% 90% at 70% 0%,#2a1622 0%,#0E0E13 60%);padding:56px 0 64px;border-bottom:1px solid rgba(255,255,255,.06);}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;}
+  .hero h1{font-size:46px;font-weight:900;}
+  .hero p.sub{color:var(--gris);font-size:19px;margin:18px 0 0;font-weight:500;}
+  .fechas-badge{display:inline-flex;align-items:center;gap:12px;background:var(--card);border:1px solid rgba(255,61,119,.3);border-radius:14px;padding:14px 20px;margin-top:26px;}
+  .fechas-badge .d{font-size:26px;font-weight:900;color:var(--acento);}
+  .fechas-badge .t{font-size:13px;color:var(--gris);font-weight:600;}
+  /* FORM */
+  .form-card{background:var(--card);border-radius:22px;padding:34px;box-shadow:0 24px 60px rgba(0,0,0,.4);border-top:5px solid var(--acento);}
+  .form-card h3{font-size:22px;font-weight:800;margin-bottom:6px;}
+  .form-card .fp{color:var(--gris);font-size:14px;margin-bottom:20px;}
+  .form-card input{width:100%;background:#0E0E13;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:15px 16px;color:#fff;font-family:inherit;font-size:15px;margin-bottom:13px;}
+  .form-card input::placeholder{color:#6b6979;}
+  .form-card .btn{width:100%;margin-top:6px;}
+  .form-card .nota{font-size:12px;color:#6b6979;text-align:center;margin-top:14px;}
+  /* SECCIONES */
+  h2.sh{font-size:34px;font-weight:900;text-align:center;margin-bottom:14px;}
+  .sub-c{color:var(--gris);text-align:center;max-width:720px;margin:0 auto 42px;font-size:16px;}
+  .perfiles{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+  .perfil{background:var(--card);border-radius:16px;padding:26px;border-left:4px solid var(--acento);}
+  .perfil h3{font-size:19px;color:var(--acento);margin-bottom:8px;}
+  .perfil p{color:var(--gris);font-size:14.5px;}
+  /* DIAS */
+  .dias{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .dia{background:var(--card);border-radius:18px;padding:28px 24px;position:relative;}
+  .dia .n{display:inline-flex;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--acento),var(--acento2));align-items:center;justify-content:center;font-weight:900;font-size:20px;margin-bottom:14px;}
+  .dia .dday{font-size:12px;color:var(--gris);font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+  .dia h3{font-size:20px;margin:4px 0 10px;}
+  .dia p{color:var(--gris);font-size:14.5px;}
+  .dia .win{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.1);font-size:13.5px;font-weight:600;}
+  .dia .win b{color:var(--acento);}
+  /* PARA TI / NO */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .col{background:var(--card);border-radius:18px;padding:30px;}
+  .col.no{border-top:4px solid #555;}
+  .col.si{border-top:4px solid var(--acento);}
+  .col h3{font-size:21px;margin-bottom:16px;}
+  .col ul{list-style:none;}
+  .col li{padding:9px 0 9px 30px;position:relative;font-size:14.5px;color:#d9d7e0;border-top:1px solid rgba(255,255,255,.06);}
+  .col li:first-child{border-top:none;}
+  .col.no li:before{content:"✕";position:absolute;left:0;color:#777;font-weight:800;}
+  .col.si li:before{content:"✓";position:absolute;left:0;color:var(--acento);font-weight:800;}
+  /* BIO */
+  .bio{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:center;background:var(--bg2);}
+  .bio-foto{background:linear-gradient(135deg,#2a1622,#1b1b26);border-radius:20px;min-height:380px;display:flex;align-items:center;justify-content:center;color:#6b6979;font-size:15px;border:1px dashed rgba(255,255,255,.15);text-align:center;padding:20px;}
+  .bio h2{font-size:32px;font-weight:900;margin-bottom:16px;}
+  .bio p{color:var(--gris);font-size:15.5px;margin-bottom:14px;}
+  .bio .stat{display:inline-block;background:var(--card);border-radius:12px;padding:12px 18px;margin:6px 8px 0 0;}
+  .bio .stat b{color:var(--acento);font-size:20px;font-weight:900;display:block;}
+  .bio .stat span{font-size:12px;color:var(--gris);}
+  /* CTA FINAL */
+  .cta-final{background:radial-gradient(120% 100% at 50% 0%,#2a1622,#0E0E13);text-align:center;}
+  .cta-final h2{font-size:36px;font-weight:900;margin-bottom:14px;}
+  .cta-final p{color:var(--gris);margin-bottom:28px;font-size:17px;}
+  footer{text-align:center;padding:30px;color:#5a5868;font-size:12.5px;border-top:1px solid rgba(255,255,255,.06);}
+  .mock-tag{position:fixed;top:0;left:0;background:var(--acento);color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-bottom-right-radius:8px;z-index:99;letter-spacing:1px;}
+  @media(max-width:860px){
+    .hero-grid,.bio{grid-template-columns:1fr;} .hero h1{font-size:34px;} h2.sh,.cta-final h2{font-size:27px;}
+    .perfiles,.dias,.split{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="mock-tag">MOCKUP</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Reto Contenido que Vende · en vivo y gratis</span>
+      <h1>Aprende a crear <span class="grad">contenido que sí vende.</span></h1>
+      <p class="sub">No el que solo gusta. El que te trae clientes. Te enseño cómo lo hago, en 3 días, en vivo y gratis. Para emprendedores y creadores.</p>
+      <div class="fechas-badge">
+        <div><div class="d">28 · 29 · 30</div><div class="t">de junio</div></div>
+        <div style="border-left:1px solid rgba(255,255,255,.15);padding-left:14px;"><div class="d">[7:00 PM]</div><div class="t">Hora Colombia · [tentativa]</div></div>
+      </div>
+    </div>
+    <div class="form-card" id="form">
+      <h3>Aparta tu lugar gratis</h3>
+      <div class="fp">Te llegan los detalles y el acceso por WhatsApp.</div>
+      <input type="text" placeholder="Escribe tu nombre">
+      <input type="email" placeholder="Escribe tu mejor correo">
+      <input type="tel" placeholder="Tu WhatsApp (con indicativo)">
+      <a href="#" class="btn">¡Sí, quiero participar!</a>
+      <div class="nota">Cupos por la dinámica en vivo. Al registrarte entras a la comunidad de WhatsApp.</div>
+    </div>
+  </div>
+</header>
+
+<!-- PARA QUIEN ES -->
+<section>
+  <div class="wrap">
+    <h2 class="sh">¿Para quién es este reto?</h2>
+    <p class="sub-c">Si te identificas con alguno de estos, este reto es para ti.</p>
+    <div class="perfiles">
+      <div class="perfil"><h3>Emprendedores y dueños de negocio</h3><p>Publicas seguido, te ven, pero el contenido no se traduce en ventas. Quieres que tu contenido te traiga clientes, no solo likes.</p></div>
+      <div class="perfil"><h3>Quien quiere vivir de crear contenido</h3><p>Sabes grabar y te gusta, pero no sabes cómo convertir eso en ingresos. Quieres dar el salto de hobby a profesión.</p></div>
+      <div class="perfil"><h3>Te escriben y no cierras</h3><p>Recibes mensajes al DM pero las conversaciones no terminan en venta. Necesitas un método para cerrar.</p></div>
+      <div class="perfil"><h3>Inviertes y no recuperas</h3><p>Ya intentaste con pauta o con más contenido y no ves resultados. Quieres entender qué estás haciendo mal.</p></div>
+    </div>
+    <div class="center" style="margin-top:38px;"><a href="#form" class="btn">Quiero participar</a></div>
+  </div>
+</section>
+
+<!-- QUE VAS A APRENDER (3 dias) -->
+<section style="background:var(--bg2);">
+  <div class="wrap">
+    <h2 class="sh">Esto es lo que vas a vivir</h2>
+    <p class="sub-c">Tres clases en vivo. Cada día te llevas algo aplicable de una vez.</p>
+    <div class="dias">
+      <div class="dia"><div class="n">1</div><div class="dday">Domingo 28</div><h3>Por qué tu contenido no vende</h3><p>Qué separa al contenido que solo gusta del que de verdad trae clientes.</p><div class="win"><b>Te llevas:</b> tus primeros ganchos listos para grabar.</div></div>
+      <div class="dia"><div class="n">2</div><div class="dday">Lunes 29</div><h3>El video que sí vende</h3><p>Cómo crear, paso a paso, un video pensado para vender y no solo para likes.</p><div class="win"><b>Te llevas:</b> tu primer video ya estructurado.</div></div>
+      <div class="dia"><div class="n">3</div><div class="dday">Martes 30</div><h3>Vender todos los días</h3><p>El sistema para convertir tu contenido en ventas constantes.</p><div class="win"><b>Te llevas:</b> tu plan completo, listo para aplicar.</div></div>
+    </div>
+    <div class="center" style="margin-top:38px;"><a href="#form" class="btn">Aparta tu lugar gratis</a></div>
+  </div>
+</section>
+
+<!-- PARA TI / NO ES PARA TI -->
+<section>
+  <div class="wrap">
+    <h2 class="sh">¿Es para ti?</h2>
+    <div class="split">
+      <div class="col no">
+        <h3>Esto <span style="color:#999">NO</span> es para ti si…</h3>
+        <ul>
+          <li>Crees que con publicar más, tarde o temprano vas a vender.</li>
+          <li>Buscas un truco mágico y no quieres aplicar nada.</li>
+          <li>No estás dispuesto a grabar ni a cambiar cómo haces tu contenido.</li>
+          <li>Te da igual seguir igual que el año pasado.</li>
+        </ul>
+      </div>
+      <div class="col si">
+        <h3>Esto <span class="acc">SÍ</span> es para ti si…</h3>
+        <ul>
+          <li>Tienes un negocio o una marca y quieres que tu contenido venda.</li>
+          <li>Estás cansado de gustar y no facturar.</li>
+          <li>Quieres un método claro, no más teoría suelta.</li>
+          <li>Estás listo para aplicar desde el primer día.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="bio-wrap" style="padding:0;">
+  <div class="wrap bio" style="padding:64px 24px;">
+    <div class="bio-foto">[ Foto de Alejandra Rincón<br>aquí ]</div>
+    <div>
+      <span class="eyebrow">Quién te va a enseñar</span>
+      <h2>Soy Alejandra Rincón</h2>
+      <p>Construí una comunidad de <b style="color:#fff">más de 300.000 seguidores</b>, todo de forma orgánica, sin pauta. Llevo años vendiendo con mi contenido y ahora te voy a enseñar cómo lo hago.</p>
+      <p>No es viralidad ni suerte. Es un método para que tu contenido deje de solo entretener y empiece a traerte clientes.</p>
+      <div>
+        <div class="stat"><b>+300.000</b><span>seguidores 100% orgánicos</span></div>
+        <div class="stat"><b>[X años]</b><span>vendiendo con contenido</span></div>
+        <div class="stat"><b>[X+]</b><span>personas acompañadas</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+  <div class="wrap">
+    <h2>Es hora de crear <span class="grad">contenido que sí vende.</span></h2>
+    <p>28, 29 y 30 de junio · en vivo · gratis · cupos limitados por la dinámica.</p>
+    <a href="#form" class="btn">¡Sí, quiero participar!</a>
+  </div>
+</section>
+
+<footer>
+  MOCKUP de la página de registro · Alejandra Rincón · Junio 2026<br>
+  Colores y datos entre [corchetes] son provisionales. La captura del formulario se conecta a un sistema propio (sin exponer datos).
+</footer>
+</body>
+</html>
