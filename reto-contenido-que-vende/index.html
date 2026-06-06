@@ -125,6 +125,35 @@ h1 .g{color:var(--dorado)}
 .sticky-cta{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,12,.96);backdrop-filter:blur(8px);border-top:1px solid var(--dorado);padding:12px 16px;text-align:center;z-index:50;transform:translateY(130%);transition:transform .35s}
 .sticky-cta.show{transform:translateY(0)}
 .sticky-cta .btn{width:100%;max-width:440px}
+/* HERO foto */
+.hero-foto{width:100px;height:100px;border-radius:50%;border:3px solid var(--dorado);overflow:hidden;margin:0 auto 18px;box-shadow:0 0 0 7px rgba(225,169,21,.1)}
+.hero-foto img{width:100%;height:100%;object-fit:cover;display:block}
+/* COUNTDOWN */
+.countdown{background:linear-gradient(180deg,var(--negro2),var(--negro));text-align:center;padding:42px 24px;border-top:1px solid rgba(225,169,21,.12);border-bottom:1px solid rgba(225,169,21,.12)}
+.cd-label{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--dorado);margin-bottom:18px}
+.cd-grid{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.cd-item{background:rgba(255,255,255,.04);border:1px solid rgba(225,169,21,.22);border-radius:12px;padding:16px 18px;min-width:80px}
+.cd-num{font-size:40px;font-weight:900;color:#fff;line-height:1}
+.cd-u{font-size:11px;color:rgba(240,232,213,.5);text-transform:uppercase;letter-spacing:1px;margin-top:5px}
+/* TESTIMONIOS */
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tcard{background:#fff;border-radius:14px;padding:24px;box-shadow:0 8px 26px rgba(20,17,12,.07);text-align:left}
+.tcard .quote{font-size:14.5px;color:var(--crematxt);font-style:italic;margin-bottom:16px}
+.tperson{display:flex;align-items:center;gap:12px}
+.tavatar{width:46px;height:46px;border-radius:50%;background:#eadfc6;display:flex;align-items:center;justify-content:center;font-size:18px;color:#a07400;font-weight:800;flex-shrink:0}
+.tname{font-weight:800;font-size:14px;color:var(--crematxt)}
+.tresult{font-size:12.5px;color:#a07400;font-weight:700}
+.tph{border:2px dashed #d8cdb3;background:#faf6ee;color:#a89878;font-size:11.5px;text-align:center;padding:6px;border-radius:8px;margin-top:12px}
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq-item{border-bottom:1px solid rgba(225,169,21,.18)}
+.faq-q{width:100%;background:none;border:none;text-align:left;color:#fff;font-family:inherit;font-size:16px;font-weight:700;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq-q .ic{color:var(--dorado);font-size:24px;flex-shrink:0;transition:transform .25s}
+.faq-item.open .faq-q .ic{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;font-size:14.5px;color:rgba(240,232,213,.65)}
+.faq-a div{padding:0 0 20px}
+.faq-item.open .faq-a{max-height:320px}
+@media(max-width:768px){.tgrid{grid-template-columns:1fr}}
 footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-size:11px;color:rgba(240,232,213,.25);border-top:1px solid rgba(255,255,255,.05)}
 @media(max-width:768px){.dgrid{grid-template-columns:1fr}.iwrap{grid-template-columns:1fr;text-align:center}.circle{margin:0 auto}.stats{justify-content:center}.ddesc{min-height:auto}}
 @media(max-width:600px){.cgrid,.ngrid{grid-template-columns:1fr}.btn{display:block;width:100%}.sec{padding:54px 20px}}
@@ -137,6 +166,7 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
 <!-- HERO oscuro -->
 <section class="hero" id="top">
   <div class="hero-in">
+    <div class="hero-foto"><img src="ale-foto.jpeg" alt="Alejandra Rincón"></div>
     <div class="badge">Reto en vivo &nbsp;·&nbsp; 3 días &nbsp;·&nbsp; Gratis</div>
     <h1>Reto <span class="g">Contenido<br>que Vende</span></h1>
     <p class="sub">Aprende a crear contenido que sí vende: el que convierte seguidores en clientes. Sin pauta, sin trucos, con el sistema que uso todos los días.</p>
@@ -147,6 +177,17 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
     <p class="note">Cupos limitados &nbsp;·&nbsp; Al registrarte entras a la comunidad de WhatsApp</p>
   </div>
 </section>
+
+<!-- COUNTDOWN -->
+<div class="countdown">
+  <div class="cd-label">El reto empieza en</div>
+  <div class="cd-grid">
+    <div class="cd-item"><div class="cd-num" id="cd-d">--</div><div class="cd-u">días</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-h">--</div><div class="cd-u">horas</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-m">--</div><div class="cd-u">min</div></div>
+    <div class="cd-item"><div class="cd-num" id="cd-s">--</div><div class="cd-u">seg</div></div>
+  </div>
+</div>
 
 <!-- ¿ES PARA TI? claro -->
 <section class="s-light">
@@ -211,6 +252,38 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
   </div>
 </section>
 
+<!-- TESTIMONIOS claro -->
+<section class="s-light">
+  <div class="sec">
+    <div class="kick reveal">Resultados reales</div>
+    <h2 class="stitle reveal">Lo que dicen quienes ya aplicaron</h2>
+    <p class="ssub reveal">Gente que pasó de publicar sin vender a tener clientes con su contenido.</p>
+    <div class="tgrid">
+      <div class="tcard reveal"><p class="quote">"[Testimonio real: qué le pasaba antes, qué cambió y el resultado concreto.]"</p><div class="tperson"><div class="tavatar">★</div><div><div class="tname">[Nombre del cliente]</div><div class="tresult">[Resultado, ej: de 2 a 12 clientes/mes]</div></div></div><div class="tph">Reemplazar por testimonio real (texto, captura o video)</div></div>
+      <div class="tcard reveal"><p class="quote">"[Testimonio real con un perfil distinto al anterior.]"</p><div class="tperson"><div class="tavatar">★</div><div><div class="tname">[Nombre del cliente]</div><div class="tresult">[Resultado concreto]</div></div></div><div class="tph">Reemplazar por testimonio real</div></div>
+      <div class="tcard reveal"><p class="quote">"[Testimonio real: resultado rápido tras aplicar el método.]"</p><div class="tperson"><div class="tavatar">★</div><div><div class="tname">[Nombre del cliente]</div><div class="tresult">[Resultado concreto]</div></div></div><div class="tph">Reemplazar por testimonio real</div></div>
+    </div>
+    <div class="ctac"><a href="#form" class="btn">Quiero esos resultados</a></div>
+  </div>
+</section>
+
+<!-- FAQ oscuro -->
+<section class="s-darker">
+  <div class="sec">
+    <div class="kick reveal">Dudas frecuentes</div>
+    <h2 class="stitle reveal">Preguntas frecuentes</h2>
+    <div class="faq reveal">
+      <div class="faq-item"><button class="faq-q">¿El reto tiene algún costo? <span class="ic">+</span></button><div class="faq-a"><div>No. Es 100% gratis. Solo te registras y entras al grupo de WhatsApp, ahí te llega todo.</div></div></div>
+      <div class="faq-item"><button class="faq-q">¿Necesito experiencia previa? <span class="ic">+</span></button><div class="faq-a"><div>No. Sirve si ya tienes (o quieres tener) un negocio, marca o servicio y publicas contenido. No necesitas saber de edición ni de pauta.</div></div></div>
+      <div class="faq-item"><button class="faq-q">¿Para qué tipo de negocio funciona? <span class="ic">+</span></button><div class="faq-a"><div>Para emprendedores, marcas personales, expertos, coaches, consultores y quien quiere vivir de crear contenido. Si tienes algo que vender, te sirve.</div></div></div>
+      <div class="faq-item"><button class="faq-q">¿Las clases quedan grabadas? <span class="ic">+</span></button><div class="faq-a"><div>El reto se vive en vivo y eso es lo que recomendamos. Los recordatorios y avisos te llegan por el grupo de WhatsApp.</div></div></div>
+      <div class="faq-item"><button class="faq-q">¿Por dónde son las clases? <span class="ic">+</span></button><div class="faq-a"><div>En vivo, los 3 días a las 7:30 p.m. (hora Colombia). El acceso te lo enviamos por el grupo de WhatsApp al que entras al registrarte.</div></div></div>
+      <div class="faq-item"><button class="faq-q">¿Cómo entro al reto? <span class="ic">+</span></button><div class="faq-a"><div>Te registras aquí, entras al grupo de WhatsApp y ahí recibes el link de cada clase y todos los detalles.</div></div></div>
+    </div>
+    <div class="ctac"><a href="#form" class="btn">Apartar mi lugar gratis</a></div>
+  </div>
+</section>
+
 <!-- FORM claro -->
 <section class="s-light" id="form">
   <div class="sec">
@@ -255,6 +328,16 @@ document.querySelectorAll('.reveal').forEach(function(el,i){el.style.transitionD
 // Botón flotante
 var sticky=document.getElementById('sticky'),hero=document.getElementById('top');
 window.addEventListener('scroll',function(){if(window.scrollY>hero.offsetHeight){sticky.classList.add('show')}else{sticky.classList.remove('show')}});
+// Cuenta regresiva al 28 jun 7:30 p.m. (hora Colombia, UTC-5)
+var target=new Date('2026-06-28T19:30:00-05:00').getTime();
+function tick(){var d=target-Date.now();if(d<0)d=0;
+  document.getElementById('cd-d').textContent=Math.floor(d/86400000);
+  document.getElementById('cd-h').textContent=Math.floor(d%86400000/3600000);
+  document.getElementById('cd-m').textContent=Math.floor(d%3600000/60000);
+  document.getElementById('cd-s').textContent=Math.floor(d%60000/1000);}
+tick();setInterval(tick,1000);
+// Acordeón de preguntas frecuentes
+document.querySelectorAll('.faq-q').forEach(function(b){b.addEventListener('click',function(){b.parentNode.classList.toggle('open')})});
 // Submit del mockup -> página de gracias (ahí dispara el evento Lead del pixel)
 function goGracias(e){e.preventDefault();window.location.href='gracias.html';}
 </script>
