@@ -122,9 +122,15 @@ h1 .g{color:var(--dorado)}
 .fbox .btn{width:100%;font-size:17px;padding:17px;margin-top:6px}
 .fbox .fnote{font-size:11.5px;color:var(--cremasub);text-align:center;margin-top:14px}
 /* STICKY */
-.sticky-cta{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,12,.96);backdrop-filter:blur(8px);border-top:1px solid var(--dorado);padding:12px 16px;text-align:center;z-index:50;transform:translateY(130%);transition:transform .35s}
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;background:rgba(20,17,12,.97);backdrop-filter:blur(8px);border-top:1px solid var(--dorado);padding:10px 16px;z-index:50;transform:translateY(130%);transition:transform .35s;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
 .sticky-cta.show{transform:translateY(0)}
-.sticky-cta .btn{width:100%;max-width:440px}
+.sticky-cta .btn{width:auto;padding:14px 30px;font-size:15px}
+.sticky-lbl{font-size:12px;font-weight:700;color:var(--dorado3)}
+.sticky-cd{display:flex;gap:7px;align-items:center}
+.scd{background:rgba(255,255,255,.06);border:1px solid rgba(225,169,21,.22);border-radius:8px;padding:5px 9px;text-align:center;min-width:44px}
+.scd b{display:block;font-size:18px;font-weight:900;color:#fff;line-height:1}
+.scd small{font-size:9px;color:rgba(240,232,213,.5);text-transform:uppercase;letter-spacing:1px}
+@media(max-width:600px){.sticky-lbl{display:none}.sticky-cta{gap:10px;padding:8px 12px}.scd{min-width:38px;padding:4px 7px}.scd b{font-size:15px}.sticky-cta .btn{padding:11px 16px;font-size:13px}}
 /* HERO foto */
 .hero-foto{width:100px;height:100px;border-radius:50%;border:3px solid var(--dorado);overflow:hidden;margin:0 auto 18px;box-shadow:0 0 0 7px rgba(225,169,21,.1)}
 .hero-foto img{width:100%;height:100%;object-fit:cover;display:block}
@@ -207,17 +213,6 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
     </div>
   </div>
 </section>
-
-<!-- COUNTDOWN -->
-<div class="countdown">
-  <div class="cd-label">El reto empieza en</div>
-  <div class="cd-grid">
-    <div class="cd-item"><div class="cd-num" id="cd-d">--</div><div class="cd-u">días</div></div>
-    <div class="cd-item"><div class="cd-num" id="cd-h">--</div><div class="cd-u">horas</div></div>
-    <div class="cd-item"><div class="cd-num" id="cd-m">--</div><div class="cd-u">min</div></div>
-    <div class="cd-item"><div class="cd-num" id="cd-s">--</div><div class="cd-u">seg</div></div>
-  </div>
-</div>
 
 <!-- ¿ES PARA TI? claro -->
 <section class="s-light">
@@ -349,7 +344,16 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
 
 <footer>© 2026 Alejandra Rincón · Reto Contenido que Vende</footer>
 
-<div class="sticky-cta" id="sticky"><a href="#form" class="btn">¡Sí, quiero participar! · Reto gratis</a></div>
+<div class="sticky-cta" id="sticky">
+  <span class="sticky-lbl">Empieza en</span>
+  <div class="sticky-cd">
+    <div class="scd"><b id="cd-d">--</b><small>días</small></div>
+    <div class="scd"><b id="cd-h">--</b><small>hrs</small></div>
+    <div class="scd"><b id="cd-m">--</b><small>min</small></div>
+    <div class="scd"><b id="cd-s">--</b><small>seg</small></div>
+  </div>
+  <a href="#form" class="btn">¡Quiero participar!</a>
+</div>
 
 <script>
 // Reveal al hacer scroll
