@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>¡Listo! Reservaste tu lugar · Reto Contenido que Vende</title>
+<!-- ====== META PIXEL + EVENTO DE CONVERSIÓN ====== -->
+<!-- Esta página solo la ve quien YA se registró. Por eso aquí se dispara el evento 'Lead'. -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1022570830716112');
+fbq('track', 'PageView');
+fbq('track', 'Lead');   // <-- evento de conversión: registro completado
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1022570830716112&ev=Lead&noscript=1"/></noscript>
+<!-- ====== FIN ====== -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--negro:#1E1A14;--dorado:#E1A915;--dorado3:#EEBF14;--texto:#F0E8D5;--wa:#25D366}
+body{background:var(--negro);color:var(--texto);font-family:'Poppins',sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;line-height:1.6}
+.box{max-width:560px}
+.check{width:84px;height:84px;border-radius:50%;background:rgba(225,169,21,.12);border:2px solid var(--dorado);color:var(--dorado);font-size:42px;display:flex;align-items:center;justify-content:center;margin:0 auto 26px}
+h1{font-size:clamp(28px,5vw,42px);font-weight:900;color:#fff;margin-bottom:14px;line-height:1.15}
+h1 .g{color:var(--dorado)}
+p{color:rgba(240,232,213,.7);font-size:16px;margin-bottom:14px}
+.step{background:rgba(255,255,255,.03);border:1px solid rgba(225,169,21,.15);border-radius:14px;padding:24px;margin:28px 0;text-align:left}
+.step .n{color:var(--dorado);font-weight:800;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px}
+.step .t{color:#fff;font-weight:700;font-size:17px;margin-bottom:6px}
+.btn-wa{display:inline-flex;align-items:center;gap:10px;background:var(--wa);color:#fff;font-size:17px;font-weight:800;padding:18px 40px;border-radius:8px;text-decoration:none;transition:transform .15s}
+.btn-wa:hover{transform:translateY(-2px)}
+.fechas{color:var(--dorado3);font-weight:700;font-size:15px;margin-top:24px}
+.small{font-size:12px;color:rgba(240,232,213,.4);margin-top:26px}
+.mock-tag{position:fixed;top:0;left:0;background:var(--dorado);color:var(--negro);font-size:10px;font-weight:800;padding:3px 10px;letter-spacing:1px}
+</style>
+</head>
+<body>
+<div class="mock-tag">MOCKUP</div>
+<div class="box">
+<div class="check">✓</div>
+<h1>¡Listo! <span class="g">Tu lugar está reservado.</span></h1>
+<p>Ya quedaste dentro del Reto Contenido que Vende. Falta un solo paso para que no te pierdas nada.</p>
+
+<div class="step">
+<div class="n">Paso final · importante</div>
+<div class="t">Entra al grupo de WhatsApp</div>
+<p style="margin:0">Ahí te mando los recordatorios, el link de cada clase y todo lo del reto. Si no entras, te lo pierdes.</p>
+</div>
+
+<a href="https://go.wha.link/ale-rincon" class="btn-wa">🟢 Entrar al grupo ahora</a>
+
+<div class="fechas">Nos vemos el 28, 29 y 30 de junio · en vivo</div>
+<p class="small">Mockup. El botón se conecta al canal/grupo real de WhatsApp al publicar.</p>
+</div>
+</body>
+</html>
