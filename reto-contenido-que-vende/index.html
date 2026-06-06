@@ -128,6 +128,16 @@ h1 .g{color:var(--dorado)}
 /* HERO foto */
 .hero-foto{width:100px;height:100px;border-radius:50%;border:3px solid var(--dorado);overflow:hidden;margin:0 auto 18px;box-shadow:0 0 0 7px rgba(225,169,21,.1)}
 .hero-foto img{width:100%;height:100%;object-fit:cover;display:block}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;text-align:left;max-width:1020px}
+.hero-grid .fechas{justify-content:flex-start}
+.hero-grid .badge{margin-bottom:18px}
+.form-hero .fbox{padding:28px 26px}
+.fb-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.fb-ava{width:50px;height:50px;border-radius:50%;overflow:hidden;border:2px solid var(--dorado);flex-shrink:0}
+.fb-ava img{width:100%;height:100%;object-fit:cover}
+.ftit2{font-weight:800;font-size:18px;color:var(--crematxt)}
+.ftxt2{font-size:12.5px;color:var(--cremasub)}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-grid .fechas{justify-content:center}}
 /* COUNTDOWN */
 .countdown{background:linear-gradient(180deg,var(--negro2),var(--negro));text-align:center;padding:42px 24px;border-top:1px solid rgba(225,169,21,.12);border-bottom:1px solid rgba(225,169,21,.12)}
 .cd-label{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--dorado);margin-bottom:18px}
@@ -165,16 +175,36 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
 
 <!-- HERO oscuro -->
 <section class="hero" id="top">
-  <div class="hero-in">
-    <div class="hero-foto"><img src="ale-foto.jpeg" alt="Alejandra Rincón"></div>
-    <div class="badge">Reto en vivo &nbsp;·&nbsp; 3 días &nbsp;·&nbsp; Gratis</div>
-    <h1>Reto <span class="g">Contenido<br>que Vende</span></h1>
-    <p class="sub">Aprende a crear contenido que sí vende: el que convierte seguidores en clientes. Sin pauta, sin trucos, con el sistema que uso todos los días.</p>
-    <div class="fechas"><span class="fpill">Dom 28</span><span class="fpill">Lun 29</span><span class="fpill">Mar 30</span></div>
-    <p class="hora">de junio &nbsp;·&nbsp; <b>en vivo, 7:30 p.m. (hora Colombia)</b></p>
-    <p class="husos">🌎 <b>México</b> 6:30 &nbsp;·&nbsp; <b>Colombia / Perú / Ecuador</b> 7:30 &nbsp;·&nbsp; <b>Chile / Miami</b> 8:30 &nbsp;·&nbsp; <b>Argentina</b> 9:30 p.m.</p>
-    <a href="#form" class="btn btn-pulse">¡Sí, quiero participar!</a>
-    <p class="note">Cupos limitados &nbsp;·&nbsp; Al registrarte entras a la comunidad de WhatsApp</p>
+  <div class="hero-in hero-grid">
+    <div class="hero-txt">
+      <div class="badge">Reto en vivo &nbsp;·&nbsp; 3 días &nbsp;·&nbsp; Gratis</div>
+      <h1>Reto <span class="g">Contenido que Vende</span></h1>
+      <p class="sub">Aprende a crear contenido que sí vende: el que convierte seguidores en clientes. Sin pauta, sin trucos, con el sistema que uso todos los días.</p>
+      <div class="fechas"><span class="fpill">Dom 28</span><span class="fpill">Lun 29</span><span class="fpill">Mar 30</span></div>
+      <p class="hora">de junio &nbsp;·&nbsp; <b>en vivo, 7:30 p.m. (hora Colombia)</b></p>
+      <p class="husos">🌎 <b>México</b> 6:30 &nbsp;·&nbsp; <b>Col / Perú / Ecu</b> 7:30 &nbsp;·&nbsp; <b>Chile / Miami</b> 8:30 &nbsp;·&nbsp; <b>Argentina</b> 9:30 p.m.</p>
+    </div>
+    <div class="form-hero">
+      <form class="fbox" onsubmit="goGracias(event)">
+        <div class="fb-head"><div class="fb-ava"><img src="ale-foto.jpeg" alt="Alejandra"></div><div><div class="ftit2">Aparta tu lugar gratis</div><div class="ftxt2">Te enseña Alejandra Rincón</div></div></div>
+        <input type="text" placeholder="Tu nombre" required>
+        <input type="email" placeholder="Tu mejor correo" required>
+        <div class="wa-row">
+          <select required>
+            <option value="+57">🇨🇴 +57</option><option value="+52">🇲🇽 +52</option>
+            <option value="+51">🇵🇪 +51</option><option value="+593">🇪🇨 +593</option>
+            <option value="+56">🇨🇱 +56</option><option value="+54">🇦🇷 +54</option>
+            <option value="+58">🇻🇪 +58</option><option value="+502">🇬🇹 +502</option>
+            <option value="+1">🇺🇸 +1</option><option value="+34">🇪🇸 +34</option>
+            <option value="+591">🇧🇴 +591</option><option value="+598">🇺🇾 +598</option>
+            <option value="+507">🇵🇦 +507</option><option value="+506">🇨🇷 +506</option>
+          </select>
+          <input type="tel" placeholder="Tu WhatsApp" required>
+        </div>
+        <button type="submit" class="btn btn-pulse">¡Sí, quiero participar!</button>
+        <p class="fnote">Cupos limitados &nbsp;·&nbsp; Entras a la comunidad de WhatsApp</p>
+      </form>
+    </div>
   </div>
 </section>
 
