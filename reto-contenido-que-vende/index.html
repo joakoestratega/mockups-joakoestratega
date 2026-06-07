@@ -131,19 +131,31 @@ h1 .g{color:var(--dorado)}
 .scd b{display:block;font-size:18px;font-weight:900;color:#fff;line-height:1}
 .scd small{font-size:9px;color:rgba(240,232,213,.5);text-transform:uppercase;letter-spacing:1px}
 @media(max-width:600px){.sticky-lbl{display:none}.sticky-cta{gap:10px;padding:8px 12px}.scd{min-width:38px;padding:4px 7px}.scd b{font-size:15px}.sticky-cta .btn{padding:11px 16px;font-size:13px}}
-/* HERO foto */
-.hero-foto{width:100px;height:100px;border-radius:50%;border:3px solid var(--dorado);overflow:hidden;margin:0 auto 18px;box-shadow:0 0 0 7px rgba(225,169,21,.1)}
-.hero-foto img{width:100%;height:100%;object-fit:cover;display:block}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center;text-align:left;max-width:1020px}
-.hero-grid .fechas{justify-content:flex-start}
-.hero-grid .badge{margin-bottom:18px}
-.form-hero .fbox{padding:28px 26px}
-.fb-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+/* HERO: foto grande + texto corto + formulario */
+.hero-grid3{display:grid;gap:36px;align-items:center;max-width:1090px;margin:0 auto;text-align:left;
+  grid-template-columns:0.82fr 1.18fr;
+  grid-template-areas:"foto texto" "foto form"}
+.hero-foto-big{grid-area:foto;align-self:stretch;border-radius:22px;overflow:hidden;border:1px solid rgba(225,169,21,.28);box-shadow:0 24px 60px rgba(0,0,0,.55);min-height:440px}
+.hero-foto-big img{width:100%;height:100%;object-fit:cover;display:block;object-position:center 12%}
+.hero-txt{grid-area:texto}
+.form-hero{grid-area:form}
+.hero-grid3 .fechas{justify-content:flex-start}
+.hero-grid3 .badge{margin-bottom:16px}
+.form-hero .fbox{padding:26px 24px}
+.fb-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
 .fb-ava{width:50px;height:50px;border-radius:50%;overflow:hidden;border:2px solid var(--dorado);flex-shrink:0}
 .fb-ava img{width:100%;height:100%;object-fit:cover}
 .ftit2{font-weight:800;font-size:18px;color:var(--crematxt)}
 .ftxt2{font-size:12.5px;color:var(--cremasub)}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;text-align:center}.hero-grid .fechas{justify-content:center}}
+/* MÓVIL/TABLET: apila TEXTO -> FOTO -> FORMULARIO */
+@media(max-width:860px){
+  .hero-grid3{grid-template-columns:1fr;text-align:center;gap:24px;
+    grid-template-areas:"texto" "foto" "form"}
+  .hero-grid3 .fechas{justify-content:center}
+  .hero-foto-big{min-height:0;width:100%;max-width:340px;height:330px;margin:0 auto;border-radius:18px}
+  .hero-foto-big img{object-position:center 6%}
+  .fb-head{justify-content:center}
+}
 /* COUNTDOWN */
 .countdown{background:linear-gradient(180deg,var(--negro2),var(--negro));text-align:center;padding:42px 24px;border-top:1px solid rgba(225,169,21,.12);border-bottom:1px solid rgba(225,169,21,.12)}
 .cd-label{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--dorado);margin-bottom:18px}
@@ -199,7 +211,8 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
 
 <!-- HERO oscuro -->
 <section class="hero" id="top">
-  <div class="hero-in hero-grid">
+  <div class="hero-in hero-grid3">
+    <div class="hero-foto-big"><img src="ale-foto.jpeg" alt="Alejandra Rincón"></div>
     <div class="hero-txt">
       <div class="badge">Reto en vivo &nbsp;·&nbsp; 3 días &nbsp;·&nbsp; Gratis</div>
       <h1>Reto <span class="g">Contenido que Vende</span></h1>
@@ -210,7 +223,7 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 96px;font-siz
     </div>
     <div class="form-hero">
       <form class="fbox" onsubmit="goGracias(event)">
-        <div class="fb-head"><div class="fb-ava"><img src="ale-foto.jpeg" alt="Alejandra"></div><div><div class="ftit2">Aparta tu lugar gratis</div><div class="ftxt2">Te enseña Alejandra Rincón</div></div></div>
+        <div class="fb-head"><div class="fb-ava"><img src="ale-blazer.jpeg" alt="Alejandra" style="object-position:center 20%"></div><div><div class="ftit2">Aparta tu lugar gratis</div><div class="ftxt2">Te enseña Alejandra Rincón</div></div></div>
         <input type="text" placeholder="Tu nombre" required>
         <input type="email" placeholder="Tu mejor correo" required>
         <div class="wa-row">
