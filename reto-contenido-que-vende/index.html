@@ -79,11 +79,13 @@ h1 .g{color:var(--dorado)}
 .dcard{position:relative;background:linear-gradient(165deg,#211c14,#17130d);border:1px solid rgba(225,169,21,.18);border-radius:18px;padding:30px 26px;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
 .dcard:hover{transform:translateY(-8px);border-color:rgba(225,169,21,.5);box-shadow:0 22px 50px rgba(0,0,0,.45)}
 .dcard:before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--dorado),var(--dorado3))}
-.dwm{position:absolute;top:6px;right:18px;font-size:120px;font-weight:900;color:rgba(225,169,21,.07);line-height:1;pointer-events:none}
-.dlabel{font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:rgba(240,232,213,.45)}
-.dfase{font-size:13px;font-weight:700;color:var(--dorado3);margin-bottom:14px}
-.dgancho{font-size:13px;font-style:italic;color:rgba(240,232,213,.55);margin-bottom:8px}
-.dtitle{font-size:19px;font-weight:800;color:#fff;margin-bottom:10px;line-height:1.28}
+.dnum{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--dorado),var(--dorado3));color:var(--negro);font-size:26px;font-weight:900;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(225,169,21,.4);flex-shrink:0}
+.dtop{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.dlabel{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--dorado3);line-height:1.35}
+.dgancho{font-size:13px;font-style:italic;color:rgba(240,232,213,.55);margin-bottom:9px}
+.dtitle{font-size:22px;font-weight:900;color:#fff;margin-bottom:11px;line-height:1.22;padding-left:13px;border-left:3px solid var(--dorado)}
+.event-banner{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 auto 42px;max-width:660px}
+.event-banner span{background:rgba(225,169,21,.1);border:1px solid rgba(225,169,21,.38);color:var(--dorado3);font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:50px}
 .ddesc{font-size:13.5px;color:rgba(240,232,213,.62);margin-bottom:18px;min-height:66px}
 .dtag{font-size:11.5px;color:var(--negro);font-weight:800;background:linear-gradient(135deg,var(--dorado),var(--dorado3));border-radius:6px;padding:9px 13px;display:inline-block}
 /* NO / SI (claro) */
@@ -212,6 +214,13 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
   .ddesc{min-height:auto}
   .ctac{margin-top:26px}
   .fband{gap:20px}
+  .stats{flex-wrap:nowrap;gap:8px;justify-content:space-between}
+  .snum{font-size:21px}
+  .slabel{font-size:9px;margin-top:2px;line-height:1.2}
+  .event-banner{gap:7px;margin-bottom:28px}
+  .event-banner span{font-size:11.5px;padding:7px 12px}
+  .dnum{width:46px;height:46px;font-size:22px}
+  .dtitle{font-size:20px}
   footer{padding:24px 18px 32px}
 }
 /* FOTO circular reutilizable (cara de Ale en varias secciones) */
@@ -246,7 +255,7 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
     </div>
     <div class="form-hero">
       <form class="fbox" onsubmit="goGracias(event)">
-        <div class="fb-head"><div class="fb-ava"><img src="ale-blazer.jpeg" alt="Alejandra" style="object-position:center 20%"></div><div><div class="ftit2">Aparta tu lugar gratis</div><div class="ftxt2">Te enseña Alejandra Rincón</div></div></div>
+        <div class="fb-head"><div class="fb-ava"><img src="ale-blazer.jpeg" alt="Alejandra" style="object-position:center 20%"></div><div><div class="ftit2">Reserva tu cupo gratis</div><div class="ftxt2">Te enseña Alejandra Rincón</div></div></div>
         <input type="text" placeholder="Tu nombre" required>
         <input type="email" placeholder="Tu mejor correo" required>
         <div class="wa-row">
@@ -271,10 +280,10 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
 <!-- ¿ES PARA TI? claro -->
 <section class="s-light">
   <div class="sec">
-    <div class="ph ph-head reveal"><img src="ale-sofa.jpeg" alt="Alejandra Rincón" style="object-position:42% 22%"></div>
+    <div class="ph ph-head reveal"><img src="ale-sofa.jpeg" alt="Alejandra Rincón" style="object-position:44% 30%;transform:scale(1.45)"></div>
     <div class="kick reveal">A quién le sirve</div>
     <h2 class="stitle reveal">¿Este reto es para ti?</h2>
-    <p class="ssub reveal">Si te identificas con alguno de estos, este reto es para ti.</p>
+    <p class="ssub reveal">Si te ves en al menos una de estas situaciones, estás en el lugar correcto.</p>
     <div class="cgrid">
       <div class="card reveal"><div class="cicon">📲</div><h3 class="ctitle">Publicas pero no vendes</h3><p class="cdesc">Tienes seguidores y recibes likes, pero tu contenido no te trae clientes ni ingresos.</p></div>
       <div class="card reveal"><div class="cicon">💬</div><h3 class="ctitle">Te escriben y no cierras</h3><p class="cdesc">La gente te escribe al DM, muestra interés, pero la conversación se enfría sin llegar a la venta.</p></div>
@@ -289,11 +298,12 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
   <div class="sec">
     <div class="kick reveal">El evento</div>
     <h2 class="stitle reveal">Esto es lo que vas a <span class="g">vivir</span></h2>
-    <p class="ssub reveal">Tres días en vivo. Cada noche te vas con algo aplicable de una vez.</p>
+    <p class="ssub reveal">Tres noches en vivo. Cada noche sales con algo listo para aplicar.</p>
+    <div class="event-banner reveal"><span>🎥 3 noches</span><span>🔴 En vivo</span><span>🎟️ Gratis</span><span>🕢 7:30 p.m.</span></div>
     <div class="dgrid">
-      <div class="dcard reveal"><div class="dwm">1</div><div class="dlabel">Domingo 28</div><div class="dfase">El despertar</div><p class="dgancho">"Publicas y publicas… y nada."</p><h3 class="dtitle">Por qué tu contenido no vende</h3><p class="ddesc">Vas a ver qué tienen los contenidos que sí venden y por qué el tuyo todavía no. Y no, no es culpa del algoritmo.</p><span class="dtag">★ Te llevas: tu primer gancho de contenido</span></div>
-      <div class="dcard reveal"><div class="dwm">2</div><div class="dlabel">Lunes 29</div><div class="dfase">El método</div><p class="dgancho">"Grabar deja de ser adivinar."</p><h3 class="dtitle">El video que sí vende</h3><p class="ddesc">La estructura exacta de un video que trae mensajes y ventas. Paso a paso, para que lo apliques esa misma noche.</p><span class="dtag">★ Te llevas: tu guión de video listo</span></div>
-      <div class="dcard reveal"><div class="dwm">3</div><div class="dlabel">Martes 30</div><div class="dfase">El sistema</div><p class="dgancho">"De publicar por publicar a vender por sistema."</p><h3 class="dtitle">Vender todos los días</h3><p class="ddesc">Conectamos todo en un sistema que te trae clientes sin depender de la suerte ni de la pauta.</p><span class="dtag">★ Te llevas: tu plan de contenido mensual</span></div>
+      <div class="dcard reveal"><div class="dtop"><div class="dnum">1</div><div class="dlabel">Domingo<br>28 de junio</div></div><p class="dgancho">"Publicas y publicas… y nada."</p><h3 class="dtitle">Por qué tu contenido no vende</h3><p class="ddesc">Vas a ver qué tienen los contenidos que sí venden y por qué el tuyo todavía no. Y no, no es culpa del algoritmo.</p><span class="dtag">★ Te llevas: tu primer gancho de contenido</span></div>
+      <div class="dcard reveal"><div class="dtop"><div class="dnum">2</div><div class="dlabel">Lunes<br>29 de junio</div></div><p class="dgancho">"Grabar deja de ser adivinar."</p><h3 class="dtitle">El video que sí vende</h3><p class="ddesc">La estructura exacta de un video que trae mensajes y ventas. Paso a paso, para que lo apliques esa misma noche.</p><span class="dtag">★ Te llevas: tu guión de video listo</span></div>
+      <div class="dcard reveal"><div class="dtop"><div class="dnum">3</div><div class="dlabel">Martes<br>30 de junio</div></div><p class="dgancho">"De publicar por publicar a vender por sistema."</p><h3 class="dtitle">Vender todos los días</h3><p class="ddesc">Conectamos todo en un sistema que te trae clientes sin depender de la suerte ni de la pauta.</p><span class="dtag">★ Te llevas: tu plan de contenido mensual</span></div>
     </div>
   </div>
 </section>
@@ -316,12 +326,12 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
 <section class="s-dark">
   <div class="sec">
     <div class="iwrap">
-      <div class="circle reveal"><img src="ale-blazer.jpeg" alt="Alejandra Rincón" style="object-position:center 22%"></div>
+      <div class="circle reveal"><img src="ale-blazer.jpeg" alt="Alejandra Rincón" style="object-position:center 8%"></div>
       <div class="reveal">
         <div class="kick" style="text-align:left;margin-bottom:8px">Quién te va a enseñar</div>
         <div class="iname">Alejandra Rincón</div>
         <div class="irole">Estratega de negocios digitales · Creadora de Proyecto Génesis</div>
-        <p class="ibio">Con más de 8 años acompañando marcas y +60 negocios escalados, construí una audiencia de más de 300.000 seguidores 100% orgánica, con el mismo sistema que vas a aprender en este reto. Ex estratega de Fujifilm. Hoy ayudo a coaches, consultores e infoproductores a convertir su contenido en una máquina de clientes.</p>
+        <p class="ibio">Con más de 8 años acompañando marcas y +60 negocios escalados, construí una audiencia de más de 300.000 seguidores 100% orgánica, con la misma estrategia que vas a aprender en este reto. Ex estratega de Fujifilm. Hoy ayudo a coaches, consultores e infoproductores a convertir su contenido en una máquina de clientes.</p>
         <div class="stats">
           <div><div class="snum">+300k</div><div class="slabel">seguidores orgánicos</div></div>
           <div><div class="snum">+60</div><div class="slabel">marcas acompañadas</div></div>
@@ -335,9 +345,8 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
 <!-- TESTIMONIOS claro -->
 <section class="s-light">
   <div class="sec">
-    <div class="kick reveal">Resultados reales</div>
-    <h2 class="stitle reveal">Resultados aplicando mi <span class="g">metodología</span></h2>
-    <p class="ssub reveal">Esto es lo que han logrado quienes aplican el método que vas a aprender en el reto.</p>
+    <h2 class="stitle reveal" style="margin-top:0">Resultados aplicando mi <span class="g">metodología</span></h2>
+    <p class="ssub reveal">Esto mismo es lo que vas a aprender a hacer en el reto.</p>
     <p class="swipe-hint">Desliza para ver más →</p>
     <div class="tgal">
       <img src="testimonios/t1.jpeg" alt="Testimonio real de alumno" loading="lazy">
@@ -361,8 +370,8 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
       <div class="ph"><img src="ale-camara.jpeg" alt="Alejandra Rincón" style="object-position:62% 28%"></div>
       <div class="ftext">
         <div class="kick">Te lo enseño yo</div>
-        <h3>El mismo sistema con el que <span class="g">yo vendo todos los días</span></h3>
-        <p>No es teoría de libro. Es lo que aplico en mi propio contenido y lo que enseño a las marcas que acompaño. En tres noches te lo entrego completo.</p>
+        <h3>El mismo sistema que aplico en <span class="g">mi propio contenido</span></h3>
+        <p>Es lo que uso para vender con mi contenido y lo mismo que apliqué con las marcas que acompaño. En las tres noches del reto te lo muestro paso a paso.</p>
         <a href="#form" class="btn">Quiero aprenderlo gratis</a>
       </div>
     </div>
@@ -382,7 +391,7 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
       <div class="faq-item"><button class="faq-q">¿Por dónde son las clases? <span class="ic">+</span></button><div class="faq-a"><div>En vivo, los 3 días a las 7:30 p.m. (hora Colombia). El acceso te lo enviamos por el grupo de WhatsApp al que entras al registrarte.</div></div></div>
       <div class="faq-item"><button class="faq-q">¿Cómo entro al reto? <span class="ic">+</span></button><div class="faq-a"><div>Te registras aquí, entras al grupo de WhatsApp y ahí recibes el link de cada clase y todos los detalles.</div></div></div>
     </div>
-    <div class="ctac"><a href="#form" class="btn">Apartar mi lugar gratis</a></div>
+    <div class="ctac"><a href="#form" class="btn">Quiero entrar al reto</a></div>
   </div>
 </section>
 
@@ -390,7 +399,7 @@ footer{background:var(--negro);text-align:center;padding:30px 20px 40px;font-siz
 <section class="s-light" id="form">
   <div class="sec">
     <div class="formwrap">
-      <div class="ph ph-head reveal"><img src="ale-corbata.jpeg" alt="Alejandra Rincón" style="object-position:center 18%"></div>
+      <div class="ph ph-head reveal"><img src="ale-corbata.jpeg" alt="Alejandra Rincón" style="object-position:46% 33%;transform:scale(1.55)"></div>
       <h2 class="reveal">Aparta tu lugar <span class="g">gratis</span></h2>
       <p class="fsub reveal">Te llegan los detalles y el acceso por WhatsApp.</p>
       <form class="fbox reveal" onsubmit="goGracias(event)">
