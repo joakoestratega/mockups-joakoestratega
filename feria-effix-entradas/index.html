@@ -1461,7 +1461,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
   max-width:900px;
   position:relative;z-index:5;
 }
-.hero-headline .amarillo{color:var(--dorado-claro);}
+.hero-headline .amarillo{color:var(--marca-claro);}
 .hero-sub{
   font-family:'Montserrat',sans-serif;
   font-weight:500;
@@ -1502,7 +1502,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
   font-family:'Montserrat',sans-serif;font-weight:700;
   font-size:clamp(18px,2.6vw,26px);color:var(--blanco);line-height:1.4;
 }
-.dolor-cierre .amarillo{color:var(--dorado-claro);}
+.dolor-cierre .amarillo{color:var(--marca-claro);}
 
 /* ===== SECCIÓN ENCUENTRA EN LA FERIA ===== */
 .encuentra{background:var(--negro);}
@@ -1519,16 +1519,16 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
   display:flex;gap:16px;align-items:flex-start;
   transition:transform .2s ease,border-color .2s ease;
 }
-.encuentra-card:hover{transform:translateY(-3px);border-color:var(--dorado);}
+.encuentra-card:hover{transform:translateY(-3px);border-color:var(--marca-claro);}
 .encuentra-card .ico{
   flex-shrink:0;width:48px;height:48px;border-radius:12px;
-  background:rgba(212,165,58,.10);
-  border:1px solid rgba(212,165,58,.38);
+  background:rgba(150,148,181,.12);
+  border:1px solid rgba(150,148,181,.40);
   display:flex;align-items:center;justify-content:center;
 }
 .encuentra-card .ico svg{
   width:24px;height:24px;
-  fill:none;stroke:var(--dorado-claro);
+  fill:none;stroke:var(--marca-claro);
   stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;
 }
 .encuentra-card .txt h3{
@@ -1536,7 +1536,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
   color:var(--blanco);text-transform:uppercase;font-weight:600;margin-bottom:6px;
 }
 .encuentra-card .txt p{color:#C7C7D5;font-size:14px;line-height:1.5;margin:0;}
-.encuentra-card .txt p strong{color:var(--dorado-claro);}
+.encuentra-card .txt p strong{color:var(--marca-claro);}
 
 /* ===== PONENTES (carrusel horizontal de afiches) ===== */
 .ponentes{background:var(--negro);}
@@ -1548,7 +1548,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
 }
 .ponentes-carrusel::-webkit-scrollbar{height:7px;}
 .ponentes-carrusel::-webkit-scrollbar-track{background:rgba(255,255,255,.06);border-radius:999px;}
-.ponentes-carrusel::-webkit-scrollbar-thumb{background:var(--dorado);border-radius:999px;}
+.ponentes-carrusel::-webkit-scrollbar-thumb{background:var(--marca-claro);border-radius:999px;}
 .ponente-card{
   flex:0 0 auto;width:268px;scroll-snap-align:start;
   border-radius:16px;overflow:hidden;
@@ -1556,16 +1556,16 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
   background:var(--negro-2);
   transition:transform .2s ease,border-color .2s ease;
 }
-.ponente-card:hover{transform:translateY(-4px);border-color:var(--dorado);}
+.ponente-card:hover{transform:translateY(-4px);border-color:var(--marca-claro);}
 .ponente-card img{width:100%;display:block;}
 .ponente-mas{
   flex:0 0 auto;width:268px;scroll-snap-align:start;
-  border-radius:16px;border:1px dashed var(--dorado);
-  background:rgba(212,165,58,.06);
+  border-radius:16px;border:1px dashed var(--marca-claro);
+  background:rgba(150,148,181,.08);
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   text-align:center;padding:30px 24px;gap:10px;
 }
-.ponente-mas .big{font-family:var(--display);font-size:clamp(44px,5vw,60px);color:var(--dorado-claro);line-height:1;}
+.ponente-mas .big{font-family:var(--display);font-size:clamp(44px,5vw,60px);color:var(--marca-claro);line-height:1;}
 .ponente-mas h3{font-family:'Oswald',sans-serif;font-size:18px;letter-spacing:1px;color:var(--blanco);text-transform:uppercase;font-weight:600;}
 .ponente-mas p{color:#C7C7D5;font-size:14px;line-height:1.5;}
 .ponentes-hint{
@@ -1628,7 +1628,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
     <p class="hero-sub-mini">Sexta edición · La revolución de los negocios</p>
     <h1 class="hero-headline">La mejor feria de comercio<br>electrónico <span class="amarillo">del mundo</span></h1>
     <p class="hero-sub">En 3 días encuentras todo lo que tu negocio necesita para <strong>vender más por internet</strong>. Los proveedores, los expertos y los aliados, juntos en un mismo lugar.</p>
-    <p class="hero-sub-mini" style="margin-top:18px;">16, 17 y 18 de octubre · Plaza Mayor, Medellín · 60.000 personas · +300 ponentes · +350 empresas</p>
+    <p class="hero-sub-mini" style="margin-top:18px;">16, 17 y 18 de octubre · Plaza Mayor, Medellín · +300 ponentes · +350 empresas</p>
 
     <!-- 3 botones tickets GIGANTES (estilo pill original) -->
     <div class="hero-tickets-row">
@@ -1716,8 +1716,8 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
     <div class="que-es-grid">
       <div class="que-es-card">
         <div class="icono">★</div>
-        <h3>Los proveedores que no aparecen en Google</h3>
-        <p>+350 empresas con marcas, dropshipping, software, logística y agencias de IA. La concentración más grande del mundo hispano.</p>
+        <h3>Los proveedores y aliados que necesitas</h3>
+        <p>+350 empresas con marcas, dropshipping, software, logística y agencias de IA, juntas en un mismo lugar. La concentración más grande del mundo hispano.</p>
       </div>
       <div class="que-es-card">
         <div class="icono">⏱</div>
@@ -1727,7 +1727,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
       <div class="que-es-card">
         <div class="icono">⌖</div>
         <h3>Los aliados que cambian tu negocio</h3>
-        <p>El networking que normalmente toma años, concentrado en un solo recinto. 60.000 personas del mundo digital en Plaza Mayor, Medellín.</p>
+        <p>El networking que normalmente toma años, concentrado en un solo recinto. Todo el mundo digital reunido en Plaza Mayor, Medellín.</p>
       </div>
     </div>
   </div>
@@ -1780,7 +1780,6 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
       <div class="escala-item"><div class="num">+300</div><div class="lbl">Ponentes nacionales e internacionales</div></div>
       <div class="escala-item"><div class="num">+160</div><div class="lbl">Conferencias y talleres</div></div>
       <div class="escala-item"><div class="num">5</div><div class="lbl">Ediciones del evento</div></div>
-      <div class="escala-item"><div class="num">+50.000</div><div class="lbl">Asistentes por edición</div></div>
     </div>
   </div>
 </section>
@@ -1794,14 +1793,23 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
     </div>
     <!-- Para agregar más ponentes: duplica un bloque .ponente-card con su afiche en assets/ -->
     <div class="ponentes-carrusel">
-      <div class="ponente-card"><img src="assets/ponente-juan-id.jpg" alt="Juan ID — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
-      <div class="ponente-card"><img src="assets/ponente-alejandra-rincon.webp" alt="Alejandra Rincón — ponente confirmada Feria EFFIX 2026" loading="lazy"></div>
-      <div class="ponente-card"><img src="assets/ponente-felipe-vergara.webp" alt="Felipe Vergara — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
-      <div class="ponente-card"><img src="assets/ponente-pamela-richter.webp" alt="Pamela Richter — ponente confirmada Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-alejandra-rincon.png" alt="Alejandra Rincón — ponente confirmada Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-juan-id.png" alt="Juan ID — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-felipe-vergara.png" alt="Felipe Vergara — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-pamela-richter.png" alt="Pamela Richter — ponente confirmada Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-santiago-sanchez.png" alt="Santiago Sánchez — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-victor-heras.png" alt="Víctor Heras — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-javier-garcia.png" alt="Javier García — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-jose-lepage.png" alt="José Lepage — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-guillermo-gonzalez.png" alt="Guillermo González Pimiento — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-fau-kassen.png" alt="Fau Kassen — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-ana-pierr.png" alt="Ana Pierr — ponente confirmada Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-manuela-aduanera.png" alt="Manuela Aduanera — ponente confirmada Feria EFFIX 2026" loading="lazy"></div>
+      <div class="ponente-card"><img src="assets/ponente-xavi-esqueriguela.png" alt="Xavi Esqueriguela — ponente confirmado Feria EFFIX 2026" loading="lazy"></div>
       <div class="ponente-mas">
         <span class="big">+300</span>
         <h3>Ponentes en total</h3>
-        <p>Seguimos anunciando. Sigue a @feriaeffix para no perderte ninguno.</p>
+        <p>Estos ya están confirmados. Seguimos anunciando: sigue a @feriaeffix para no perderte ninguno.</p>
       </div>
     </div>
     <p class="ponentes-hint">← Desliza para ver más ponentes →</p>
@@ -1982,7 +1990,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
   <div class="container">
     <div class="titulo-seccion">
       <h2 class="display">Lo que dicen quienes ya fueron a Feria EFFIX</h2>
-      <p>5 ediciones, más de 50.000 asistentes por edición, y la gente que va una vez, vuelve. Esa es la mejor prueba de que sí sirve.</p>
+      <p>Cinco ediciones llenas, y la gente que va una vez, vuelve. Esa es la mejor prueba de que sí sirve.</p>
     </div>
 
     <div class="testimonio-img">
@@ -2035,7 +2043,7 @@ button.cta-ticket{width:100%;border:none;cursor:pointer;font-family:'Oswald',san
     <div class="faq-lista">
       <details class="faq-item">
         <summary>Nunca he ido. ¿De verdad vale la pena?</summary>
-        <div class="respuesta">Feria EFFIX es el evento de comercio electrónico más grande del mundo hispano, con <strong>5 ediciones</strong> y <strong>más de 50.000 asistentes por edición</strong>. En 3 días tienes acceso a +300 ponentes y +350 empresas. Lo que normalmente buscarías meses por internet o años de contactos, aquí lo encuentras en un solo lugar.</div>
+        <div class="respuesta">Feria EFFIX es la mejor feria de comercio electrónico del mundo, con <strong>5 ediciones</strong> a sus espaldas. En 3 días tienes acceso a +300 ponentes y +350 empresas. Lo que normalmente buscarías meses por internet o años de contactos, aquí lo encuentras en un solo lugar.</div>
       </details>
       <details class="faq-item">
         <summary>¿Voy a poder hablar con los ponentes y las empresas?</summary>
